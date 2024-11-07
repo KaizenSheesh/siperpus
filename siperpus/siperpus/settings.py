@@ -25,11 +25,38 @@ SECRET_KEY = 'django-insecure-@^!1&ec32z(^&g!y*s(18i)&lc8rcoumw(=saz=&fk!ka(#f(3
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = True
 
-ALLOWED_HOSTS = []
+# settings.py
+SESSION_ENGINE = 'django.contrib.sessions.backends.file'
+SESSION_FILE_PATH = '/tmp'  # Sesuaikan dengan path yang Anda inginkan
+
+# Konfigurasi session
+SESSION_COOKIE_AGE = 86400  # 24 jam dalam detik
+SESSION_COOKIE_SECURE = True  # Jika menggunakan HTTPS
+
+ALLOWED_HOSTS = [
+    '8000-idx-siperpus-1730949380502.cluster-mwrgkbggpvbq6tvtviraw2knqg.cloudworkstations.dev',
+    'localhost',
+    '127.0.0.1'
+]
+
+CSRF_TRUSTED_ORIGINS = [
+    'https://8000-idx-siperpus-1730949380502.cluster-mwrgkbggpvbq6tvtviraw2knqg.cloudworkstations.dev'
+]
+
+CSRF_COOKIE_SECURE = True
+SESSION_COOKIE_SECURE = True
+
+SECURE_PROXY_SSL_HEADER = ('HTTP_X_FORWARDED_PROTO', 'https')
+
+# Tambahkan konfigurasi CORS jika diperlukan
+CORS_ALLOWED_ORIGINS = [
+    'https://8000-idx-siperpus-1730949380502.cluster-mwrgkbggpvbq6tvtviraw2knqg.cloudworkstations.dev'
+]
+CORS_ALLOW_CREDENTIALS = True
 
 TAILWIND_APP_NAME = 'theme'
 
-NPM_BIN_PATH = "C:\\Program Files\\nodejs\\npm.cmd"
+NPM_BIN_PATH = "/usr/bin/npm"
 
 
 # Application definition
@@ -44,7 +71,7 @@ INSTALLED_APPS = [
     'tailwind',
     'django_browser_reload',
     'theme',
-    'authUser',
+    'register',
 ]
 
 MIDDLEWARE = [
