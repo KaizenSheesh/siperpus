@@ -27,6 +27,10 @@ DEBUG = True
 
 ALLOWED_HOSTS = []
 
+TAILWIND_APP_NAME = 'theme'
+
+NPM_BIN_PATH = "C:\\Program Files\\nodejs\\npm.cmd"
+
 
 # Application definition
 
@@ -37,6 +41,10 @@ INSTALLED_APPS = [
     'django.contrib.sessions',
     'django.contrib.messages',
     'django.contrib.staticfiles',
+    'tailwind',
+    'django_browser_reload',
+    'theme',
+    'authUser',
 ]
 
 MIDDLEWARE = [
@@ -47,6 +55,7 @@ MIDDLEWARE = [
     'django.contrib.auth.middleware.AuthenticationMiddleware',
     'django.contrib.messages.middleware.MessageMiddleware',
     'django.middleware.clickjacking.XFrameOptionsMiddleware',
+    "django_browser_reload.middleware.BrowserReloadMiddleware",
 ]
 
 ROOT_URLCONF = 'siperpus.urls'
@@ -54,7 +63,7 @@ ROOT_URLCONF = 'siperpus.urls'
 TEMPLATES = [
     {
         'BACKEND': 'django.template.backends.django.DjangoTemplates',
-        'DIRS': [],
+        'DIRS': ['templates'],
         'APP_DIRS': True,
         'OPTIONS': {
             'context_processors': [
