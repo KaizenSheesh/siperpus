@@ -23,17 +23,34 @@
 
 <body class="bg-gray-50 font-montserrat ading-normal">
   <nav>
-    <div class="flex p-5">
+    <div class="flex py-5 p-10">
       <div class="w-1/2">
-        <h1>Siperpus</h1>
+        <h1 class="text-2xl font-bold">Siperpus</h1>
       </div>
-      <div class="w-1/2">
-        <button>Logout</button>
+      <div class="w-1/2 flex justify-end">
+        <form action="{%url 'logout' %}">
+          <button class="p-3 bg-blue-500 rounded-xl text-white" type="submit">
+            Logout
+          </button>
+        </form>
       </div>
     </div>
   </nav>
-  <div class="container">
-    <section class="flex min-h-screen mt-20">
+  <div class="px-10">
+
+    {% if messages %}
+    <div class="messages">
+      {% for message in messages %}
+      <div
+        class="p-4 mb-4 {% if message.tags == 'error' %}bg-red-100 text-red-700{% else %}bg-green-100 text-green-700{% endif %} rounded">
+        {{ message }}
+      </div>
+      {% endfor %}
+    </div>
+    {% endif %}
+
+    <h3 class="font-semibold">Welcome back!, {{ user.username }} 👋</h3>
+    <section class="min-h-screen mt-5">
       <table id="example" class="display" style="width: 100%">
         <thead>
           <tr>
