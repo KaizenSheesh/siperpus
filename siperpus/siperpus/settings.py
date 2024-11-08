@@ -27,7 +27,7 @@ DEBUG = True
 
 # settings.py
 SESSION_ENGINE = 'django.contrib.sessions.backends.file'
-SESSION_FILE_PATH = '/tmp'  # Sesuaikan dengan path yang Anda inginkan
+# SESSION_FILE_PATH = '/tmp'  # Sesuaikan dengan path yang Anda inginkan
 
 # Konfigurasi session
 SESSION_COOKIE_AGE = 86400  # 24 jam dalam detik
@@ -84,6 +84,7 @@ MIDDLEWARE = [
     'django.contrib.messages.middleware.MessageMiddleware',
     'django.middleware.clickjacking.XFrameOptionsMiddleware',
     "django_browser_reload.middleware.BrowserReloadMiddleware",
+    "siperpus.middleware.LoginRequiredMiddleware",
 ]
 
 ROOT_URLCONF = 'siperpus.urls'
