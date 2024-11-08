@@ -14,7 +14,7 @@ Setelah kalian mengclone project ini kalian jalankan perintah dibawah ini
 python -m venv venv
 venv/Scripts/activate
 python -m pip install django
-python -m pip install -u pip
+python -m pip install -U pip
 
 ```
 
