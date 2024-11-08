@@ -13,7 +13,7 @@ def register_view(request):
         success, message = SessionAuth.register_user(request, username, password, role)
         
         if success:
-            messages.success(request, 'Registration successful! Please login.')
+            messages.success(request, 'Registrasi akun berhasil!, Silahkan Login!')
             return redirect('login')
         else:
             messages.error(request, message)
@@ -27,20 +27,18 @@ def login_view(request):
         password = request.POST.get('password')
         
         if SessionAuth.authenticate(request, username, password):
-            messages.success(request, 'Login successful!')
+            messages.success(request, 'Login Berhasil')
             return redirect('home')
         else:
-            messages.error(request, 'Invalid username or password')
+            messages.error(request, 'Username atau Password salah')
             
     return render(request, 'auth/login.html')
 
 def logout_view(request):
     SessionAuth.logout(request)
-    messages.info(request, 'You have been logged out.')
+    # messages.info(request, 'Logout Berhasil!.')
     return redirect('login')
 
 def home_view(request):
     user = SessionAuth.get_current_user(request)
-    if not user:
-        return redirect('login')
     return render(request, 'home.html', {'user': user})
