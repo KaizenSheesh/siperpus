@@ -1,0 +1,86 @@
+[
+    {
+        "title": "Pendeteksi Kebakaran Melalui CCTV",
+        "author": "Siska Kumala Sari",
+        "category": "IOT",
+        "lok_rak": "3W",
+        "id": 1
+    },
+    {
+        "title": "Sistem Informasi Rumah Sakit Jiwa Cinta Waras",
+        "author": "Tio Antonio",
+        "category": "Sistem Informasi",
+        "lok_rak": "1R",
+        "id": 2
+    },
+    {
+        "title": "Sistem Informasi BMKG Pontianak",
+        "author": "Kemal Pahlevi",
+        "category": "Sistem Informasi",
+        "lok_rak": "9P",
+        "id": 3
+    },
+    {
+        "title": "FFFF",
+        "author": "Shidney",
+        "category": "FF",
+        "lok_rak": "R5",
+        "id": 4
+    },
+    {
+        "title": "FFF",
+        "author": "Shidney",
+        "category": "r",
+        "lok_rak": "E3",
+        "id": 5
+    },
+    {
+        "title": "DDD",
+        "author": "Mwe",
+        "category": "FF",
+        "lok_rak": "34",
+        "id": 6
+    },
+    {
+        "title": "DDDD",
+        "author": "Mwe",
+        "category": "FF",
+        "lok_rak": "34",
+        "id": 7
+    },
+    {
+        "title": "DDDD",
+        "author": "MweD",
+        "category": "FDF",
+        "lok_rak": "3D4",
+        "id": 8
+    },
+    {
+        "title": "DDDDDD",
+        "author": "MweDD",
+        "category": "FFff",
+        "lok_rak": "34F",
+        "id": 9
+    },
+    {
+        "title": "DDFFFD",
+        "author": "MweFF",
+        "category": "FFF",
+        "lok_rak": "3ff4",
+        "id": 10
+    },
+    {
+        "title": "DDFSD",
+        "author": "Mwesds",
+        "category": "FFsd",
+        "lok_rak": "34fgs",
+        "id": 11
+    },
+    {
+        "title": "DfggDD",
+        "author": "Mwe3e",
+        "category": "F43F",
+        "lok_rak": "3443",
+        "id": 12
+    }
+]
