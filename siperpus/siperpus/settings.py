@@ -43,8 +43,41 @@ CSRF_TRUSTED_ORIGINS = [
     'https://8000-idx-siperpus-1730949380502.cluster-mwrgkbggpvbq6tvtviraw2knqg.cloudworkstations.dev'
 ]
 
+
 CSRF_COOKIE_SECURE = True
 SESSION_COOKIE_SECURE = True
+
+CORS_ALLOWED_ORIGINS = [
+    "http://localhost:3000",
+    "http://localhost:8000", 
+]
+
+CORS_ALLOW_METHODS = [
+    "DELETE",
+    "GET",
+    "OPTIONS",
+    "PATCH",
+    "POST",
+    "PUT",
+]
+
+CORS_ALLOW_HEADERS = [
+    "accept",
+    "authorization",
+    "content-type",
+    "x-csrftoken",
+    "x-requested-with",
+]
+
+CORS_ALLOW_ALL_ORIGINS = True
+
+CORS_ALLOW_CREDENTIALS = True
+
+
+# SESSION_ENGINE = 'django.contrib.sessions.backends.db'
+SESSION_COOKIE_AGE = 36000
+SESSION_EXPIRE_AT_BROWSER_CLOSE = False
+
 
 SECURE_PROXY_SSL_HEADER = ('HTTP_X_FORWARDED_PROTO', 'https')
 
@@ -73,6 +106,9 @@ INSTALLED_APPS = [
     'django_browser_reload',
     'theme',
     'register',
+    'rest_framework',
+    'books_api',
+    'corsheaders',
 ]
 
 MIDDLEWARE = [
@@ -85,6 +121,7 @@ MIDDLEWARE = [
     'django.middleware.clickjacking.XFrameOptionsMiddleware',
     "django_browser_reload.middleware.BrowserReloadMiddleware",
     "siperpus.middleware.LoginRequiredMiddleware",
+    'corsheaders.middleware.CorsMiddleware',
 ]
 
 ROOT_URLCONF = 'siperpus.urls'
