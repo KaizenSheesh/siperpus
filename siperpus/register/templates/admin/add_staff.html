@@ -1,0 +1,49 @@
+{% load static tailwind_tags %}
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <title>SiPerpus - Tambah Staff</title>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    {% tailwind_css %}
+</head>
+
+<body class="bg-gray-50">
+    <nav>
+        <div class="flex py-5 p-10">
+            <div class="w-1/2">
+                <h1 class="text-2xl font-bold">Siperpus</h1>
+            </div>
+            <div class="w-1/2 flex justify-end">
+                <form action="{% url 'logout' %}">
+                    <button class="p-3 bg-zinc-800 rounded-xl text-white" type="submit">
+                        Logout
+                    </button>
+                </form>
+            </div>
+        </div>
+    </nav>
+    <div class="px-10">
+        {% if error %}
+        <p style="color: red;">{{ error }}</p>
+        {% endif %}
+        <h3 class="font-semibold mb-5">Menambahkan akun staff/petugas</h3>
+        <form method="POST" action="{% url 'add_staff' %}">
+            {% csrf_token %}
+            <div class="mb-4">
+                <label for="title" class="block text-sm font-medium text-gray-700">Username Staff/Petugas</label>
+                <input type="text" id="title" name="username"
+                    class="mt-1 block w-full p-2 border border-gray-300 rounded-md" required>
+            </div>
+            <div class="mb-4">
+                <label for="author" class="block text-sm font-medium text-gray-700">Password</label>
+                <input type="password" id="author" name="password"
+                    class="mt-1 block w-full p-2 border border-gray-300 rounded-md" required>
+            </div>
+            <button type="submit" class="p-3 bg-zinc-800 rounded-xl text-white">Tambah Staff</button>
+        </form>
+    </div>
+</body>
+
+</html>
