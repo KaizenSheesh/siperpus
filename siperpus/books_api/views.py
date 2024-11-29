@@ -3,8 +3,8 @@ import os
 from rest_framework.decorators import api_view
 from rest_framework.response import Response
 from rest_framework import status
-from django.shortcuts import redirect, render
-from django.contrib.auth.decorators import login_required
+from django.views.decorators.csrf import csrf_exempt
+
 
 # books = [
 #     {'id': 1, 'title': 'Sistem Informasi Perkebunan', 'author': 'John Doe', 'category': 'Sistem Informasi', 'lok_rak': '3B'},
@@ -33,40 +33,56 @@ def get_book(request, book_id):
     if book:
         return Response(book)
     return Response({'detail': 'Not found'}, status=status.HTTP_404_NOT_FOUND)
-
+@api_view(['POST'])
 def add_book(request):
     if request.method == 'POST':
+        print("Data yang diterima:", request.data)
+        title = request.data.get('title')
+        author = request.data.get('author')
+        category = request.data.get('category')
+        lok_rak = request.data.get('lok_rak')
+
+        if not all([title, author, category, lok_rak]):
+            return Response({'success': False, 'message': 'Incomplete data'}, status=400)
+
         new_book = {
-            'title': request.POST['title'],
-            'author': request.POST['author'],
-            'category': request.POST['category'],
-            'lok_rak': request.POST['lok_rak'],
+            'title': title,
+            'author': author,
+            'category': category,
+            'lok_rak': lok_rak,
             'id': max([b['id'] for b in read_books_from_file()], default=0) + 1
         }
+
         books = read_books_from_file()
         books.append(new_book)
         write_books_to_file(books)
-        return redirect('/') 
-    return render(request, 'api_books/add_book.html')
+        
+        return Response({'success': True, 'message': 'Book added successfully'}, status=201)
 
+
+@api_view(['POST'])
+@csrf_exempt 
 def edit_book(request, book_id):
     books = read_books_from_file()
     book = next((b for b in books if b['id'] == book_id), None)
 
     if not book:
-        return redirect('/')
+        return Response({'error': 'Book not found'}, status=status.HTTP_404_NOT_FOUND)
 
     if request.method == 'POST':
-        book['title'] = request.POST['title']
-        book['author'] = request.POST['author']
-        book['category'] = request.POST['category']
-        book['lok_rak'] = request.POST['lok_rak']
-        
-        write_books_to_file(books)
-        
-        return redirect('/')
+        try:
+            data = request.data
+            book['title'] = data['title']
+            book['author'] = data['author']
+            book['category'] = data['category']
+            book['lok_rak'] = data['lok_rak']
+            
+            write_books_to_file(books)
+            return Response({'success': True}, status=status.HTTP_200_OK)
+        except json.JSONDecodeError:
+            return Response({'error': 'Invalid data'}, status=status.HTTP_400_BAD_REQUEST)
 
-    return render(request, 'api_books/edit_book.html', {'book': book})
+    return Response({'book': book}, status=status.HTTP_200_OK)
 
 @api_view(['DELETE'])
 def delete_book(request, book_id):

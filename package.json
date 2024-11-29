@@ -1,0 +1,17 @@
+{
+  "name": "siperpus",
+  "version": "1.0.0",
+  "description": "<p>SIPERPUS Merupakan aplikasi Sistem Informasi Perpustakaan Pusat (Polnep) yang berguuna untuk mengelola data buku TUGAS AKHIR yang ada diperpustakaan</p>",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "build:tailwind": "npx tailwindcss -i ./static/css/input.css -o ./static/css/output.css --watch"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "devDependencies": {
+    "daisyui": "^4.12.14",
+    "tailwindcss": "^3.4.14"
+  }
+}

@@ -1,86 +1,47 @@
 [
     {
-        "title": "Pendeteksi Kebakaran Melalui CCTV",
-        "author": "Siska Kumala Sari",
-        "category": "IOT",
-        "lok_rak": "3W",
-        "id": 1
+        "id": 1,
+        "noarsip": "TI202301",
+        "nama_mhs": "Meisi Arsella",
+        "nim": "3202016015",
+        "judul": "Rancang Bangun Website Puskesmas Desa Sekura Kabupaten Sambas Menggunakan Framework Laravel 8",
+        "dospem": "Lindung Siswanto, S.Kom., M.Eng.",
+        "tahun_lulus": "2023"
     },
     {
-        "title": "Sistem Informasi Rumah Sakit Jiwa Cinta Waras",
-        "author": "Tio Antonio",
-        "category": "Sistem Informasi",
-        "lok_rak": "1R",
-        "id": 2
+        "id": 2,
+        "noarsip": "TI202302",
+        "nama_mhs": "Muklis Faridho Novianto",
+        "nim": "3202016114",
+        "judul": "Rancang Bangun Aplikasi Media Pembelajaran Interaktif Kitab Khulasoh Nurul Yaqin Menggunakan Adobe Animate CC",
+        "dospem": "Mariana Syamsudin, S.T., M.T., Ph.D.",
+        "tahun_lulus": "2023"
     },
     {
-        "title": "Sistem Informasi BMKG Pontianak",
-        "author": "Kemal Pahlevi",
-        "category": "Sistem Informasi",
-        "lok_rak": "9P",
-        "id": 3
+        "id": 3,
+        "noarsip": "TI202303",
+        "nama_mhs": "Fajar Bayu Krisna",
+        "nim": "3202016013",
+        "judul": "Rancang Bangun Aplikasi Penginputan Data Surat Berbasis Website Pada Badan Keuangan Dan Aset Daerah Provinsi Kalimantan Barat (Bidang Perbendaharan)",
+        "dospem": "Suharsono, S.Kom., M.Kom.",
+        "tahun_lulus": "2023"
     },
     {
-        "title": "FFFF",
-        "author": "Shidney",
-        "category": "FF",
-        "lok_rak": "R5",
-        "id": 4
+        "id": 4,
+        "noarsip": "TI202304",
+        "nama_mhs": "Rizky Alrino Murtadho",
+        "nim": "3202016062",
+        "judul": "Rancang Bangun Game Tebak Pahlawan Sebagai Media Pengenalan Pahlawan Indonesia",
+        "dospem": "Suharsono, S.Kom., M.Kom.",
+        "tahun_lulus": "2023"
     },
     {
-        "title": "FFF",
-        "author": "Shidney",
-        "category": "r",
-        "lok_rak": "E3",
-        "id": 5
-    },
-    {
-        "title": "DDD",
-        "author": "Mwe",
-        "category": "FF",
-        "lok_rak": "34",
-        "id": 6
-    },
-    {
-        "title": "DDDD",
-        "author": "Mwe",
-        "category": "FF",
-        "lok_rak": "34",
-        "id": 7
-    },
-    {
-        "title": "DDDD",
-        "author": "MweD",
-        "category": "FDF",
-        "lok_rak": "3D4",
-        "id": 8
-    },
-    {
-        "title": "DDDDDD",
-        "author": "MweDD",
-        "category": "FFff",
-        "lok_rak": "34F",
-        "id": 9
-    },
-    {
-        "title": "DDFFFD",
-        "author": "MweFF",
-        "category": "FFF",
-        "lok_rak": "3ff4",
-        "id": 10
-    },
-    {
-        "title": "DDFSD",
-        "author": "Mwesds",
-        "category": "FFsd",
-        "lok_rak": "34fgs",
-        "id": 11
-    },
-    {
-        "title": "DfggDD",
-        "author": "Mwe3e",
-        "category": "F43F",
-        "lok_rak": "3443",
-        "id": 12
+        "id": 5,
+        "noarsip": "TI202305",
+        "nama_mhs": "Mihandha Gustiani",
+        "nim": "3202016039",
+        "judul": "Pembuatan Video Animasi Sebagai Media Pemasaran Pada Aplikasi E-Kasir",
+        "dospem": "Tommi Suryanto, S.Kom., M.Kom",
+        "tahun_lulus": "2023"
     }
 ]
