@@ -18,6 +18,15 @@ python -m pip install -U pip
 
 ```
 
+Install beberapa lib tambahan terlebih dahulu
+
+```bash
+
+pip install django-cors-headers
+pip install djangorestframework
+
+```
+
 Setelah itu arahkan / masuk ke dalam folder cd siperpus
 
 Jalankan perintah berikut untuk menginstall Django-Tailwind
