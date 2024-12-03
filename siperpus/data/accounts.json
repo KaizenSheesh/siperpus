@@ -16,6 +16,7 @@
     { "username": "asdw", "password": "sdaw", "role": "user" },
     { "username": "user10", "password": "user10", "role": "user" },
     { "username": "user11", "password": "user11", "role": "user" },
-    { "username": "users", "password": "user#1234", "role": "user" }
+    { "username": "users", "password": "user#1234", "role": "user" },
+    { "username": "dimas", "password": "dimas#1234", "role": "user" }
   ]
 }

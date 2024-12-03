@@ -8,9 +8,19 @@
       href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css"
       rel="stylesheet"
     />
+    <style>
+      img {
+        filter: brightness(0.5);
+      }
+    </style>
   </head>
   <body class="flex h-screen bg-gray-100">
-    <div class="w-3/5 hidden lg:block">
+    <div class="relative w-3/5 hidden lg:flex items-center">
+      <h1 class="absolute text-4xl font-bold text-white z-10 m-5">
+        Sistem Informasi Perpustakaan <br />
+        Jurusan Teknik Elektro <br />
+        Politeknik Negeri Pontianak
+      </h1>
       <img
         src="https://blog-edutore-partner.s3.ap-southeast-1.amazonaws.com/wp-content/uploads/2022/06/15062404/polnep.jpg"
         class="w-full h-full object-cover brightness-50"
@@ -51,7 +61,7 @@
           type="submit"
           class="w-full py-2 font-bold text-white bg-green-500 rounded hover:bg-green-600 mt-4"
         >
-          Register
+          Buat akun anda
         </button>
       </form>
       <p class="text-center text-sm mt-4">
