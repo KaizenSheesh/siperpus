@@ -7,6 +7,13 @@ from rest_framework.decorators import api_view
 from rest_framework.response import Response
 from rest_framework import status
 import json
+import os
+
+BOOKS_FILE = os.path.join(os.path.dirname(__file__), "../books_api/books.json")
+
+def read_books():
+    with open(BOOKS_FILE, 'r') as file:
+        return json.load(file)
 
 @ensure_csrf_cookie
 def register_view(request):
@@ -47,7 +54,20 @@ def logout_view(request):
 
 def home_view(request):
     user = SessionAuth.get_current_user(request)
-    return render(request, 'home.html', {'user': user})
+    books = read_books()
+    
+    # Menghitung buku berdasarkan kategori (TA 2023, TA 2024)
+    ta_count = len([book for book in books])
+    ta_2023_count = len([book for book in books if book['tahun_lulus'] == 2023])
+    ta_2024_count = len([book for book in books if book['tahun_lulus'] == 2024])
+
+    return render(request, 'home.html', {
+        'user': user,
+        'ta_count': ta_count,
+        'ta_2023_count': ta_2023_count,
+        'ta_2024_count': ta_2024_count
+        })
+
 def books_view(request):
     user = SessionAuth.get_current_user(request)
     return render(request, 'books.html', {'user': user})
