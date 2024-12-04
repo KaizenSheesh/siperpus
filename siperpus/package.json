@@ -1,6 +1,7 @@
 {
   "devDependencies": {
-    "cross-env": "^7.0.3"
+    "cross-env": "^7.0.3",
+    "daisyui": "^4.12.14"
   },
   "dependencies": {
     "sweetalert2": "^11.14.5"
