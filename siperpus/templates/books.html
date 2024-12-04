@@ -60,7 +60,7 @@
             </li>
             <li>
               <a
-                href="{% url 'books' %}"
+                href="{% url 'home' %}"
                 class="block hover:bg-gray-200 font-medium rounded-xl py-3 px-5"
                 >Daftar Buku</a
               >
@@ -126,7 +126,253 @@
             </div>
           </div>
         </nav>
-        <div class="p-5">
+        <div class="px-5">
+          <dialog id="my_modal_add" class="modal">
+            <div class="modal-box bg-white">
+              <form method="dialog">
+                <button
+                  class="btn btn-sm btn-circle btn-ghost absolute right-2 top-2"
+                >
+                  ✕
+                </button>
+              </form>
+              <h3 class="text-lg font-bold">Tambah Buku</h3>
+              <form id="addBookForm">
+                {% csrf_token %}
+                <div class="form-control">
+                  <label class="label">
+                    <span class="label-text text-black">Title</span>
+                  </label>
+                  <input
+                    type="text"
+                    name="title"
+                    id="bookTitleAdd"
+                    class="input input-bordered bg-gray-200 border border-black"
+                    required
+                  />
+                </div>
+                <div class="form-control">
+                  <label class="label">
+                    <span class="label-text text-black">Author</span>
+                  </label>
+                  <input
+                    type="text"
+                    name="author"
+                    id="bookAuthorAdd"
+                    class="input input-bordered bg-gray-200 border border-black"
+                    required
+                  />
+                </div>
+                <div class="form-control">
+                  <label class="label">
+                    <span class="label-text text-black">Category</span>
+                  </label>
+                  <input
+                    type="text"
+                    name="category"
+                    id="bookCategoryAdd"
+                    class="input input-bordered bg-gray-200 border border-black"
+                    required
+                  />
+                </div>
+                <div class="form-control">
+                  <label class="label">
+                    <span class="label-text text-black">Lokasi Rak</span>
+                  </label>
+                  <input
+                    type="text"
+                    name="lok_rak"
+                    id="bookLokRakAdd"
+                    class="input input-bordered bg-gray-200 border border-black"
+                    required
+                  />
+                </div>
+                <div class="modal-action">
+                  <button
+                    class="btn bg-white text-black bg-gray-400 border border-0 hover:bg-gray-300"
+                    onclick="closeModal()"
+                  >
+                    Cancel
+                  </button>
+                  <button
+                    type="submit"
+                    class="btn bg-black text-white border border-0"
+                  >
+                    Simpan
+                  </button>
+                </div>
+              </form>
+            </div>
+          </dialog>
+
+          <dialog id="my_modal_add_staff" class="modal">
+            <div class="modal-box bg-white">
+              <form method="dialog">
+                <button
+                  class="btn btn-sm btn-circle btn-ghost absolute right-2 top-2"
+                >
+                  ✕
+                </button>
+              </form>
+              <h3 class="text-lg font-bold">Tambah Akun Staff</h3>
+              <form id="addStaffForm">
+                {% csrf_token %}
+                <div class="form-control">
+                  <label class="label">
+                    <span class="label-text text-black">Username</span>
+                  </label>
+                  <input
+                    type="text"
+                    name="username"
+                    class="input input-bordered bg-gray-200 border border-black"
+                    required
+                  />
+                </div>
+                <div class="form-control">
+                  <label class="label">
+                    <span class="label-text text-black">Password</span>
+                  </label>
+                  <input
+                    type="password"
+                    name="password"
+                    class="input input-bordered bg-gray-200 border border-black"
+                    required
+                  />
+                </div>
+                <div class="modal-action">
+                  <button type="button" class="btn" onclick="closeStaffModal()">
+                    Cancel
+                  </button>
+                  <button type="submit" class="btn btn-primary">Simpan</button>
+                </div>
+              </form>
+            </div>
+          </dialog>
+
+          <dialog id="my_modal_edit" class="modal">
+            <div class="modal-box bg-white">
+              <form method="dialog">
+                <button
+                  class="btn btn-sm btn-circle btn-ghost absolute right-2 top-2"
+                >
+                  ✕
+                </button>
+              </form>
+              <h3 class="text-lg font-bold">Edit Buku</h3>
+              <form id="editBookForm">
+                <div class="form-control">
+                  <label class="label">
+                    <span class="label-text text-black">Title</span>
+                  </label>
+                  <input
+                    type="text"
+                    name="title"
+                    id="bookTitle"
+                    placeholder="Title"
+                    class="input input-bordered bg-gray-200 border border-black"
+                    required
+                  />
+                </div>
+                <div class="form-control">
+                  <label class="label">
+                    <span class="label-text text-black">Author</span>
+                  </label>
+                  <input
+                    type="text"
+                    name="author"
+                    id="bookAuthor"
+                    placeholder="Author"
+                    class="input input-bordered bg-gray-200 border border-black"
+                    required
+                  />
+                </div>
+                <div class="form-control">
+                  <label class="label">
+                    <span class="label-text text-black">Category</span>
+                  </label>
+                  <input
+                    type="text"
+                    name="category"
+                    id="bookCategory"
+                    placeholder="Category"
+                    class="input input-bordered bg-gray-200 border border-black"
+                    required
+                  />
+                </div>
+                <div class="form-control">
+                  <label class="label">
+                    <span class="label-text text-black">Lokasi Rak</span>
+                  </label>
+                  <input
+                    type="text"
+                    name="lok_rak"
+                    id="bookLokRak"
+                    placeholder="Location"
+                    class="input input-bordered bg-gray-200 border border-black"
+                    required
+                  />
+                </div>
+                <input type="hidden" id="bookId" />
+
+                <div class="modal-action">
+                  <button
+                    class="btn bg-white text-black bg-gray-400 border border-0 hover:bg-gray-300"
+                    type="button"
+                    onclick="closeModal()"
+                  >
+                    Cancel
+                  </button>
+                  <button
+                    class="btn bg-black text-white border border-0"
+                    type="button"
+                    onclick="submitEdit()"
+                  >
+                    Save Changes
+                  </button>
+                </div>
+              </form>
+            </div>
+          </dialog>
+          <section
+            class="min-h-screen overflow-x-auto lg:overflow-x-visible pb-5"
+          >
+            <div class="mb-5 flex justify-end space-x-2">
+              <h3 class="font-semibold mr-3 md:hidden mb-5">
+                Welcome back! {{ user.username }} 👋
+              </h3>
+              {% if user.role == 'staff' or user.role == 'admin' %}
+              <button
+                class="btn btn-default text-white mb-3"
+                onclick="my_modal_add.showModal()"
+              >
+                Tambah Buku
+              </button>
+              {% endif %} {% if user.role == 'admin' %}
+              <button
+                class="btn btn-default text-white"
+                onclick="my_modal_add_staff.showModal()"
+              >
+                Tambah Akun Staff
+              </button>
+              {% endif %}
+            </div>
+            <table id="example" class="display">
+              <thead>
+                <tr>
+                  <th>Nomor Urut Arsip</th>
+                  <th>Nama Mahasiswa</th>
+                  <th>NIM</th>
+                  <th>Judul</th>
+                  <th>Dosen Pembimbing</th>
+                  <th>Tahun Lulus</th>
+                  {% if user.role == 'staff' or user.role == 'admin' %}
+                  <th>Aksi</th>
+                  {% endif %}
+                </tr>
+              </thead>
+              <tbody></tbody>
+            </table>
+          </section>
         </div>
       </main>
     </div>
@@ -385,7 +631,6 @@
 
         const columns = [
           { data: "id" },
-          { data: "noarsip" },
           { data: "nama_mhs" },
           { data: "nim" },
           { data: "judul" },

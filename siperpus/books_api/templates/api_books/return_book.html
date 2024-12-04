@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <title>Return Book</title>
+</head>
+<body>
+    <h1>Return Book</h1>
+    {% if error %}
+        <p style="color: red;">{{ error }}</p>
+    {% endif %}
+    <form method="POST">
+        {% csrf_token %}
+        <label for="book">Select Book:</label>
+        <select name="book_id" required>
+            {% for book in books %}
+                <option value="{{ book.id }}">{{ book.title }} borrowed by {{ book.borrower }}</option>
+            {% endfor %}
+        </select>
+        <br>
+        <button type="submit">Return</button>
+    </form>
+</body>
+</html>

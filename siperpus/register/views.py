@@ -48,6 +48,9 @@ def logout_view(request):
 def home_view(request):
     user = SessionAuth.get_current_user(request)
     return render(request, 'home.html', {'user': user})
+def books_view(request):
+    user = SessionAuth.get_current_user(request)
+    return render(request, 'books.html', {'user': user})
 
 @api_view(['POST'])
 def add_staff(request):
