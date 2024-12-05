@@ -36,6 +36,7 @@ Jalankan perintah berikut untuk menginstall Django-Tailwind
 python -m pip install 'django-tailwind[reload]'
 python manage.py tailwind init
 python manage.py tailwind install
+npm i -D daisyui@latest
 
 ```
 
