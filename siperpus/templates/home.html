@@ -42,26 +42,26 @@
         <h1 class="text-2xl font-bold px-5">SIPTA</h1>
         <ul class="mt-5 space-y-2">
           <li>
-            <a href="{% url 'home' %}" class="block hover:bg-gray-200 font-medium rounded-xl py-3 px-5 
-               {% if request.path == '/auth/' %}bg-gray-300 text-black{% else %}text-gray-600{% endif %}">
+            <a href="{% url 'home' %}" class="block hover:bg-gray-200 hover:text-black font-medium rounded-xl py-3 px-5 
+               {% if request.path == '/auth/' %}bg-black text-white{% else %}text-gray-600{% endif %}">
               Dashboard
             </a>
           </li>
           <li>
-            <a href="{% url 'books' %}" class="block hover:bg-gray-200 font-medium rounded-xl py-3 px-5 
-               {% if request.path == 'auth/books/' %}bg-gray-300 text-black{% else %}text-gray-600{% endif %}">
+            <a href="{% url 'books' %}" class="block hover:bg-gray-200 hover:text-black font-medium rounded-xl py-3 px-5 
+               {% if request.path == '/auth/books/' %}bg-black text-white{% else %}text-gray-600{% endif %}">
               Daftar Buku
             </a>
           </li>
           <li>
-            <a href="{% url 'borrow_book' %}" class="block hover:bg-gray-200 font-medium rounded-xl py-3 px-5 
-               {% if request.path == 'auth/borrow_book/' %}bg-gray-300 text-black{% else %}text-gray-600{% endif %}">
+            <a href="{% url 'peminjaman' %}" class="block hover:bg-gray-200 hover:text-black font-medium rounded-xl py-3 px-5 
+               {% if request.path == '/auth/peminjaman/' %}bg-black text-white{% else %}text-gray-600{% endif %}">
               Peminjaman Buku
             </a>
           </li>
           <li>
-            <a href="{% url 'logout' %}" class="block hover:bg-gray-200 font-medium rounded-xl py-3 px-5 
-               {% if request.path == 'auth/logout/' %}bg-gray-300 text-black{% else %}text-gray-600{% endif %}">
+            <a href="{% url 'logout' %}" class="block hover:bg-gray-200 hover:text-black font-medium rounded-xl py-3 px-5 
+               {% if request.path == 'auth/logout/' %}bg-black text-white{% else %}text-gray-600{% endif %}">
               Logout
             </a>
           </li>
@@ -75,8 +75,14 @@
       <nav>
         <div class="flex p-5">
           <div class="w-1/2 flex justify-start items-center">
-            <button id="toggleSidebar" class="lg:hidden text-white bg-black p-2 rounded" onclick="openSidebar()">
-              ☰
+            <button id="toggleSidebar" class="lg:hidden text-white bg-black p-3 rounded-full" onclick="openSidebar()">
+              <svg class="swap-off" xmlns="http://www.w3.org/2000/svg" width="25" height="25" viewBox="0 0 24 24"
+                fill="none" stroke="white" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"
+                class="lucide lucide-menu">
+                <line x1="4" x2="20" y1="12" y2="12" />
+                <line x1="4" x2="20" y1="6" y2="6" />
+                <line x1="4" x2="20" y1="18" y2="18" />
+              </svg>
             </button>
           </div>
           <div class="w-1/2 lg:w-full flex justify-end items-center">
