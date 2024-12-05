@@ -34,7 +34,7 @@
     <link rel="stylesheet" href="https://cdn.datatables.net/2.1.8/css/dataTables.tailwindcss.css" />
 </head>
 
-<body class="bg-gray-50 font-montserrat">
+<body class="bg-gray-50 font-montserrat min-h-screen">
     <div class="relative flex lg:overflow-x-hidden">
         <aside id="sidebar"
             class="w-64 bg-white text-white h-screen fixed z-50 transform -translate-x-full lg:translate-x-0 transition-transform duration-300">
@@ -54,7 +54,8 @@
                         </a>
                     </li>
                     <li>
-                        <a href="{% url 'peminjaman' %}" class="block hover:bg-gray-200 hover:text-black font-medium rounded-xl py-3 px-5 
+                        <a href="{% url 'peminjaman' %}"
+                            class="block hover:bg-gray-200 hover:text-black font-medium rounded-xl py-3 px-5 
                {% if request.path == '/auth/peminjaman/' or request.path == '/auth/peminjaman/buku/' %}bg-black text-white{% else %}text-gray-600{% endif %}">
                             Peminjaman Buku
                         </a>
@@ -75,9 +76,15 @@
             <nav>
                 <div class="flex p-5">
                     <div class="w-1/2 flex justify-start items-center">
-                        <button id="toggleSidebar" class="lg:hidden text-white bg-black p-2 rounded"
+                        <button id="toggleSidebar" class="lg:hidden text-white bg-black p-3 rounded-full"
                             onclick="openSidebar()">
-                            ☰
+                            <svg class="swap-off" xmlns="http://www.w3.org/2000/svg" width="25" height="25"
+                                viewBox="0 0 24 24" fill="none" stroke="white" stroke-width="2" stroke-linecap="round"
+                                stroke-linejoin="round" class="lucide lucide-menu">
+                                <line x1="4" x2="20" y1="12" y2="12" />
+                                <line x1="4" x2="20" y1="6" y2="6" />
+                                <line x1="4" x2="20" y1="18" y2="18" />
+                            </svg>
                         </button>
                     </div>
                     <div class="w-1/2 lg:w-full flex justify-end items-center">
@@ -102,9 +109,24 @@
                     </div>
                 </div>
             </nav>
-            <div class="p-5 min-h-screen">
+            <div class="p-5">
                 <h1 class="text-xl font-bold">Peminjaman Buku</h1>
-                <h3 class="text=md font-medium">RANCANG BANGUN APLIKASI PEMESANAN MAKANAN BAKMIE HAJI AMAN BERBASIS ANDROID</h3>
+                <h3 class="text=md font-medium">RANCANG BANGUN APLIKASI PEMESANAN MAKANAN BAKMIE HAJI AMAN BERBASIS
+                    ANDROID</h3>
+
+                <div class="w-full flex justify-center items-center mt-16 lg:mt-32 pb-10">
+                    <div class="w-96 h-64 shadow-xl rounded-xl p-3">
+                        <div class="label">
+                            <span class="label-text text-gray-600">Tanggal Peminjaman</span>
+                        </div>
+                        <input type="date" name="tgl_peminjaman" placeholder="Type here" class="input input-bordered w-full bg-white text-gray-600 border border-gray-400" />
+                        <div class="label">
+                            <span class="label-text text-gray-600">Tanggal Pengembalian</span>
+                        </div>
+                        <input type="date" name="tgl_pengembalian" placeholder="Type here" class="input input-bordered w-full bg-white text-gray-600 border border-gray-400" />
+                        <button class="w-full btn btn-default text-white mt-5">Konfirmasi</button>
+                    </div>
+                </div>
             </div>
         </main>
     </div>
