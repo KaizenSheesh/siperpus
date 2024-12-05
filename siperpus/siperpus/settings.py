@@ -40,7 +40,9 @@ ALLOWED_HOSTS = [
 ]
 
 CSRF_TRUSTED_ORIGINS = [
-    'https://8000-idx-siperpus-1730949380502.cluster-mwrgkbggpvbq6tvtviraw2knqg.cloudworkstations.dev'
+    'https://8000-idx-siperpus-1730949380502.cluster-mwrgkbggpvbq6tvtviraw2knqg.cloudworkstations.dev',
+    'https://40grpvxr-8000.asse.devtunnels.ms/',
+    'http://localhost:8000'
 ]
 
 
