@@ -119,11 +119,13 @@
                         <div class="label">
                             <span class="label-text text-gray-600">Tanggal Peminjaman</span>
                         </div>
-                        <input type="date" name="tgl_peminjaman" placeholder="Type here" class="input input-bordered w-full bg-white text-gray-600 border border-gray-400" />
+                        <input type="date" name="tgl_peminjaman" placeholder="Type here"
+                            class="input input-bordered w-full bg-white text-gray-600 border border-gray-400" />
                         <div class="label">
                             <span class="label-text text-gray-600">Tanggal Pengembalian</span>
                         </div>
-                        <input type="date" name="tgl_pengembalian" placeholder="Type here" class="input input-bordered w-full bg-white text-gray-600 border border-gray-400" />
+                        <input type="date" name="tgl_pengembalian" placeholder="Type here"
+                            class="input input-bordered w-full bg-white text-gray-600 border border-gray-400" />
                         <button class="w-full btn btn-default text-white mt-5">Konfirmasi</button>
                     </div>
                 </div>
@@ -151,6 +153,23 @@
             document.getElementById("overlay").classList.remove("block");
             document.body.classList.remove("overflow-hidden");
         }
+    </script>
+    <script>
+        function getQueryParams(param) {
+            const urlParams = new URLSearchParams(window.location.search);
+            return urlParams.get(param);
+        }
+
+        const bookId = getQueryParams('bookId');
+        const userId = getQueryParams('userId');
+
+        fetch(`/api/books/${bookId}/`)
+            .then(response => response.json())
+            .then(data => {
+                document.getElementById('judul-buku').innerText = data.title;
+                document.getElementById('book-id').value = bookId;
+                document.getElementById('user-id').value = userId;
+            });
     </script>
     <script>
         const Toast = Swal.mixin({

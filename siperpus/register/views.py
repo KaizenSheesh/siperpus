@@ -9,7 +9,7 @@ from rest_framework import status
 import json
 import os
 
-BOOKS_FILE = os.path.join(os.path.dirname(__file__), "../books_api/books.json")
+BOOKS_FILE = os.path.join(os.path.dirname(__file__), "../books_api/data/books.json")
 
 def read_books():
     with open(BOOKS_FILE, 'r') as file:

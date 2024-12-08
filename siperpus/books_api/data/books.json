@@ -6,9 +6,7 @@
     "judul": "RANCANG BANGUN APLIKASI PEMILIHAN MATA PELAJARAN PILIHAN BERDASARKAN MINAT DAN BAKAT SISWA DI SMA NEGERI 1 PONTIANAK DENGAN IMPLEMENTASI SISTEM PAKAR",
     "dospem": "Safri Adam, S.Kom., M.Kom.",
     "tahun_lulus": 2024,
-    "is_borrowed": false,
-    "borrower": null,
-    "borrow_date": null
+    "status": "Tersedia"
   },
   {
     "id": 2,
@@ -17,9 +15,7 @@
     "judul": "PERANCANGAN JARINGAN INTERNET SEKOLAH BERBASIS CLIENT-SERVER PADA SEKOLAH MENENGAH KEJURUAN NEGERI (SMKN) 1 BALAI KABUPATEN SANGGAU",
     "dospem": "Yasir Arafat, S.S.T., M.T.",
     "tahun_lulus": 2024,
-    "is_borrowed": false,
-    "borrower": null,
-    "borrow_date": null
+    "status": "Dipinjam"
   },
   {
     "id": 3,
@@ -28,9 +24,7 @@
     "judul": "pembuatan sistem antrian dan integrasi pengenalan wajah pada buku digital di balai besar pom Pontianak",
     "dospem": "Fitri Wibowo, S.S.T., M.T.",
     "tahun_lulus": 2024,
-    "is_borrowed": false,
-    "borrower": null,
-    "borrow_date": null
+    "status": "Pending"
   },
   {
     "id": 4,
@@ -39,9 +33,7 @@
     "judul": "RANCANG BANGUN MEDIA PEMBELAJARAN ROTASI DAN REVOLUSI BUMI MENGGUNAKAN AUGMENTED REALITY",
     "dospem": "Tommi Suryanto, S.Kom., M.Kom.",
     "tahun_lulus": 2024,
-    "is_borrowed": false,
-    "borrower": null,
-    "borrow_date": null
+    "status": "Tersedia"
   },
   {
     "id": 5,
@@ -50,9 +42,7 @@
     "judul": "RANCANG BANGUN APLIKASI PEMBELAJARAN PERKEMBANGBIAKAN TUMBUHAN UNTUK SMPN 05 PONTIANAK BERBASIS AUGMENTED REALITY",
     "dospem": "Tommi Suryanto, S.Kom., M.Kom.",
     "tahun_lulus": 2024,
-    "is_borrowed": false,
-    "borrower": null,
-    "borrow_date": null
+    "status": "Tersedia"
   },
   {
     "id": 6,
@@ -61,9 +51,7 @@
     "judul": "RANCANG BANGUN APLIKASI CUTI KARYAWAN DI PT PERKEBUNAN NUSANTARA IV REGIONAL V",
     "dospem": "Lindung Siswanto, S.Kom., M.Eng.",
     "tahun_lulus": 2024,
-    "is_borrowed": false,
-    "borrower": null,
-    "borrow_date": null
+    "status": "Tersedia"
   },
   {
     "id": 7,
@@ -72,9 +60,7 @@
     "judul": "RANCANG BANGUN APLIKASI MATRIKS KOMPETENSI DOSEN DAN TENAGA KEPENDIDIKAN PADA PROGRAM STUDI TEKNIK INFORMATIKA POLITEKNIK NEGERI PONTIANAK",
     "dospem": "Neny Firdyanti, S.T., M.",
     "tahun_lulus": 2024,
-    "is_borrowed": false,
-    "borrower": null,
-    "borrow_date": null
+    "status": "Tersedia"
   },
   {
     "id": 8,
@@ -83,9 +69,7 @@
     "judul": "RANCANG BANGUN WEBSITE MONITORING DAN CONTROL SYSTEM BERBASIS IOT UNTUK SMART FISH FARMING (SHIFA) PADA BUDIDAYA IKAN ARWANA",
     "dospem": "Fitri Wibowo, S.S.T., M.T.",
     "tahun_lulus": 2024,
-    "is_borrowed": false,
-    "borrower": null,
-    "borrow_date": null
+    "status": "Tersedia"
   },
   {
     "id": 9,
@@ -94,9 +78,7 @@
     "judul": "RANCANG BANGUN PERANGKAT SISTEM MONITORING DAN CONTROL UNTUK SMART FISH FARMING (SHIFA) PADA BUDIDAYA IKAN ARWANA MENGGUNAKAN ESP32",
     "dospem": "Fitri Wibowo, S.S.T, M.T.",
     "tahun_lulus": 2024,
-    "is_borrowed": false,
-    "borrower": null,
-    "borrow_date": null
+    "status": "Tersedia"
   },
   {
     "id": 10,
@@ -105,9 +87,7 @@
     "judul": "PENERAPAN SEARCH ENGINE OPTIMIZATION DALAM RANCANG BANGUN WEBSITE COMPANY PROFILE PADA CV, BERKAH PINTU KREASI MENGGUNAKAN FRAMEWORK CODEIGNITER 4",
     "dospem": "Suheri, S.T., M.Cs.",
     "tahun_lulus": 2024,
-    "is_borrowed": false,
-    "borrower": null,
-    "borrow_date": null
+    "status": "Tersedia"
   },
   {
     "id": 11,
@@ -116,9 +96,7 @@
     "judul": "perancang bangun aplikasi berita acara pembayaran serah terima aset berbasis web di perumda air minum Tirta khatulistiwa kota Pontianak ",
     "dospem": "Ferry Faisal, S.S.T., M.T.",
     "tahun_lulus": 2024,
-    "is_borrowed": false,
-    "borrower": null,
-    "borrow_date": null
+    "status": "Tersedia"
   },
   {
     "id": 12,
@@ -127,9 +105,7 @@
     "judul": "RANCANG BANGUN APLIKASI E-MUTASI SISWA BERBASIS WEB DI DINAS PENDIDIKAN DAN KEBUDAYAAN KOTA PONTIANAK",
     "dospem": "Fitri Wibowo, S.S.T., M.T.",
     "tahun_lulus": 2024,
-    "is_borrowed": false,
-    "borrower": null,
-    "borrow_date": null
+    "status": "Tersedia"
   },
   {
     "id": 13,
@@ -138,9 +114,7 @@
     "judul": "PENGEMBANGAN SISTEM INFORMASI GEOGRAFIS BERBASIS WEB DALAM UPAYA KONSERVASI TERUMBU KARANG DI PESISIR KALIMANTAN BARAT",
     "dospem": "Fitri Wibowo, S.S.T., M.T.",
     "tahun_lulus": 2024,
-    "is_borrowed": false,
-    "borrower": null,
-    "borrow_date": null
+    "status": "Tersedia"
   },
   {
     "id": 14,
@@ -149,9 +123,7 @@
     "judul": "RANCANG BANGUN LOCAL AREA NETWORK (LAN) UNTUK AKSESIBILITAS INTERNET SEKOLAH BERBASIS CLIENT-SERVER PADA SEKOLAH MENENGAH ATAS NEGERI (SMAN) 4 PONTIANAK",
     "dospem": "Yasir Arafat, S.S.T., M.T.",
     "tahun_lulus": 2024,
-    "is_borrowed": false,
-    "borrower": null,
-    "borrow_date": null
+    "status": "Tersedia"
   },
   {
     "id": 15,
@@ -160,9 +132,7 @@
     "judul": "APLIKASI RANCANG BANGUN WEBSITE PROFIL TIM BOLA VOLI NOMEN NESCIO (NN)",
     "dospem": "Mariana Syamsudin, S.T., M.T., PhD",
     "tahun_lulus": 2024,
-    "is_borrowed": false,
-    "borrower": null,
-    "borrow_date": null
+    "status": "Tersedia"
   },
   {
     "id": 16,
@@ -171,9 +141,7 @@
     "judul": "RANCANG BANGUN APLIKASI SISTEM REGISTRASI UJI KOMPETENSI FUNGSIONAL KESEHATAN KALIMANTAN BARAT (SERUNI SEHAT) PADA DINAS KESEHATAN PROVINSI KALIMANTAN BARAT",
     "dospem": "Suharsono, S.Kom., M.Kom.",
     "tahun_lulus": 2024,
-    "is_borrowed": false,
-    "borrower": null,
-    "borrow_date": null
+    "status": "Tersedia"
   },
   {
     "id": 17,
@@ -182,9 +150,7 @@
     "judul": "RANCANG BANGUN APLIKASI PEMESANAN AULA BERBASIS WEB PADA BADAN PENGEMBANGAN SUMBER DAYA MANUSIA PROVINSI KALIMANTAN BARAT",
     "dospem": "Yasir Arafat, S.S.T., M.T.",
     "tahun_lulus": 2024,
-    "is_borrowed": false,
-    "borrower": null,
-    "borrow_date": null
+    "status": "Tersedia"
   },
   {
     "id": 18,
@@ -193,9 +159,7 @@
     "judul": "RANCANG BANGUN APLIKASI RENCANA ANGGARAN BIAYA PEKERJAAN KONSTRUKSI BERBASIS WEB DI PERUSAHAAN DAERAH AIR MINUM TIRTA KHATULISTIWA KOTA PONTIANAK",
     "dospem": "Ferry Faisal, S.S.T., M.T.",
     "tahun_lulus": 2024,
-    "is_borrowed": false,
-    "borrower": null,
-    "borrow_date": null
+    "status": "Tersedia"
   },
   {
     "id": 19,
@@ -204,9 +168,7 @@
     "judul": "HEALER : E-HEALTH CARE CENTER MUHAMMADIYAH PONTIANAK BERBASIS PROGRESSIVE WEB APPLICATION (PWA)",
     "dospem": "Fitri Wibowo, S.S.T., M.T.",
     "tahun_lulus": 2024,
-    "is_borrowed": false,
-    "borrower": null,
-    "borrow_date": null
+    "status": "Tersedia"
   },
   {
     "id": 20,
@@ -215,9 +177,7 @@
     "judul": "RANCANG BANGUN APLIKASI PENGELOLAAN KEUANGAN HIMPUNAN MAHASISWA JURUSAN TEKNIK ELEKTRO BERBASIS WEB MENGGUNAKAN METODE AGILE",
     "dospem": "Safri Adam, S.Kom., M.Kom.",
     "tahun_lulus": 2024,
-    "is_borrowed": false,
-    "borrower": null,
-    "borrow_date": null
+    "status": "Tersedia"
   },
   {
     "id": 21,
@@ -226,9 +186,7 @@
     "judul": "rancang bangun aplikasi manajemen inventaris berbasis web di PT Borneo inovasi gemilang",
     "dospem": "Safri Adam, S.Kom., M.Kom",
     "tahun_lulus": 2024,
-    "is_borrowed": false,
-    "borrower": null,
-    "borrow_date": null
+    "status": "Tersedia"
   },
   {
     "id": 22,
@@ -237,9 +195,7 @@
     "judul": "rancang bangun media pembelajaran interaktif mubadiul FIQHIYAH JUZ 1 MENGGUNAKAN ADOBE AnimATE CC",
     "dospem": "Muhammad Diponegoro, S.Kom., M.Cs.",
     "tahun_lulus": 2024,
-    "is_borrowed": false,
-    "borrower": null,
-    "borrow_date": null
+    "status": "Tersedia"
   },
   {
     "id": 23,
@@ -248,9 +204,7 @@
     "judul": "RANCANG BANGUN APLIKASI PENJUALAN BAJU DAN JASA JAHIT BERBASIS WEB PADA USAHA JAHIT AMINAH",
     "dospem": "Muhammad Hasbi, S.T., M.T.",
     "tahun_lulus": 2024,
-    "is_borrowed": false,
-    "borrower": null,
-    "borrow_date": null
+    "status": "Tersedia"
   },
   {
     "id": 24,
@@ -259,9 +213,7 @@
     "judul": "RANCANG BANGUN APLIKASI MEDIA PEMBELAJARAN INTERAKTIF KISAH KETELADANAN NABI DAN RASUL MENGGUNAKAN ADOBE AnimATE CC (STUDI KASUS : SDN 21 PONTIANAK TIMUR)",
     "dospem": "Tommi Suryanto, S.Kom., M.Kom.",
     "tahun_lulus": 2024,
-    "is_borrowed": false,
-    "borrower": null,
-    "borrow_date": null
+    "status": "Tersedia"
   },
   {
     "id": 25,
@@ -270,9 +222,7 @@
     "judul": "rancang bangun aplikasi sistem presensi siswa di sekolah menengah kejuruan 1 semparuk Sambas berbasis",
     "dospem": "Tri Bowo Atmojo, S.T.,M.Cs.",
     "tahun_lulus": 2024,
-    "is_borrowed": false,
-    "borrower": null,
-    "borrow_date": null
+    "status": "Tersedia"
   },
   {
     "id": 26,
@@ -281,9 +231,7 @@
     "judul": "RANCANG BANGUN WEBSITE NAISH PUDDING KOTA PONTIANAK ",
     "dospem": "Muhammad Hasbi, S.T., M.T.",
     "tahun_lulus": 2024,
-    "is_borrowed": false,
-    "borrower": null,
-    "borrow_date": null
+    "status": "Tersedia"
   },
   {
     "id": 27,
@@ -292,9 +240,7 @@
     "judul": "pembuatan game cerita rakyat di Pulau Kalimantan dengan genre role playing game menggunakan RPG maker MZ",
     "dospem": "Muhammad Hasbi, S.T., M.T.",
     "tahun_lulus": 2024,
-    "is_borrowed": false,
-    "borrower": null,
-    "borrow_date": null
+    "status": "Tersedia"
   },
   {
     "id": 28,
@@ -303,9 +249,7 @@
     "judul": "PENERAPAN INITIATION DAN TESTING PADA METODE GAME DEVELOPMENT LIFE CYCLE DALAM PEMBUATAN GAME BOEDJANG COFFEE",
     "dospem": "Budianingsih, S.T., M.T.",
     "tahun_lulus": 2024,
-    "is_borrowed": false,
-    "borrower": null,
-    "borrow_date": null
+    "status": "Tersedia"
   },
   {
     "id": 29,
@@ -314,9 +258,7 @@
     "judul": "RANCANG BANGUN AUGMENTED REALITY (AR) UNTUK MEMPERKENALKAN ISI MONUMEN TUGU KHATULISTIWA ",
     "dospem": "Tommi Suryanto, S.Kom., M.Kom.",
     "tahun_lulus": 2024,
-    "is_borrowed": false,
-    "borrower": null,
-    "borrow_date": null
+    "status": "Tersedia"
   },
   {
     "id": 30,
@@ -325,9 +267,7 @@
     "judul": "RANCANG BANGUN SISTEM INFORMASI MAGANG KURIKULUM MERDEKA BELAJAR KAMPUS MERDEKA (SIMBKM) BERBASIS WEB DI JURUSAN TEKNIK ELEKTRO POLITEKNIK NEGERI PONTIANAK",
     "dospem": "Lindung Siswanto, S.Kom., M.Eng.",
     "tahun_lulus": 2024,
-    "is_borrowed": false,
-    "borrower": null,
-    "borrow_date": null
+    "status": "Tersedia"
   },
   {
     "id": 31,
@@ -336,9 +276,7 @@
     "judul": "RANCANG BANGUN SISTEM MONITORING GIZI ANAK BERDASARKAN PENGENALAN GAMBAR (SIMOGA) BERBASIS WEBSITE DI DINAS KESEHATAN PROVINSI KALIMANTAN BARAT",
     "dospem": "Suheri, S.T., M.Cs.",
     "tahun_lulus": 2024,
-    "is_borrowed": false,
-    "borrower": null,
-    "borrow_date": null
+    "status": "Tersedia"
   },
   {
     "id": 32,
@@ -347,9 +285,7 @@
     "judul": "PENGEMBANGAN APLIKASI REKAP PEMBERITAAN MENGGUNAKAN FRAMEWORK LARAVEL",
     "dospem": "Ferry Faisal, S.S.T., MT.",
     "tahun_lulus": 2024,
-    "is_borrowed": false,
-    "borrower": null,
-    "borrow_date": null
+    "status": "Tersedia"
   },
   {
     "id": 33,
@@ -358,9 +294,7 @@
     "judul": "APLIKASI PEMESANAN JASA MAKE UP BERBASIS WEB PADA FEBIOLA NANDA MAKE UP ARTIST",
     "dospem": "Muhammad Hasbi, S.T., M.T.",
     "tahun_lulus": 2024,
-    "is_borrowed": false,
-    "borrower": null,
-    "borrow_date": null
+    "status": "Tersedia"
   },
   {
     "id": 34,
@@ -369,9 +303,7 @@
     "judul": "RANCANG BANGUN MEDIA PEMBELAJARAN INTERAKTIF PENDIDIKAN AGAMA ISLAM MENGGUNAKAN ADOBE AnimATE CC (STUDI KASUS : SDN 03 KARIMUNTING)",
     "dospem": "Sarah Bibi, S.S.T., M.Pd.",
     "tahun_lulus": 2024,
-    "is_borrowed": false,
-    "borrower": null,
-    "borrow_date": null
+    "status": "Tersedia"
   },
   {
     "id": 35,
@@ -380,9 +312,7 @@
     "judul": "RANCANG BANGUN APLIKASI MONITORING GIZI BALITA DAN REKOMENDASI MAKANAN BERBASIS ANDROID DENGAN PENGENALAN GAMBAR MENGGUNAKAN API TENSORFLOW",
     "dospem": "Sarah Bibi, S.S.T., M.Pd.",
     "tahun_lulus": 2024,
-    "is_borrowed": false,
-    "borrower": null,
-    "borrow_date": null
+    "status": "Tersedia"
   },
   {
     "id": 36,
@@ -391,9 +321,7 @@
     "judul": "RANCANG BANGUN SISTEM MANAJEMEN SURAT MASUK DAN SURAT KELUAR MENGGUNAKAN FRAMEWORK CODEIGNITER STUDI KASUS KPKNL SINGKAWANG",
     "dospem": "Muhammad Diponegoro, S.Kom., M.Cs.",
     "tahun_lulus": 2024,
-    "is_borrowed": false,
-    "borrower": null,
-    "borrow_date": null
+    "status": "Tersedia"
   },
   {
     "id": 37,
@@ -402,9 +330,7 @@
     "judul": "RANCANG BANGUN APLIKASI PENYEWAAN MOBIL DAN TRAVEL PADA MT RENTCAR BERBASIS WEB",
     "dospem": "Wendhi Yuniarto, S.T., M.T.",
     "tahun_lulus": 2024,
-    "is_borrowed": false,
-    "borrower": null,
-    "borrow_date": null
+    "status": "Tersedia"
   },
   {
     "id": 38,
@@ -413,9 +339,7 @@
     "judul": "RANCANG BANGUN APLIKASI VISUALISASI DATA PERKEBUNAN RAKYAT PADA DINAS PERKEBUNAN DAN PETERNAKAN KABUPATEN KUBU RAYA BERBASIS WEB",
     "dospem": "Neny Firdyanti, ST., MT.",
     "tahun_lulus": 2024,
-    "is_borrowed": false,
-    "borrower": null,
-    "borrow_date": null
+    "status": "Tersedia"
   },
   {
     "id": 39,
@@ -424,9 +348,7 @@
     "judul": "RANCANG BANGUN MEDIA PEMBELAJARAN EKONOMI DENGAN ADOBE AnimATE DAN AFTER EFFECT SISWA KELAS X SMA NEGERI 1 SUNGAI AMBAWANG",
     "dospem": "Novi Aryani, S.T., S.T., M.Tr.Kom.",
     "tahun_lulus": 2024,
-    "is_borrowed": false,
-    "borrower": null,
-    "borrow_date": null
+    "status": "Tersedia"
   },
   {
     "id": 40,
@@ -435,9 +357,7 @@
     "judul": "RANCANG BANGUN SISTEM INFORMASI BERBASIS WEB TAMAN PENDIDIKAN AL-QUR'AN (TPQ) BAITI JANNATI MENGGUNAKAN FRAMEWORK LARAVEL ",
     "dospem": "Neny Firdyanti, ST., MT.",
     "tahun_lulus": 2024,
-    "is_borrowed": false,
-    "borrower": null,
-    "borrow_date": null
+    "status": "Tersedia"
   },
   {
     "id": 41,
@@ -446,9 +366,7 @@
     "judul": "RANCANG BANGUN APLIKASI PEMESANAN JASA NAIL ART DAN LAST LIFT PADA ALPHA BEAUTY CENTER BERBASIS WEB",
     "dospem": "Neny Firdyanti, S.T.,M.T.",
     "tahun_lulus": 2024,
-    "is_borrowed": false,
-    "borrower": null,
-    "borrow_date": null
+    "status": "Tersedia"
   },
   {
     "id": 42,
@@ -457,9 +375,7 @@
     "judul": "RANCANG BANGUN APLIKASI MEDIA PEMBELAJARAN MENGGUNAKAN AUGMENTED REALITY ILMU PENGETAHUAN ALAM (IPA) MATERI SISTEM RANGKA MANUSIA BERBASIS ANDROID UNTUK GURU DAN SISWA TUNARUNGU SEKOLAH LUAR BIASA (SLB) B DHARMA ASIH PONTIANAK",
     "dospem": "Nurul Fadhillah, S.Pd., M.Ed.TESOL",
     "tahun_lulus": 2024,
-    "is_borrowed": false,
-    "borrower": null,
-    "borrow_date": null
+    "status": "Tersedia"
   },
   {
     "id": 43,
@@ -468,9 +384,7 @@
     "judul": "PENGEMBANGAN FITUR  AUGMENTED REALITY  DALAM  APLIKASI MEDIA PEMBELAJARAN ILMU PENGETAHUAN ALAM (IPA) MATERI SISTEM RANGKA MANUSIA BERBASIS ANDROID UNTUK GURU DAN SISWA TUNARUNGU SEKOLAH LUAR BIASA (SLB) B DHARMA ASIH PONTIANAK",
     "dospem": "Nurul Fadhillah, S.Pd., M.Ed.TESOL",
     "tahun_lulus": 2024,
-    "is_borrowed": false,
-    "borrower": null,
-    "borrow_date": null
+    "status": "Tersedia"
   },
   {
     "id": 44,
@@ -479,9 +393,7 @@
     "judul": "RANCANG BANGUN APLIKASI MONITORING PEKERJAAN(E-MONITORING)BERBASIS WE PADA BAGIAN PENECANAAN DAN PENGELOLAAN ASET DI PERUMDA TIRTA KHATULISTIWA KOTA PONTIANAK",
     "dospem": "Suharsono,S.Kom,.M.Kom.",
     "tahun_lulus": 2024,
-    "is_borrowed": false,
-    "borrower": null,
-    "borrow_date": null
+    "status": "Tersedia"
   },
   {
     "id": 45,
@@ -490,9 +402,7 @@
     "judul": "RANCANG BANGUN SISTEM LAYANAN KANTOR DESA PALOAN KABUPATEN LANDAK BERBASIS WEB ",
     "dospem": "Yasir Arafat, S.ST., M.T.",
     "tahun_lulus": 2024,
-    "is_borrowed": false,
-    "borrower": null,
-    "borrow_date": null
+    "status": "Tersedia"
   },
   {
     "id": 46,
@@ -501,9 +411,7 @@
     "judul": "AUGMENTED REALITY (AR) UNTUK PEMBELAJARAN STRUKTUR DAN FUNGSI TUMBUHAN BERBASIS ANDROID",
     "dospem": "Yasir Arafat, S.ST., M.T.",
     "tahun_lulus": 2024,
-    "is_borrowed": false,
-    "borrower": null,
-    "borrow_date": null
+    "status": "Tersedia"
   },
   {
     "id": 47,
@@ -512,9 +420,7 @@
     "judul": "PEMBUATAN WEBSITE SEKOLAH SEBAGAI MEDIA INFORMASI, PROMOSI, DAN PENDAFTARAN DI TK AL MUKADDIMAH MENGGUNAKAN FRAMEWORK CODEIGNITER 4",
     "dospem": "Suheri, S.T., M.Cs.",
     "tahun_lulus": 2024,
-    "is_borrowed": false,
-    "borrower": null,
-    "borrow_date": null
+    "status": "Tersedia"
   },
   {
     "id": 48,
@@ -523,9 +429,7 @@
     "judul": "PEMBUATAN WEBSITE SEKOLAH SEBAGAI MEDIA INFORMASI, PROMOSI, DAN PENDAFTARAN DI TK AL MUKADDIMAH MENGGUNAKAN FRAMEWORK CODEIGNITER 4",
     "dospem": "Suheri, S.T., M.Cs.",
     "tahun_lulus": 2024,
-    "is_borrowed": false,
-    "borrower": null,
-    "borrow_date": null
+    "status": "Tersedia"
   },
   {
     "id": 49,
@@ -534,9 +438,7 @@
     "judul": "RANCANG BANGUN GAME PUZZLE ADVENTURE 2.5D \"ESCAPE FROM THE OFFICE\" MENGGUNAKAN UNITY ENGINE",
     "dospem": "Muhammad Hasbi, S.T., M.T.",
     "tahun_lulus": 2024,
-    "is_borrowed": false,
-    "borrower": null,
-    "borrow_date": null
+    "status": "Tersedia"
   },
   {
     "id": 50,
@@ -545,9 +447,7 @@
     "judul": "RANCANG BANGUN APLIKASI LAUNDERCLEAN SEBAGAI PLATFORM PENYEDIA JASA LAUNDRY RUMAHAN DI KOTA PONTIANAK BERBASIS WEBSITE MENGGUNAKAN FRAMEWORK LARAVEL",
     "dospem": "Safri Adam, S.Kom., M.Kom",
     "tahun_lulus": 2024,
-    "is_borrowed": false,
-    "borrower": null,
-    "borrow_date": null
+    "status": "Tersedia"
   },
   {
     "id": 51,
@@ -556,9 +456,7 @@
     "judul": "PENERAPAN PRODUCTION PADA METODE GAME DEVELOPMENT LIFE CYCLE DAN PEMBUATAN GAME BOEJANG COFFEE",
     "dospem": "Budianingsih, S.T., M.T.",
     "tahun_lulus": 2024,
-    "is_borrowed": false,
-    "borrower": null,
-    "borrow_date": null
+    "status": "Tersedia"
   },
   {
     "id": 52,
@@ -567,9 +465,7 @@
     "judul": "PEMBUATAN APLIKASI MANAJEMEN INVENTARIS DI WORKSHOP PROGRAM STUDI D4 PENGOLAHAN DAN PENYIMPANAN HASIL PERIKANAN POLITEKNIK NEGERI PONTIANAK BERBASIS WEB MENGGUNAKAN FRAMEWORK CODEIGNITER 4",
     "dospem": "Suheri, S.T., M.Cs.",
     "tahun_lulus": 2024,
-    "is_borrowed": false,
-    "borrower": null,
-    "borrow_date": null
+    "status": "Tersedia"
   },
   {
     "id": 53,
@@ -578,9 +474,7 @@
     "judul": "RANCANG BANGUN WEBSITE PEMERINTAHAN KABUPATEN SINTANG DENGAN FITUR ANTI WEB DEFACEMENT MENGGUNAKAN FRAMEWORK CODEIGNITER 4",
     "dospem": "Suheri, S.T., M.Cs.",
     "tahun_lulus": 2024,
-    "is_borrowed": false,
-    "borrower": null,
-    "borrow_date": null
+    "status": "Tersedia"
   },
   {
     "id": 54,
@@ -589,9 +483,7 @@
     "judul": "RANCANG BANGUN SISTEM INFORMASI PEMBAYARAN BIAYA PENDIDIKAN PADA SD PLUS BINA 45 PONTIANAK",
     "dospem": "Lindung Siswanto, S.Kom., M.Eng.",
     "tahun_lulus": 2024,
-    "is_borrowed": false,
-    "borrower": null,
-    "borrow_date": null
+    "status": "Tersedia"
   },
   {
     "id": 55,
@@ -600,9 +492,7 @@
     "judul": "RANCANG BANGUN SISTEM INFORMASI SEKOLAH SEPAK BOLA TUNAS BARU BERBASIS WEB",
     "dospem": "Suharsono,S.Kom,.M.Kom.",
     "tahun_lulus": 2024,
-    "is_borrowed": false,
-    "borrower": null,
-    "borrow_date": null
+    "status": "Tersedia"
   },
   {
     "id": 56,
@@ -611,9 +501,7 @@
     "judul": "RANCANG BANGUN APLIKASI UNIT KEGIATAN MAHASISWA (UKM) BADMINTON POLITEKNIK NEGERI PONTIANAK BERBASIS WEB",
     "dospem": "Neny Firdyanti, S.T.,M.T.",
     "tahun_lulus": 2024,
-    "is_borrowed": false,
-    "borrower": null,
-    "borrow_date": null
+    "status": "Tersedia"
   },
   {
     "id": 57,
@@ -622,9 +510,7 @@
     "judul": "PEMBUATAN WEBSITE PENJUALAN PADA TOKO RUMAHKU JINGGA MENGGUNAKAN FRAMEWORK CODEIGNITER 4",
     "dospem": "Suheri, S.T., M.Cs.",
     "tahun_lulus": 2024,
-    "is_borrowed": false,
-    "borrower": null,
-    "borrow_date": null
+    "status": "Tersedia"
   },
   {
     "id": 58,
@@ -633,9 +519,7 @@
     "judul": "RANCANG BANGUN APLIKASI PENCATATAN PENGELUARAN PENGAWAS PADA CV. ANUGERAH JAYA CEMERLANG BERBASIS WEB",
     "dospem": "Fitri Wibowo, S.S.T., M.T.",
     "tahun_lulus": 2024,
-    "is_borrowed": false,
-    "borrower": null,
-    "borrow_date": null
+    "status": "Tersedia"
   },
   {
     "id": 59,
@@ -644,9 +528,7 @@
     "judul": "IMPLEMENTASI MEDIA PEMBELAJARAN INTERAKTIF BERBASIS AnimASI PADA MATERI FIQIH THAHARAH KELAS VII MENGGUNAKAN ACTION SCRIPT 3.0",
     "dospem": "Suharsono, S.Kom., M.Kom.",
     "tahun_lulus": 2024,
-    "is_borrowed": false,
-    "borrower": null,
-    "borrow_date": null
+    "status": "Tersedia"
   },
   {
     "id": 60,
@@ -655,9 +537,7 @@
     "judul": "PEMANFAATAN TEKNOLOGI AUGMENTED REALITY SEBAGAI MEDIA BANTU PEMBELAJARAN HEWAN REPTIL PADA TK AISYIYAH BUSTANUL ATHFAL 1 PONTIANAK",
     "dospem": "Novi Aryani, S.T., S.T., M.Tr.Kom.",
     "tahun_lulus": 2024,
-    "is_borrowed": false,
-    "borrower": null,
-    "borrow_date": null
+    "status": "Tersedia"
   },
   {
     "id": 61,
@@ -666,9 +546,7 @@
     "judul": "PERANCANGAN JARINGAN INTERNET PADA SEKOLAH MENENGAH PERTAMA NEGERI (SMPN) 1 SUNGAI RAYA KABUPATEN KUBU RAYA",
     "dospem": "Muhammad Hasbi, S.T., M.T.",
     "tahun_lulus": 2024,
-    "is_borrowed": false,
-    "borrower": null,
-    "borrow_date": null
+    "status": "Tersedia"
   },
   {
     "id": 62,
@@ -677,9 +555,7 @@
     "judul": "PEMBUATAN AnimASI IKLAN APLIKASI BRIMO DI BANK RAKYAT INDONESIA CABANG SINTANG",
     "dospem": "Novi Aryani, S.T., S.T., M.Tr.Kom.",
     "tahun_lulus": 2024,
-    "is_borrowed": false,
-    "borrower": null,
-    "borrow_date": null
+    "status": "Tersedia"
   },
   {
     "id": 63,
@@ -688,9 +564,7 @@
     "judul": "RANCANG BANGUN APLIKASI BACKEND LAUNDERCLEAN BERBASIS RESTFUL API DENGAN FRAMEWORK LARAVEL DAN AUTENTIFIKASI JSON WEB TOKEN (JWT)",
     "dospem": "Lindung Siswanto, S.Kom., M.Eng.",
     "tahun_lulus": 2024,
-    "is_borrowed": false,
-    "borrower": null,
-    "borrow_date": null
+    "status": "Tersedia"
   },
   {
     "id": 64,
@@ -699,9 +573,7 @@
     "judul": "RANCANG BANGUN APLIKASI FRONTEND LAUNDERCLEAN MENGGUNAKAN FRAMEWORK NEXT.JS DENGAN PENERAPAN SEARCH ENGINE OPTIMIZATION (SEO) DAN RESPONSIVE WEB DESIGN",
     "dospem": "Safri Adam, S.Kom., M.Kom",
     "tahun_lulus": 2024,
-    "is_borrowed": false,
-    "borrower": null,
-    "borrow_date": null
+    "status": "Tersedia"
   },
   {
     "id": 65,
@@ -710,9 +582,7 @@
     "judul": "RANCANG BANGUN MEDIA PEMBELAJARAN KOSAKATA BAHASA ARAB MENGGUNAKAN ADOBE AnimATE DI MADRASAH IBTIDAIYAH SWASTA AL-AZHAR KABUPATEN SAMBAS BELUM",
     "dospem": "Tommy Suryanto, S.Kom., M.Kom",
     "tahun_lulus": 2024,
-    "is_borrowed": false,
-    "borrower": null,
-    "borrow_date": null
+    "status": "Tersedia"
   },
   {
     "id": 66,
@@ -721,9 +591,7 @@
     "judul": "RANCANG BANGUN APLIKASI PRESENSI DAN PENDAPATAN PADA MARLIN SWIMMING CLUB PONTIANAK BERBASIS WEB",
     "dospem": "Sarah Bibi, S.S.T., M.Pd.",
     "tahun_lulus": 2024,
-    "is_borrowed": false,
-    "borrower": null,
-    "borrow_date": null
+    "status": "Tersedia"
   },
   {
     "id": 67,
@@ -732,9 +600,7 @@
     "judul": "RANCANG BANGUN APLIKASI PENGELOLAAN ARSIP (E-ARSIP) PADA BAGIAN PERENCANAAN PENGELOLAAN ASET DI PERUMDA AIR MINUM TIRTA KHATULISTIWA KOTA PONTIANAK",
     "dospem": "Ferry Faisal, S.S.T., MT.",
     "tahun_lulus": 2024,
-    "is_borrowed": false,
-    "borrower": null,
-    "borrow_date": null
+    "status": "Tersedia"
   },
   {
     "id": 68,
@@ -743,9 +609,7 @@
     "judul": "PERANCANGAN DAN IMPLEMENTASI WEBSITE PROFILE PT BORNEO TECH SOLUTION",
     "dospem": "Muhammad Hasbi, S.T., M.T.",
     "tahun_lulus": 2024,
-    "is_borrowed": false,
-    "borrower": null,
-    "borrow_date": null
+    "status": "Tersedia"
   },
   {
     "id": 69,
@@ -754,9 +618,7 @@
     "judul": "RANCANG BANGUN MEDIA PEMBELAJARAN INTERAKTIF PENGENALAN HURUF HIJAIYAH DAN TAJWID MENGGUNAKAN ADOBE AnimATE PADA PAUD RAUDHATUL ATHFAL AS SYIFA",
     "dospem": "Tommy Suryanto, S.Kom., M.Kom",
     "tahun_lulus": 2024,
-    "is_borrowed": false,
-    "borrower": null,
-    "borrow_date": null
+    "status": "Tersedia"
   },
   {
     "id": 70,
@@ -765,8 +627,6 @@
     "judul": "RANCANG BANGUN APLIKASI PEMESANAN MAKANAN BAKMIE HAJI AMAN BERBASIS ANDROID",
     "dospem": "Sarah Bibi, S.S.T., M.Pd.",
     "tahun_lulus": 2024,
-    "is_borrowed": false,
-    "borrower": null,
-    "borrow_date": null
+    "status": "Tersedia"
   }
 ]

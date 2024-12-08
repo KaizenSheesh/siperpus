@@ -7,33 +7,27 @@ from django.views.decorators.csrf import csrf_exempt
 from datetime import datetime
 from django.shortcuts import render, redirect
 
-BOOKS_FILE = os.path.join(os.path.dirname(__file__), 'books.json')
+BOOKS_FILE = os.path.join(os.path.dirname(__file__), 'data/books.json')
 BORROWS_FILE = os.path.join(os.path.dirname(__file__), 'peminjaman.json')
 
-def read_books_from_file():
-    with open(BOOKS_FILE, 'r') as file:
+def read_books_from_file(file_path):
+    if not os.path.exists(file_path):
+        return []
+    with open(file_path, 'r') as file:
         return json.load(file)
 
-def write_books_to_file(books):
-    with open(BOOKS_FILE, 'w') as file:
-        json.dump(books, file, indent=4)
-
-def read_borrows_from_file():
-    with open(BORROWS_FILE, 'r') as file:
-        return json.load(file)
-
-def write_borrows_to_file(borrows):
-    with open(BORROWS_FILE, 'w') as file:
-        json.dump(borrows, file, indent=4)
+def write_books_to_file(file_path, data):
+    with open(file_path, 'w') as file:
+        json.dump(data, file, indent=4)
 
 @api_view(['GET'])
 def get_books(request):
-    books = read_books_from_file()
+    books = read_books_from_file(BOOKS_FILE)
     return Response(books)
 
 @api_view(['GET'])
 def get_book(request, book_id):
-    books = read_books_from_file()
+    books = read_books_from_file(BOOKS_FILE)
     book = next((b for b in books if b['id'] == book_id), None)
     if book:
         return Response(book)
@@ -59,12 +53,12 @@ def add_book(request):
             'judul': judul,
             'dospem': dospem,
             'tahun_lulus': tahun_lulus,
-            'id': max([b['id'] for b in read_books_from_file()], default=0) + 1
+            'id': max([b['id'] for b in read_books_from_file(BOOKS_FILE)], default=0) + 1
         }
 
-        books = read_books_from_file()
+        books = read_books_from_file(BOOKS_FILE)
         books.append(new_book)
-        write_books_to_file(books)
+        write_books_to_file(BOOKS_FILE, books)
         
         return Response({'success': True, 'message': 'Book added successfully'}, status=201)
 
@@ -72,7 +66,7 @@ def add_book(request):
 @api_view(['POST'])
 @csrf_exempt 
 def edit_book(request, book_id):
-    books = read_books_from_file()
+    books = read_books_from_file(BOOKS_FILE)
     book = next((b for b in books if b['id'] == book_id), None)
 
     if not book:
@@ -88,7 +82,7 @@ def edit_book(request, book_id):
             book['dospem'] = data['dospem']
             book['tahun_lulus'] = data['tahun_lulus']
             
-            write_books_to_file(books)
+            write_books_to_file(BOOKS_FILE, books)
             return Response({'success': True}, status=status.HTTP_200_OK)
         except json.JSONDecodeError:
             return Response({'error': 'Invalid data'}, status=status.HTTP_400_BAD_REQUEST)
@@ -97,74 +91,75 @@ def edit_book(request, book_id):
 
 @api_view(['DELETE'])
 def delete_book(request, book_id):
-    books = read_books_from_file()
+    books = read_books_from_file(BOOKS_FILE)
     updated_books = [b for b in books if b['id'] != book_id]
     
     if len(updated_books) == len(books):
         return Response({'detail': 'Book not found'}, status=status.HTTP_404_NOT_FOUND)
     
-    write_books_to_file(updated_books)
+    write_books_to_file(BOOKS_FILE, updated_books)
     return Response({'detail': 'Deleted successfully'}, status=status.HTTP_204_NO_CONTENT)
 
-def borrow_book(request):
-    if request.method == 'POST':
-        book_id = int(request.POST['book_id'])
-        borrow_date = request.POST['borrow_date']
-        return_date = request.POST['return_date']
+# def borrow_book(request):
+#     if request.method == 'POST':
+#         book_id = int(request.POST['book_id'])
+#         borrow_date = request.POST['borrow_date']
+#         return_date = request.POST['return_date']
 
-        books = read_books_from_file()
-        borrowed_books = read_borrows_from_file()
+#         books = read_books_from_file(BOOKS_FILE)
+#         borrowed_books = read_borrows_from_file()
         
-        # Cari buku yang akan dipinjam
-        book = next((b for b in books if b['id'] == book_id), None)
+#         # Cari buku yang akan dipinjam
+#         book = next((b for b in books if b['id'] == book_id), None)
 
-        if book and not book.get('is_borrowed', False):
-            # Update status buku di file buku utama
-            book['is_borrowed'] = True
-            write_books_to_file(books)
+#         if book and not book.get('is_borrowed', False):
+#             # Update status buku di file buku utama
+#             book['is_borrowed'] = True
+#             write_books_to_file(BOOKS_FILE, books)
 
-            # Tambahkan data ke borrowed_books.json
-            borrowed_books.append({
-                "book_id": book_id,
-                "borrower": request.user.username,
-                "borrow_date": borrow_date,
-                "return_date": return_date
-            })
-            write_borrows_to_file(borrowed_books)
+#             # Tambahkan data ke borrowed_books.json
+#             borrowed_books.append({
+#                 "book_id": book_id,
+#                 "borrower": request.user.username,
+#                 "borrow_date": borrow_date,
+#                 "return_date": return_date
+#             })
+#             write_borrows_to_file(borrowed_books)
             
-            return redirect('/')
-        else:
-            return render(request, 'api_books/borrow_book.html', {'error': 'Buku tidak tersedia untuk dipinjam'})
-    else:
-        # Hanya tampilkan buku yang tersedia untuk dipinjam
-        books = [b for b in read_books_from_file() if not b.get('is_borrowed', False)]
-        return render(request, 'api_books/borrow_book.html', {'books': books})
+#             return redirect('/')
+#         else:
+#             return render(request, 'api_books/borrow_book.html', {'error': 'Buku tidak tersedia untuk dipinjam'})
+#     else:
+#         # Hanya tampilkan buku yang tersedia untuk dipinjam
+#         books = [b for b in read_books_from_file(BOOKS_FILE) if not b.get('is_borrowed', False)]
+#         return render(request, 'api_books/borrow_book.html', {'books': books})
 
-def return_book(request):
-    if request.method == 'POST':
-        book_id = int(request.POST['book_id'])
+# def return_book(request):
+#     if request.method == 'POST':
+#         book_id = int(request.POST['book_id'])
 
-        books = read_books_from_file()
-        borrowed_books = read_borrows_from_file()
+#         books = read_books_from_file(BOOKS_FILE)
+#         borrowed_books = read_borrows_from_file()
         
-        # Cari buku yang akan dikembalikan
-        book = next((b for b in books if b['id'] == book_id), None)
-        borrowed_book = next((b for b in borrowed_books if b['book_id'] == book_id and b['borrower'] == request.user.username), None)
+#         # Cari buku yang akan dikembalikan
+#         book = next((b for b in books if b['id'] == book_id), None)
+#         borrowed_book = next((b for b in borrowed_books if b['book_id'] == book_id and b['borrower'] == request.user.username), None)
 
-        if book and book.get('is_borrowed', False) and borrowed_book:
-            # Update status buku
-            book['is_borrowed'] = False
-            write_books_to_file(books)
+#         if book and book.get('is_borrowed', False) and borrowed_book:
+#             # Update status buku
+#             book['is_borrowed'] = False
+#             write_books_to_file(BOOKS_FILE, books)
 
-            # Hapus data dari borrowed_books.json
-            borrowed_books = [b for b in borrowed_books if not (b['book_id'] == book_id and b['borrower'] == request.user.username)]
-            write_borrows_to_file(borrowed_books)
+#             # Hapus data dari borrowed_books.json
+#             borrowed_books = [b for b in borrowed_books if not (b['book_id'] == book_id and b['borrower'] == request.user.username)]
+#             write_borrows_to_file(borrowed_books)
 
-            return redirect('/')
-        else:
-            return render(request, 'api_books/return_book.html', {'error': 'Buku tidak ditemukan atau sudah dikembalikan'})
-    else:
-        # Tampilkan buku yang dipinjam oleh user yang login
-        borrowed_books = read_borrows_from_file()
-        user_borrowed_books = [b for b in borrowed_books if b['borrower'] == request.user.username]
-        return render(request, 'api_books/return_book.html', {'borrowed_books': user_borrowed_books})
+#             return redirect('/')
+#         else:
+#             return render(request, 'api_books/return_book.html', {'error': 'Buku tidak ditemukan atau sudah dikembalikan'})
+#     else:
+#         # Tampilkan buku yang dipinjam oleh user yang login
+#         borrowed_books = read_borrows_from_file()
+#         user_borrowed_books = [b for b in borrowed_books if b['borrower'] == request.user.username]
+#         return render(request, 'api_books/return_book.html', {'borrowed_books': user_borrowed_books})
+
