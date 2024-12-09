@@ -48,7 +48,6 @@ def login_view(request):
 
 @ensure_csrf_cookie
 def logout_view(request):
-    # Logout user by clearing session
     SessionAuth.logout(request)
     messages.info(request, 'Logout Berhasil!')
     return redirect('login')
@@ -58,7 +57,6 @@ def home_view(request):
     user = SessionAuth.get_current_user(request)
     books = read_books()
     
-    # Menghitung buku berdasarkan kategori (TA 2023, TA 2024)
     ta_count = len([book for book in books])
     ta_2023_count = len([book for book in books if book['tahun_lulus'] == 2023])
     ta_2024_count = len([book for book in books if book['tahun_lulus'] == 2024])

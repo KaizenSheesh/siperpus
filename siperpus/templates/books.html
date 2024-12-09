@@ -1,385 +1,568 @@
 {% load static tailwind_tags %}
 <!DOCTYPE html>
 <html lang="en">
+  <head>
+    <title>SIPTA</title>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+    {% tailwind_css %}
+    <link
+      rel="stylesheet"
+      href="https://cdn.datatables.net/2.1.8/css/dataTables.dataTables.css"
+    />
+    <style>
+      @import url("https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&family=Roboto:wght@700&display=swap");
+    </style>
+    <style>
+      * {
+        font-family: "Montserrat", sans-serif;
+        color: black;
+      }
 
-<head>
-  <title>SIPTA</title>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <meta http-equiv="X-UA-Compatible" content="ie=edge" />
-  {% tailwind_css %}
-  <link rel="stylesheet" href="https://cdn.datatables.net/2.1.8/css/dataTables.dataTables.css" />
-  <style>
-    @import url("https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&family=Roboto:wght@700&display=swap");
-  </style>
-  <style>
-    * {
-      font-family: "Montserrat", sans-serif;
-      color: black;
-    }
+      body.overflow-hidden {
+        overflow: hidden;
+      }
 
-    body.overflow-hidden {
-      overflow: hidden;
-    }
+      #sidebar {
+        transition: transform 0.3s ease-in-out;
+      }
 
-    #sidebar {
-      transition: transform 0.3s ease-in-out;
-    }
+      #overlay {
+        transition: opacity 0.3s ease-in-out;
+      }
+    </style>
+    <link
+      rel="stylesheet"
+      href="https://cdn.datatables.net/1.11.5/css/jquery.dataTables.min.css"
+    />
+    <link
+      rel="stylesheet"
+      href="https://cdn.datatables.net/2.1.8/css/dataTables.tailwindcss.css"
+    />
+  </head>
 
-    #overlay {
-      transition: opacity 0.3s ease-in-out;
-    }
-  </style>
-  <link rel="stylesheet" href="https://cdn.datatables.net/1.11.5/css/jquery.dataTables.min.css" />
-  <link rel="stylesheet" href="https://cdn.datatables.net/2.1.8/css/dataTables.tailwindcss.css" />
-</head>
+  <body class="bg-gray-50 font-montserrat">
+    <div class="relative flex lg:overflow-x-hidden">
+      <aside
+        id="sidebar"
+        class="w-64 bg-white text-white h-screen fixed z-50 transform -translate-x-full transition-transform duration-300"
+      >
+        <div class="p-5">
+          <h1 class="text-2xl font-bold px-5">SIPTA</h1>
+          <ul class="mt-5 space-y-2">
+            <li>
+              <a
+                href="{% url 'home' %}"
+                class="block hover:bg-gray-200 hover:text-black font-medium rounded-xl py-3 px-5 {% if request.path == '/auth/' %}bg-black text-white{% else %}text-gray-600{% endif %}"
+              >
+                Dashboard
+              </a>
+            </li>
+            <li>
+              <a
+                href="{% url 'books' %}"
+                class="block hover:bg-gray-200 hover:text-black font-medium rounded-xl py-3 px-5 {% if request.path == '/auth/books/' %}bg-black text-white{% else %}text-gray-600{% endif %}"
+              >
+                Daftar Buku
+              </a>
+            </li>
+            <li>
+              <a
+                href="{% url 'peminjaman' %}"
+                class="block hover:bg-gray-200 hover:text-black font-medium rounded-xl py-3 px-5 {% if request.path == '/auth/peminjaman/' %}bg-black text-white{% else %}text-gray-600{% endif %}"
+              >
+                Peminjaman Buku
+              </a>
+            </li>
+            <li>
+              <a
+                href="{% url 'logout' %}"
+                class="block hover:bg-gray-200 font-medium rounded-xl py-3 px-5 {% if request.path == '/auth/logout/' %}bg-black text-white{% else %}text-gray-600{% endif %}"
+              >
+                Logout
+              </a>
+            </li>
+          </ul>
+        </div>
+      </aside>
 
-<body class="bg-gray-50 font-montserrat">
-  <div class="relative flex lg:overflow-x-hidden">
-    <aside id="sidebar"
-      class="w-64 bg-white text-white h-screen fixed z-50 transform -translate-x-full lg:translate-x-0 transition-transform duration-300">
-      <div class="p-5">
-        <h1 class="text-2xl font-bold px-5">SIPTA</h1>
-        <ul class="mt-5 space-y-2">
-          <li>
-            <a href="{% url 'home' %}" class="block hover:bg-gray-200 hover:text-black font-medium rounded-xl py-3 px-5 
-               {% if request.path == '/auth/' %}bg-black text-white{% else %}text-gray-600{% endif %}">
-              Dashboard
-            </a>
-          </li>
-          <li>
-            <a href="{% url 'books' %}" class="block hover:bg-gray-200 hover:text-black font-medium rounded-xl py-3 px-5 
-               {% if request.path == '/auth/books/' %}bg-black text-white{% else %}text-gray-600{% endif %}">
-              Daftar Buku
-            </a>
-          </li>
-          <li>
-            <a href="{% url 'peminjaman' %}" class="block hover:bg-gray-200 hover:text-black font-medium rounded-xl py-3 px-5 
-               {% if request.path == '/auth/peminjaman/' %}bg-black text-white{% else %}text-gray-600{% endif %}">
-              Peminjaman Buku
-            </a>
-          </li>
-          <li>
-            <a href="{% url 'logout' %}" class="block hover:bg-gray-200 font-medium rounded-xl py-3 px-5 
-               {% if request.path == '/auth/logout/' %}bg-black text-white{% else %}text-gray-600{% endif %}">
-              Logout
-            </a>
-          </li>
-        </ul>
-      </div>
-    </aside>
+      <div
+        id="overlay"
+        class="fixed inset-0 bg-black bg-opacity-50 hidden z-40"
+        onclick="closeSidebar()"
+      ></div>
 
-    <div id="overlay" class="fixed inset-0 bg-black bg-opacity-50 hidden z-40" onclick="closeSidebar()"></div>
-
-    <main class="flex-1 lg:ml-64 overflow-x-auto">
-      <nav>
-        <div class="flex p-5">
-          <div class="w-1/2 flex justify-start items-center">
-            <button id="toggleSidebar" class="lg:hidden text-white bg-black p-3 rounded-full" onclick="openSidebar()">
-              <svg class="swap-off" xmlns="http://www.w3.org/2000/svg" width="25" height="25" viewBox="0 0 24 24"
-                fill="none" stroke="white" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"
-                class="lucide lucide-menu">
-                <line x1="4" x2="20" y1="12" y2="12" />
-                <line x1="4" x2="20" y1="6" y2="6" />
-                <line x1="4" x2="20" y1="18" y2="18" />
-              </svg>
-            </button>
+      <main class="flex-1 overflow-x-auto">
+        <nav>
+          <div class="flex p-5">
+            <div class="w-1/2 flex justify-start items-center">
+              <button
+                id="toggleSidebar"
+                class="text-white bg-black p-3 rounded-full"
+                onclick="openSidebar()"
+              >
+                <svg
+                  class="swap-off"
+                  xmlns="http://www.w3.org/2000/svg"
+                  width="25"
+                  height="25"
+                  viewBox="0 0 24 24"
+                  fill="none"
+                  stroke="white"
+                  stroke-width="2"
+                  stroke-linecap="round"
+                  stroke-linejoin="round"
+                  class="lucide lucide-menu"
+                >
+                  <line x1="4" x2="20" y1="12" y2="12" />
+                  <line x1="4" x2="20" y1="6" y2="6" />
+                  <line x1="4" x2="20" y1="18" y2="18" />
+                </svg>
+              </button>
+            </div>
+            <div class="w-1/2 lg:w-full flex justify-end items-center">
+              <h3 class="font-semibold mr-3 hidden md:block">
+                Welcome back! {{ user.username }} 👋
+              </h3>
+              <details class="dropdown dropdown-end">
+                <summary class="avatar placeholder cursor-pointer">
+                  <div class="bg-black w-12 rounded-full">
+                    <span class="text-3xl text-white"
+                      >{{ user.username|slice:":1" }}</span
+                    >
+                  </div>
+                </summary>
+                <ul
+                  class="menu dropdown-content bg-black rounded-box z-[1] w-52 p-2 shadow hover:bg-gray-800"
+                >
+                  <form action="{% url 'logout' %}">
+                    <li>
+                      <button class="text-white" type="submit">Logout</button>
+                    </li>
+                  </form>
+                </ul>
+              </details>
+            </div>
           </div>
-          <div class="w-1/2 lg:w-full flex justify-end items-center">
-            <h3 class="font-semibold mr-3 hidden md:block">
+        </nav>
+        <div class="px-5">
+          <dialog id="my_modal_add" class="modal">
+            <div class="modal-box bg-white">
+              <form method="dialog">
+                <button
+                  class="btn btn-sm btn-circle btn-ghost absolute right-2 top-2"
+                >
+                  ✕
+                </button>
+              </form>
+              <h3 class="text-lg font-bold">Tambah Buku</h3>
+              <form id="addBookForm">
+                {% csrf_token %}
+                <div class="form-control">
+                  <label class="label">
+                    <span class="label-text text-black">Title</span>
+                  </label>
+                  <input
+                    type="text"
+                    name="title"
+                    id="bookTitleAdd"
+                    class="input input-bordered bg-gray-200 border border-black"
+                    required
+                  />
+                </div>
+                <div class="form-control">
+                  <label class="label">
+                    <span class="label-text text-black">Author</span>
+                  </label>
+                  <input
+                    type="text"
+                    name="author"
+                    id="bookAuthorAdd"
+                    class="input input-bordered bg-gray-200 border border-black"
+                    required
+                  />
+                </div>
+                <div class="form-control">
+                  <label class="label">
+                    <span class="label-text text-black">Category</span>
+                  </label>
+                  <input
+                    type="text"
+                    name="category"
+                    id="bookCategoryAdd"
+                    class="input input-bordered bg-gray-200 border border-black"
+                    required
+                  />
+                </div>
+                <div class="form-control">
+                  <label class="label">
+                    <span class="label-text text-black">Lokasi Rak</span>
+                  </label>
+                  <input
+                    type="text"
+                    name="lok_rak"
+                    id="bookLokRakAdd"
+                    class="input input-bordered bg-gray-200 border border-black"
+                    required
+                  />
+                </div>
+                <div class="modal-action">
+                  <button
+                    class="btn bg-white text-black bg-gray-400 border border-0 hover:bg-gray-300"
+                    onclick="closeModal()"
+                  >
+                    Cancel
+                  </button>
+                  <button
+                    type="submit"
+                    class="btn bg-black text-white border border-0"
+                  >
+                    Simpan
+                  </button>
+                </div>
+              </form>
+            </div>
+          </dialog>
+
+          <dialog id="my_modal_add_staff" class="modal">
+            <div class="modal-box bg-white">
+              <form method="dialog">
+                <button
+                  class="btn btn-sm btn-circle btn-ghost absolute right-2 top-2"
+                >
+                  ✕
+                </button>
+              </form>
+              <h3 class="text-lg font-bold">Tambah Akun Staff</h3>
+              <form id="addStaffForm">
+                {% csrf_token %}
+                <div class="form-control">
+                  <label class="label">
+                    <span class="label-text text-black">Username</span>
+                  </label>
+                  <input
+                    type="text"
+                    name="username"
+                    class="input input-bordered bg-gray-200 border border-black"
+                    required
+                  />
+                </div>
+                <div class="form-control">
+                  <label class="label">
+                    <span class="label-text text-black">Password</span>
+                  </label>
+                  <input
+                    type="password"
+                    name="password"
+                    class="input input-bordered bg-gray-200 border border-black"
+                    required
+                  />
+                </div>
+                <div class="modal-action">
+                  <button type="button" class="btn" onclick="closeStaffModal()">
+                    Cancel
+                  </button>
+                  <button type="submit" class="btn btn-primary">Simpan</button>
+                </div>
+              </form>
+            </div>
+          </dialog>
+
+          <dialog id="my_modal_edit" class="modal">
+            <div class="modal-box bg-white">
+              <form method="dialog">
+                <button
+                  class="btn btn-sm btn-circle btn-ghost absolute right-2 top-2"
+                >
+                  ✕
+                </button>
+              </form>
+              <h3 class="text-lg font-bold">Edit Buku</h3>
+              <form id="editBookForm">
+                <div class="form-control">
+                  <label class="label">
+                    <span class="label-text text-black">Title</span>
+                  </label>
+                  <input
+                    type="text"
+                    name="title"
+                    id="bookTitle"
+                    placeholder="Title"
+                    class="input input-bordered bg-gray-200 border border-black"
+                    required
+                  />
+                </div>
+                <div class="form-control">
+                  <label class="label">
+                    <span class="label-text text-black">Author</span>
+                  </label>
+                  <input
+                    type="text"
+                    name="author"
+                    id="bookAuthor"
+                    placeholder="Author"
+                    class="input input-bordered bg-gray-200 border border-black"
+                    required
+                  />
+                </div>
+                <div class="form-control">
+                  <label class="label">
+                    <span class="label-text text-black">Category</span>
+                  </label>
+                  <input
+                    type="text"
+                    name="category"
+                    id="bookCategory"
+                    placeholder="Category"
+                    class="input input-bordered bg-gray-200 border border-black"
+                    required
+                  />
+                </div>
+                <div class="form-control">
+                  <label class="label">
+                    <span class="label-text text-black">Lokasi Rak</span>
+                  </label>
+                  <input
+                    type="text"
+                    name="lok_rak"
+                    id="bookLokRak"
+                    placeholder="Location"
+                    class="input input-bordered bg-gray-200 border border-black"
+                    required
+                  />
+                </div>
+                <input type="hidden" id="bookId" />
+
+                <div class="modal-action">
+                  <button
+                    class="btn bg-white text-black bg-gray-400 border border-0 hover:bg-gray-300"
+                    type="button"
+                    onclick="closeModal()"
+                  >
+                    Cancel
+                  </button>
+                  <button
+                    class="btn bg-black text-white border border-0"
+                    type="button"
+                    onclick="submitEdit()"
+                  >
+                    Save Changes
+                  </button>
+                </div>
+              </form>
+            </div>
+          </dialog>
+          <section class="min-h-screen pb-5">
+            <h3 class="font-semibold mr-3 md:hidden mb-5">
               Welcome back! {{ user.username }} 👋
             </h3>
-            <details class="dropdown dropdown-end">
-              <summary class="avatar placeholder cursor-pointer">
-                <div class="bg-black w-12 rounded-full">
-                  <span class="text-3xl text-white">{{ user.username|slice:":1" }}</span>
-                </div>
-              </summary>
-              <ul class="menu dropdown-content bg-black rounded-box z-[1] w-52 p-2 shadow hover:bg-gray-800">
-                <form action="{% url 'logout' %}">
-                  <li>
-                    <button class="text-white" type="submit">Logout</button>
-                  </li>
-                </form>
-              </ul>
-            </details>
-          </div>
+            <div class="mb-2 flex justify-start space-x-2">
+              {% if user.role == 'staff' or user.role == 'admin' %}
+              <button
+                class="btn btn-default text-white mb-3"
+                onclick="my_modal_add.showModal()"
+              >
+                Tambah Buku
+              </button>
+              {% endif %} {% if user.role == 'admin' %}
+              <button
+                class="btn btn-default text-white"
+                onclick="my_modal_add_staff.showModal()"
+              >
+                Tambah Akun Staff
+              </button>
+              {% endif %}
+            </div>
+            <p class="font-medium mb-5">
+              Anda bisa mencari buku dengan keyword <br />
+              Nomor Urut Arsip, Nama Mahasiswa, NIM, Judul Tugas Akhir, Dosen
+              Pembimbing, dan Tahun Lulus
+            </p>
+            <div class="overflow-x-auto lg:overflow-x-visible">
+              <table id="example" class="display w-full">
+                <thead>
+                  <tr>
+                    <th>Nomor Urut Arsip</th>
+                    <th>Nama Mahasiswa</th>
+                    <th>NIM</th>
+                    <th>Judul</th>
+                    <th>Dosen Pembimbing</th>
+                    <th>Tahun Lulus</th>
+                    <th>Status</th>
+                    {% if user.role == 'staff' or user.role == 'admin' %}
+                    <th>Aksi</th>
+                    {% endif %}
+                  </tr>
+                </thead>
+                <tbody></tbody>
+              </table>
+            </div>
+          </section>
         </div>
-      </nav>
-      <div class="px-5">
-        <dialog id="my_modal_add" class="modal">
-          <div class="modal-box bg-white">
-            <form method="dialog">
-              <button class="btn btn-sm btn-circle btn-ghost absolute right-2 top-2">
-                ✕
-              </button>
-            </form>
-            <h3 class="text-lg font-bold">Tambah Buku</h3>
-            <form id="addBookForm">
-              {% csrf_token %}
-              <div class="form-control">
-                <label class="label">
-                  <span class="label-text text-black">Title</span>
-                </label>
-                <input type="text" name="title" id="bookTitleAdd"
-                  class="input input-bordered bg-gray-200 border border-black" required />
-              </div>
-              <div class="form-control">
-                <label class="label">
-                  <span class="label-text text-black">Author</span>
-                </label>
-                <input type="text" name="author" id="bookAuthorAdd"
-                  class="input input-bordered bg-gray-200 border border-black" required />
-              </div>
-              <div class="form-control">
-                <label class="label">
-                  <span class="label-text text-black">Category</span>
-                </label>
-                <input type="text" name="category" id="bookCategoryAdd"
-                  class="input input-bordered bg-gray-200 border border-black" required />
-              </div>
-              <div class="form-control">
-                <label class="label">
-                  <span class="label-text text-black">Lokasi Rak</span>
-                </label>
-                <input type="text" name="lok_rak" id="bookLokRakAdd"
-                  class="input input-bordered bg-gray-200 border border-black" required />
-              </div>
-              <div class="modal-action">
-                <button class="btn bg-white text-black bg-gray-400 border border-0 hover:bg-gray-300"
-                  onclick="closeModal()">
-                  Cancel
-                </button>
-                <button type="submit" class="btn bg-black text-white border border-0">
-                  Simpan
-                </button>
-              </div>
-            </form>
-          </div>
-        </dialog>
+      </main>
+    </div>
 
-        <dialog id="my_modal_add_staff" class="modal">
-          <div class="modal-box bg-white">
-            <form method="dialog">
-              <button class="btn btn-sm btn-circle btn-ghost absolute right-2 top-2">
-                ✕
-              </button>
-            </form>
-            <h3 class="text-lg font-bold">Tambah Akun Staff</h3>
-            <form id="addStaffForm">
-              {% csrf_token %}
-              <div class="form-control">
-                <label class="label">
-                  <span class="label-text text-black">Username</span>
-                </label>
-                <input type="text" name="username" class="input input-bordered bg-gray-200 border border-black"
-                  required />
-              </div>
-              <div class="form-control">
-                <label class="label">
-                  <span class="label-text text-black">Password</span>
-                </label>
-                <input type="password" name="password" class="input input-bordered bg-gray-200 border border-black"
-                  required />
-              </div>
-              <div class="modal-action">
-                <button type="button" class="btn" onclick="closeStaffModal()">
-                  Cancel
-                </button>
-                <button type="submit" class="btn btn-primary">Simpan</button>
-              </div>
-            </form>
-          </div>
-        </dialog>
-
-        <dialog id="my_modal_edit" class="modal">
-          <div class="modal-box bg-white">
-            <form method="dialog">
-              <button class="btn btn-sm btn-circle btn-ghost absolute right-2 top-2">
-                ✕
-              </button>
-            </form>
-            <h3 class="text-lg font-bold">Edit Buku</h3>
-            <form id="editBookForm">
-              <div class="form-control">
-                <label class="label">
-                  <span class="label-text text-black">Title</span>
-                </label>
-                <input type="text" name="title" id="bookTitle" placeholder="Title"
-                  class="input input-bordered bg-gray-200 border border-black" required />
-              </div>
-              <div class="form-control">
-                <label class="label">
-                  <span class="label-text text-black">Author</span>
-                </label>
-                <input type="text" name="author" id="bookAuthor" placeholder="Author"
-                  class="input input-bordered bg-gray-200 border border-black" required />
-              </div>
-              <div class="form-control">
-                <label class="label">
-                  <span class="label-text text-black">Category</span>
-                </label>
-                <input type="text" name="category" id="bookCategory" placeholder="Category"
-                  class="input input-bordered bg-gray-200 border border-black" required />
-              </div>
-              <div class="form-control">
-                <label class="label">
-                  <span class="label-text text-black">Lokasi Rak</span>
-                </label>
-                <input type="text" name="lok_rak" id="bookLokRak" placeholder="Location"
-                  class="input input-bordered bg-gray-200 border border-black" required />
-              </div>
-              <input type="hidden" id="bookId" />
-
-              <div class="modal-action">
-                <button class="btn bg-white text-black bg-gray-400 border border-0 hover:bg-gray-300" type="button"
-                  onclick="closeModal()">
-                  Cancel
-                </button>
-                <button class="btn bg-black text-white border border-0" type="button" onclick="submitEdit()">
-                  Save Changes
-                </button>
-              </div>
-            </form>
-          </div>
-        </dialog>
-        <section class="min-h-screen pb-5">
-          <h3 class="font-semibold mr-3 md:hidden mb-5">
-            Welcome back! {{ user.username }} 👋
-          </h3>
-          <div class="mb-2 flex justify-start space-x-2">
-            {% if user.role == 'staff' or user.role == 'admin' %}
-            <button class="btn btn-default text-white mb-3" onclick="my_modal_add.showModal()">
-              Tambah Buku
-            </button>
-            {% endif %} {% if user.role == 'admin' %}
-            <button class="btn btn-default text-white" onclick="my_modal_add_staff.showModal()">
-              Tambah Akun Staff
-            </button>
-            {% endif %}
-          </div>
-          <p class="font-medium mb-5">Anda bisa mencari buku dengan keyword <br> Nomor Urut Arsip, Nama Mahasiswa, NIM,
-            Judul Tugas Akhir, Dosen Pembimbing, dan Tahun Lulus</p>
-          <div class="overflow-x-auto lg:overflow-x-visible">
-            <table id="example" class="display w-full">
-              <thead>
-                <tr>
-                  <th>Nomor Urut Arsip</th>
-                  <th>Nama Mahasiswa</th>
-                  <th>NIM</th>
-                  <th>Judul</th>
-                  <th>Dosen Pembimbing</th>
-                  <th>Tahun Lulus</th>
-                  <th>Status</th>
-                  {% if user.role == 'staff' or user.role == 'admin' %}
-                  <th>Aksi</th>
-                  {% endif %}
-                </tr>
-              </thead>
-              <tbody></tbody>
-            </table>
-          </div>
-        </section>
-      </div>
-    </main>
-  </div>
-
-  <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
-  <script src="https://code.jquery.com/jquery-3.5.1.js"></script>
-  <script src="https://cdn.datatables.net/1.11.5/js/jquery.dataTables.min.js"></script>
-  <script src="https://cdn.datatables.net/2.1.8/js/dataTables.tailwindcss.min.js"></script>
-  <script>
-    const Toast = Swal.mixin({
-      toast: true,
-      position: "top-end",
-      showConfirmButton: false,
-      timer: 3000,
-      timerProgressBar: true,
-      didOpen: (toast) => {
-        toast.onmouseenter = Swal.stopTimer;
-        toast.onmouseleave = Swal.resumeTimer;
-      },
-    });
-
-    document.addEventListener('DOMContentLoaded', function () {
-      {% if messages %}
-      {% for message in messages %}
-      Toast.fire({
-        icon: '{{ message.tags }}',
-        title: '{{ message }}'
+    <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
+    <script src="https://code.jquery.com/jquery-3.5.1.js"></script>
+    <script src="https://cdn.datatables.net/1.11.5/js/jquery.dataTables.min.js"></script>
+    <script src="https://cdn.datatables.net/2.1.8/js/dataTables.tailwindcss.min.js"></script>
+    <script>
+      const Toast = Swal.mixin({
+        toast: true,
+        position: "top-end",
+        showConfirmButton: false,
+        timer: 3000,
+        timerProgressBar: true,
+        didOpen: (toast) => {
+          toast.onmouseenter = Swal.stopTimer;
+          toast.onmouseleave = Swal.resumeTimer;
+        },
       });
-      {% endfor %}
-      {% endif %}
-    });
 
-    document.addEventListener("DOMContentLoaded", function () {
-      const addStaffForm = document.getElementById("addStaffForm");
+      document.addEventListener('DOMContentLoaded', function () {
+        {% if messages %}
+        {% for message in messages %}
+        Toast.fire({
+          icon: '{{ message.tags }}',
+          title: '{{ message }}'
+        });
+        {% endfor %}
+        {% endif %}
+      });
 
-      addStaffForm.addEventListener("submit", function (event) {
-        event.preventDefault();
+      document.addEventListener("DOMContentLoaded", function () {
+        const addStaffForm = document.getElementById("addStaffForm");
 
-        const username = addStaffForm.querySelector(
-          'input[name="username"]'
-        ).value;
-        const password = addStaffForm.querySelector(
-          'input[name="password"]'
-        ).value;
+        addStaffForm.addEventListener("submit", function (event) {
+          event.preventDefault();
 
-        fetch("/auth/admin/add_staff/", {
-          method: "POST",
-          headers: {
-            "Content-Type": "application/json",
-            "X-CSRFToken": getCookie("csrftoken"),
-          },
-          body: JSON.stringify({
-            username: username,
-            password: password,
-          }),
-        })
-          .then((response) => response.json())
-          .then((data) => {
-            if (data.success) {
-              Toast.fire({
-                icon: "success",
-                title: "Akun Petugas Berhasil Ditambahkan!",
-              });
-              closeStaffModal();
-            } else {
+          const username = addStaffForm.querySelector(
+            'input[name="username"]'
+          ).value;
+          const password = addStaffForm.querySelector(
+            'input[name="password"]'
+          ).value;
+
+          fetch("/auth/admin/add_staff/", {
+            method: "POST",
+            headers: {
+              "Content-Type": "application/json",
+              "X-CSRFToken": getCookie("csrftoken"),
+            },
+            body: JSON.stringify({
+              username: username,
+              password: password,
+            }),
+          })
+            .then((response) => response.json())
+            .then((data) => {
+              if (data.success) {
+                Toast.fire({
+                  icon: "success",
+                  title: "Akun Petugas Berhasil Ditambahkan!",
+                });
+                closeStaffModal();
+              } else {
+                Toast.fire({
+                  icon: "error",
+                  title: data.message,
+                });
+              }
+            })
+            .catch((error) => {
+              console.error("Error:", error);
               Toast.fire({
                 icon: "error",
-                title: data.message,
+                title: "Terjadi Suatu Kesalahan!, Mohon Coba Lagi.",
               });
-            }
-          })
-          .catch((error) => {
-            console.error("Error:", error);
-            Toast.fire({
-              icon: "error",
-              title: "Terjadi Suatu Kesalahan!, Mohon Coba Lagi.",
             });
-          });
+        });
       });
-    });
 
-    document.addEventListener("DOMContentLoaded", function () {
-      const addBookForm = document.getElementById("addBookForm");
-      addBookForm.addEventListener("submit", function (event) {
-        event.preventDefault();
+      document.addEventListener("DOMContentLoaded", function () {
+        const addBookForm = document.getElementById("addBookForm");
+        addBookForm.addEventListener("submit", function (event) {
+          event.preventDefault();
 
-        const bookTitle = addBookForm.querySelector(
-          'input[name="title"]'
-        ).value;
-        const bookAuthor = addBookForm.querySelector(
-          'input[name="author"]'
-        ).value;
-        const bookCategory = addBookForm.querySelector(
-          'input[name="category"]'
-        ).value;
-        const bookLokRak = addBookForm.querySelector(
-          'input[name="lok_rak"]'
-        ).value;
+          const bookTitle = addBookForm.querySelector(
+            'input[name="title"]'
+          ).value;
+          const bookAuthor = addBookForm.querySelector(
+            'input[name="author"]'
+          ).value;
+          const bookCategory = addBookForm.querySelector(
+            'input[name="category"]'
+          ).value;
+          const bookLokRak = addBookForm.querySelector(
+            'input[name="lok_rak"]'
+          ).value;
 
-        fetch('{% url "add_book" %}', {
+          fetch('{% url "add_book" %}', {
+            method: "POST",
+            headers: {
+              "Content-Type": "application/json",
+              "X-CSRFToken": getCookie("csrftoken"),
+            },
+            body: JSON.stringify({
+              title: bookTitle,
+              author: bookAuthor,
+              category: bookCategory,
+              lok_rak: bookLokRak,
+            }),
+          })
+            .then((response) => response.json())
+            .then((data) => {
+              if (data.success) {
+                closeModalAdd();
+                window.location.reload();
+                Toast.fire({
+                  icon: "success",
+                  title: "Berhasil Menambahkan Buku Tugas Akhir Baru!",
+                });
+              } else {
+                Toast.fire({
+                  icon: "error",
+                  title: "Terjadi Kesalahan Saat Menambahkan Buku!",
+                });
+              }
+            })
+            .catch((error) => {
+              Toast.fire({
+                icon: "error",
+                title: "Terjadi Suatu Kesalahan!, Mohon Coba Lagi.",
+              });
+            });
+        });
+      });
+
+      function openEditModal(bookId) {
+        $.ajax({
+          url: `/api/books/${bookId}/`,
+          type: "GET",
+          success: function (data) {
+            $("#bookId").val(data.id);
+            $("#bookTitle").val(data.title);
+            $("#bookAuthor").val(data.author);
+            $("#bookCategory").val(data.category);
+            $("#bookLokRak").val(data.lok_rak);
+
+            document.getElementById("my_modal_edit").showModal();
+          },
+          error: function (xhr, status, error) {
+            alert("Gagal memuat data buku.");
+          },
+        });
+      }
+
+      function submitEdit() {
+        const bookId = document.getElementById("bookId").value;
+        const bookTitle = document.getElementById("bookTitle").value;
+        const bookAuthor = document.getElementById("bookAuthor").value;
+        const bookCategory = document.getElementById("bookCategory").value;
+        const bookLokRak = document.getElementById("bookLokRak").value;
+
+        fetch(`/api/books/edit/${bookId}/`, {
           method: "POST",
           headers: {
             "Content-Type": "application/json",
@@ -395,193 +578,143 @@
           .then((response) => response.json())
           .then((data) => {
             if (data.success) {
-              closeModalAdd();
+              closeModal();
               window.location.reload();
               Toast.fire({
                 icon: "success",
-                title: "Berhasil Menambahkan Buku Tugas Akhir Baru!",
+                title: "Berhasil Mengedit Data Buku!",
               });
             } else {
               Toast.fire({
                 icon: "error",
-                title: "Terjadi Kesalahan Saat Menambahkan Buku!",
+                title: "Error saat mengedit buku",
               });
             }
           })
           .catch((error) => {
-            Toast.fire({
-              icon: "error",
-              title: "Terjadi Suatu Kesalahan!, Mohon Coba Lagi.",
-            });
+            console.error("Error:", error);
           });
-      });
-    });
-
-    function openEditModal(bookId) {
-      $.ajax({
-        url: `/api/books/${bookId}/`,
-        type: "GET",
-        success: function (data) {
-          $("#bookId").val(data.id);
-          $("#bookTitle").val(data.title);
-          $("#bookAuthor").val(data.author);
-          $("#bookCategory").val(data.category);
-          $("#bookLokRak").val(data.lok_rak);
-
-          document.getElementById("my_modal_edit").showModal();
-        },
-        error: function (xhr, status, error) {
-          alert("Gagal memuat data buku.");
-        },
-      });
-    }
-
-    function submitEdit() {
-      const bookId = document.getElementById("bookId").value;
-      const bookTitle = document.getElementById("bookTitle").value;
-      const bookAuthor = document.getElementById("bookAuthor").value;
-      const bookCategory = document.getElementById("bookCategory").value;
-      const bookLokRak = document.getElementById("bookLokRak").value;
-
-      fetch(`/api/books/edit/${bookId}/`, {
-        method: "POST",
-        headers: {
-          "Content-Type": "application/json",
-          "X-CSRFToken": getCookie("csrftoken"),
-        },
-        body: JSON.stringify({
-          title: bookTitle,
-          author: bookAuthor,
-          category: bookCategory,
-          lok_rak: bookLokRak,
-        }),
-      })
-        .then((response) => response.json())
-        .then((data) => {
-          if (data.success) {
-            closeModal();
-            window.location.reload();
-            Toast.fire({
-              icon: "success",
-              title: "Berhasil Mengedit Data Buku!",
-            });
-          } else {
-            Toast.fire({
-              icon: "error",
-              title: "Error saat mengedit buku",
-            });
-          }
-        })
-        .catch((error) => {
-          console.error("Error:", error);
-        });
-    }
-
-    function closeModal() {
-      const modalCheckbox = document.getElementById("my_modal_edit");
-      if (modalCheckbox) {
-        modalCheckbox.checked = false;
       }
-    }
 
-    function closeModalAdd() {
-      const modalCheckbox = document.getElementById("my_modal_add");
-      if (modalCheckbox) {
-        modalCheckbox.checked = false;
-      }
-    }
-
-    function closeStaffModal() {
-      const modal = document.getElementById('my_modal_add_staff');
-      if (modal) {
-        modal.close();
-      }
-    }
-
-    function getCookie(name) {
-      let cookieValue = null;
-      if (document.cookie && document.cookie !== "") {
-        const cookies = document.cookie.split(";");
-        for (let i = 0; i < cookies.length; i++) {
-          const cookie = cookies[i].trim();
-          if (cookie.substring(0, name.length + 1) === name + "=") {
-            cookieValue = decodeURIComponent(
-              cookie.substring(name.length + 1)
-            );
-            break;
-          }
+      function closeModal() {
+        const modalCheckbox = document.getElementById("my_modal_edit");
+        if (modalCheckbox) {
+          modalCheckbox.checked = false;
         }
       }
-      return cookieValue;
-    }
-  </script>
-  <script>
-    function openSidebar() {
-      document
-        .getElementById("sidebar")
-        .classList.remove("-translate-x-full");
-      document.getElementById("overlay").classList.remove("hidden");
-      document.getElementById("overlay").classList.add("block");
-      document.body.classList.add("overflow-hidden");
-    }
 
-    function closeSidebar() {
-      document.getElementById("sidebar").classList.add("-translate-x-full");
-      document.getElementById("overlay").classList.add("hidden");
-      document.getElementById("overlay").classList.remove("block");
-      document.body.classList.remove("overflow-hidden");
-    }
-  </script>
-  <script>
-    $(document).ready(function () {
-      const userRole = "{{ user.role }}";
+      function closeModalAdd() {
+        const modalCheckbox = document.getElementById("my_modal_add");
+        if (modalCheckbox) {
+          modalCheckbox.checked = false;
+        }
+      }
 
-      const columns = [
-        { data: "id" },
-        { data: "nama_mhs" },
-        { data: "nim" },
-        { data: "judul" },
-        { data: "dospem" },
-        { data: "tahun_lulus" },
-        {
-          data: "status",
-          render: function (data, type, row) {
-            if (data === 'Tersedia') {
-              return `<div class="badge badge-success h-auto">Tersedia</div>`;
-            } else if (data === 'Dipinjam') {
-              return `<div class="badge badge-info h-auto">Dipinjam</div>`;
-            } else if (data === 'Pending') {
-              return `<div class="badge badge-warning w-auto">Pending</div>`;
-            } else {
-              return `<div class="badge badge-error">Error</div>`;
+      function closeStaffModal() {
+        const modal = document.getElementById('my_modal_add_staff');
+        if (modal) {
+          modal.close();
+        }
+      }
+
+      function getCookie(name) {
+        let cookieValue = null;
+        if (document.cookie && document.cookie !== "") {
+          const cookies = document.cookie.split(";");
+          for (let i = 0; i < cookies.length; i++) {
+            const cookie = cookies[i].trim();
+            if (cookie.substring(0, name.length + 1) === name + "=") {
+              cookieValue = decodeURIComponent(
+                cookie.substring(name.length + 1)
+              );
+              break;
             }
           }
-        },
-      ];
+        }
+        return cookieValue;
+      }
+    </script>
+    <script>
+      function openSidebar() {
+        document
+          .getElementById("sidebar")
+          .classList.remove("-translate-x-full");
+        document.getElementById("overlay").classList.remove("hidden");
+        document.getElementById("overlay").classList.add("block");
+        document.body.classList.add("overflow-hidden");
+      }
 
-      if (userRole === "admin" || userRole === "staff") {
-        columns.push({
-          data: null,
-          render: function (data, type, row) {
-            return `
+      function closeSidebar() {
+        document.getElementById("sidebar").classList.add("-translate-x-full");
+        document.getElementById("overlay").classList.add("hidden");
+        document.getElementById("overlay").classList.remove("block");
+        document.body.classList.remove("overflow-hidden");
+      }
+    </script>
+    <script>
+      $(document).ready(function () {
+        const userRole = "{{ user.role }}";
+
+        const columns = [
+          { data: "id" },
+          { data: "nama_mhs" },
+          { data: "nim" },
+          { data: "judul" },
+          { data: "dospem" },
+          { data: "tahun_lulus" },
+          {
+            data: "status",
+            render: function (data, type, row) {
+              if (data === "Tersedia") {
+                return `<div class="badge badge-success h-auto">Tersedia</div>`;
+              } else if (data === "Dipinjam") {
+                return `<div class="badge badge-info h-auto">Dipinjam</div>`;
+              } else if (data === "Pending") {
+                return `<div class="badge badge-warning w-auto">Pending</div>`;
+              } else {
+                return `<div class="badge badge-error">Error</div>`;
+              }
+            },
+          },
+        ];
+
+        if (userRole === "admin" || userRole === "staff") {
+          columns.push({
+            data: null,
+            render: function (data, type, row) {
+              return `
                 <div class="flex gap-3">
-                    <div class="tooltip" data-tip="${row.status !== 'Tersedia' ? (row.status === 'Dipinjam' ? 'Sedang Dipinjam' : 'Dalam Persetujuan') : 'Pinjam Buku'}">
+                    <div class="tooltip" data-tip="${
+                      row.status !== "Tersedia"
+                        ? row.status === "Dipinjam"
+                          ? "Sedang Dipinjam"
+                          : "Dalam Persetujuan"
+                        : "Pinjam Buku"
+                    }">
                       <button 
                           onclick="redirectToPeminjaman(${row.id})"  
-                          ${row.status !== 'Tersedia' ? 'disabled' : ''}>
-                          ${row.status === 'Tersedia' ?
-                '<svg xmlns="http://www.w3.org/2000/svg" width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-book-marked"><path d="M10 2v8l3-3 3 3V2"/><path d="M4 19.5v-15A2.5 2.5 0 0 1 6.5 2H19a1 1 0 0 1 1 1v18a1 1 0 0 1-1 1H6.5a1 1 0 0 1 0-5H20"/></svg>' :
-                ''}
-                            ${row.status === 'Dipinjam' ?
-                '<svg xmlns="http://www.w3.org/2000/svg" width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-book-marked"><path d="M10 2v8l3-3 3 3V2"/><path d="M4 19.5v-15A2.5 2.5 0 0 1 6.5 2H19a1 1 0 0 1 1 1v18a1 1 0 0 1-1 1H6.5a1 1 0 0 1 0-5H20"/></svg>' :
-                ''}
-                            ${row.status === 'Pending' ?
-                '<svg xmlns="http://www.w3.org/2000/svg" width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-book-marked"><path d="M10 2v8l3-3 3 3V2"/><path d="M4 19.5v-15A2.5 2.5 0 0 1 6.5 2H19a1 1 0 0 1 1 1v18a1 1 0 0 1-1 1H6.5a1 1 0 0 1 0-5H20"/></svg>' :
-                ''}
+                          ${row.status !== "Tersedia" ? "disabled" : ""}>
+                          ${
+                            row.status === "Tersedia"
+                              ? '<svg xmlns="http://www.w3.org/2000/svg" width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-book-marked"><path d="M10 2v8l3-3 3 3V2"/><path d="M4 19.5v-15A2.5 2.5 0 0 1 6.5 2H19a1 1 0 0 1 1 1v18a1 1 0 0 1-1 1H6.5a1 1 0 0 1 0-5H20"/></svg>'
+                              : ""
+                          }
+                            ${
+                              row.status === "Dipinjam"
+                                ? '<svg xmlns="http://www.w3.org/2000/svg" width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-book-marked"><path d="M10 2v8l3-3 3 3V2"/><path d="M4 19.5v-15A2.5 2.5 0 0 1 6.5 2H19a1 1 0 0 1 1 1v18a1 1 0 0 1-1 1H6.5a1 1 0 0 1 0-5H20"/></svg>'
+                                : ""
+                            }
+                            ${
+                              row.status === "Pending"
+                                ? '<svg xmlns="http://www.w3.org/2000/svg" width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-book-marked"><path d="M10 2v8l3-3 3 3V2"/><path d="M4 19.5v-15A2.5 2.5 0 0 1 6.5 2H19a1 1 0 0 1 1 1v18a1 1 0 0 1-1 1H6.5a1 1 0 0 1 0-5H20"/></svg>'
+                                : ""
+                            }
                       </button>
                     </div>
                     <div class="tooltip" data-tip="Edit Buku">
-                      <button data-id="${row.id}" onclick="openEditModal(${row.id})">
+                      <button data-id="${row.id}" onclick="openEditModal(${
+                row.id
+              })">
                         <svg xmlns="http://www.w3.org/2000/svg" width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-pencil"><path d="M21.174 6.812a1 1 0 0 0-3.986-3.987L3.842 16.174a2 2 0 0 0-.5.83l-1.321 4.352a.5.5 0 0 0 .623.622l4.353-1.32a2 2 0 0 0 .83-.497z"/><path d="m15 5 4 4"/></svg>
                       </button>
                     </div>
@@ -594,43 +727,42 @@
                     </a>
                 </div>
               `;
-          },
-        });
-      }
-
-      const table = $("#example").DataTable({
-        ajax: {
-          url: "/api/books/",
-          dataSrc: "",
-        },
-        columns: columns,
-      });
-
-      $("#example").on("click", ".delete-btn", function (e) {
-        e.preventDefault();
-        const bookId = $(this).data("id");
-        if (confirm("Are you sure you want to delete this book?")) {
-          $.ajax({
-            url: `http://127.0.0.1:8000/api/books/delete/${bookId}/`,
-            type: "DELETE",
-            success: function (result) {
-              alert("Book deleted successfully.");
-              table.ajax.reload();
-            },
-            error: function (xhr, status, error) {
-              alert("Failed to delete book.");
             },
           });
         }
-        z;
+
+        const table = $("#example").DataTable({
+          ajax: {
+            url: "/api/books/",
+            dataSrc: "",
+          },
+          columns: columns,
+        });
+
+        $("#example").on("click", ".delete-btn", function (e) {
+          e.preventDefault();
+          const bookId = $(this).data("id");
+          if (confirm("Are you sure you want to delete this book?")) {
+            $.ajax({
+              url: `http://127.0.0.1:8000/api/books/delete/${bookId}/`,
+              type: "DELETE",
+              success: function (result) {
+                alert("Book deleted successfully.");
+                table.ajax.reload();
+              },
+              error: function (xhr, status, error) {
+                alert("Failed to delete book.");
+              },
+            });
+          }
+          z;
+        });
       });
-    });
 
-    function redirectToPeminjaman(bookId) {
-      const userId = "{{ user.id }}";
-      window.location.href = `/peminjaman/buku?bookId=${bookId}&userId=${userId}`;
-    }
-  </script>
-</body>
-
+      function redirectToPeminjaman(bookId) {
+        const userId = "{{ user.id }}";
+        window.location.href = `/peminjaman/buku?bookId=${bookId}&userId=${userId}`;
+      }
+    </script>
+  </body>
 </html>

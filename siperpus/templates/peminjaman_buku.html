@@ -37,7 +37,7 @@
 <body class="bg-gray-50 font-montserrat min-h-screen">
     <div class="relative flex lg:overflow-x-hidden">
         <aside id="sidebar"
-            class="w-64 bg-white text-white h-screen fixed z-50 transform -translate-x-full lg:translate-x-0 transition-transform duration-300">
+            class="w-64 bg-white text-white h-screen fixed z-50 transform -translate-x-full transition-transform duration-300">
             <div class="p-5">
                 <h1 class="text-2xl font-bold px-5">SIPTA</h1>
                 <ul class="mt-5 space-y-2">
@@ -72,11 +72,11 @@
 
         <div id="overlay" class="fixed inset-0 bg-black bg-opacity-50 hidden z-40" onclick="closeSidebar()"></div>
 
-        <main class="flex-1 lg:ml-64 overflow-x-auto">
+        <main class="flex-1 overflow-x-auto">
             <nav>
                 <div class="flex p-5">
                     <div class="w-1/2 flex justify-start items-center">
-                        <button id="toggleSidebar" class="lg:hidden text-white bg-black p-3 rounded-full"
+                        <button id="toggleSidebar" class="text-white bg-black p-3 rounded-full"
                             onclick="openSidebar()">
                             <svg class="swap-off" xmlns="http://www.w3.org/2000/svg" width="25" height="25"
                                 viewBox="0 0 24 24" fill="none" stroke="white" stroke-width="2" stroke-linecap="round"
