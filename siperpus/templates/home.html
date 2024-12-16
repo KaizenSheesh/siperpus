@@ -55,7 +55,7 @@
           </li>
           <li>
             <a href="{% url 'peminjaman' %}" class="block hover:bg-gray-200 hover:text-black font-medium rounded-xl py-3 px-5 
-               {% if request.path == '/peminjaman/' %}bg-black text-white{% else %}text-gray-600{% endif %}">
+               {% if request.path == '/peminjaman/' or request.path == '/peminjaman/buku/'%}bg-black text-white{% else %}text-gray-600{% endif %}">
               Peminjaman Buku
             </a>
           </li>
@@ -96,9 +96,56 @@
             </button>
           </div>
           <div class="w-1/2 lg:w-full flex justify-end items-center">
-            <h3 class="font-semibold mr-3 hidden md:block">
+            <h3 class="font-semibold hidden md:block">
               Welcome back! {{ user.username }} 👋
             </h3>
+            <div class="relative">
+              <button id="notification-btn" class="p-3 rounded-full transition">
+                <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" fill="none" stroke="black" stroke-width="2"
+                  stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-bell">
+                  <path d="M10 21h4" />
+                  <path d="M18 8a6 6 0 0 0-12 0c0 5-1.5 6.5-3 8h18c-1.5-1.5-3-3-3-8" />
+                </svg>
+              </button>
+      
+              <!-- Dropdown Content -->
+              <div id="notifications-dropdown"
+                class="absolute right-0 mt-2 w-80 bg-white shadow-lg rounded-lg overflow-y-auto max-h-64 hidden z-50">
+                <div id="notifications-container" class="flex flex-col gap-2 p-3">
+                  {% for notification in notifications %}
+                  <div class="flex items-center justify-between bg-yellow-50 border border-yellow-500 rounded-lg p-3">
+                    <div class="flex gap-3 items-center">
+                      <div class="icon p-2 rounded-lg bg-yellow-100">
+                        <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none"
+                          stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"
+                          class="lucide lucide-bell-ring">
+                          <path d="M10.268 21a2 2 0 0 0 3.464 0" />
+                          <path d="M22 8c0-2.3-.8-4.3-2-6" />
+                          <path
+                            d="M3.262 15.326A1 1 0 0 0 4 17h16a1 1 0 0 0 .74-1.673C19.41 13.956 18 12.499 18 8A6 6 0 0 0 6 8c0 4.499-1.411 5.956-2.738 7.326" />
+                          <path d="M4 2C2.8 3.7 2 5.7 2 8" />
+                        </svg>
+                      </div>
+                      <div>
+                        <p class="text-black font-medium text-sm">{{ notification.message }}</p>
+                        {% if notification.description %}
+                        <p class="text-gray-600 text-xs">{{ notification.description }}</p>
+                        {% endif %}
+                      </div>
+                    </div>
+                    <button onclick="this.parentElement.remove()" class="text-gray-400 hover:text-red-500 transition">
+                      <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" fill="none" stroke="currentColor"
+                        stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round">
+                        <path d="M6 18L18 6M6 6l12 12" />
+                      </svg>
+                    </button>
+                  </div>
+                  {% empty %}
+                  <p class="text-gray-500 text-sm text-center">Tidak ada notifikasi.</p>
+                  {% endfor %}
+                </div>
+              </div>
+            </div>
             <details class="dropdown dropdown-end">
               <summary class="avatar placeholder cursor-pointer">
                 <div class="bg-black w-12 rounded-full">
@@ -117,44 +164,6 @@
         </div>
       </nav>
       <div class="p-5 min-h-screen">
-        <div id="notifications-container" class="flex flex-col gap-3 sm:w-72 mb-5" style="width: 100%">
-          {% for notification in notifications %}
-            <div
-              class="alert flex items-center justify-between w-full h-auto md:h-16 rounded-lg px-4 shadow-lg border border-yellow-600 bg-transparent"
-              data-type="{{ notification.type }}">
-              <div class="flex items-center gap-3">
-                <div class="icon p-2 rounded-lg bg-white/20">
-                  <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-bell-ring"><path d="M10.268 21a2 2 0 0 0 3.464 0"/><path d="M22 8c0-2.3-.8-4.3-2-6"/><path d="M3.262 15.326A1 1 0 0 0 4 17h16a1 1 0 0 0 .74-1.673C19.41 13.956 18 12.499 18 8A6 6 0 0 0 6 8c0 4.499-1.411 5.956-2.738 7.326"/><path d="M4 2C2.8 3.7 2 5.7 2 8"/></svg>
-                </div>
-                <div>
-                  <p class="text-black font-medium text-xs md:text-lg">{{ notification.message }}</p>
-                  {% if notification.description %}
-                    <p class="text-gray-600 text-xs">{{ notification.description }}</p>
-                  {% endif %}
-                </div>
-              </div>
-              <button
-                class="close-btn text-gray-400 hover:text-white transition ease-in-out"
-                onclick="this.parentElement.remove()"
-              >
-                <svg
-                  xmlns="http://www.w3.org/2000/svg"
-                  fill="none"
-                  viewBox="0 0 24 24"
-                  stroke-width="1.5"
-                  stroke="currentColor"
-                  class="w-6 h-6"
-                >
-                  <path
-                    stroke-linecap="round"
-                    stroke-linejoin="round"
-                    d="M6 18L18 6M6 6l12 12"
-                  ></path>
-                </svg>
-              </button>
-            </div>
-          {% endfor %}
-        </div>
         <h1 class="text-3xl font-bold mb-4">Selamat datang di SIPTA 👋</h1>
         <p class="font-medium mb-8">Sistem Informasi Perpustakaan Tugas Akhir Jurusan Elektro</p>
 
@@ -193,6 +202,21 @@
   <script src="https://code.jquery.com/jquery-3.5.1.js"></script>
   <script src="https://cdn.datatables.net/1.11.5/js/jquery.dataTables.min.js"></script>
   <script src="https://cdn.datatables.net/2.1.8/js/dataTables.tailwindcss.min.js"></script>
+  <script>
+    const notificationBtn = document.getElementById("notification-btn");
+    const notificationDropdown = document.getElementById("notifications-dropdown");
+  
+    notificationBtn.addEventListener("click", () => {
+      notificationDropdown.classList.toggle("hidden");
+    });
+  
+    // Menutup dropdown jika klik di luar
+    document.addEventListener("click", (e) => {
+      if (!notificationDropdown.contains(e.target) && !notificationBtn.contains(e.target)) {
+        notificationDropdown.classList.add("hidden");
+      }
+    });
+  </script>
   <script>
     function openSidebar() {
       document

@@ -94,7 +94,14 @@ def home_view(request):
 @ensure_csrf_cookie
 def books_view(request):
     user = SessionAuth.get_current_user(request)
-    return render(request, 'books.html', {'user': user})
+    peminjaman_data = load_json_data(PEMINJAMAN_FILE)
+    today = datetime.now().date()
+
+    notifications = get_notifications(peminjaman_data, user["username"], today)
+    return render(request, 'books.html', {
+        'user': user,
+        'notifications': notifications,
+        })
 
 def load_json_data(file_path):
     try:
@@ -173,7 +180,12 @@ def daftar_permintaan(request):
 
     with open(BOOKS_FILE, 'r') as file:
         books_data = json.load(file)
+        
+        peminjaman_data = load_json_data(PEMINJAMAN_FILE)
+    today = datetime.now().date()
 
+    notifications = get_notifications(peminjaman_data, user["username"], today)
+    
     pending_requests = []
     for req in peminjaman_data:
         if req["status"] == "pending":
@@ -193,9 +205,11 @@ def daftar_permintaan(request):
     return render(request, 'daftar_permintaan.html', {
         'user': user,
         'pending_requests': pending_requests,
+        'notifications': notifications,
     })
 
 def konfirmasi_peminjaman_view(request):
+    user = SessionAuth.get_current_user(request)
     if request.method == "POST":
         peminjaman_id = request.POST.get("id")
         book_id = request.POST.get('bookId')
@@ -203,6 +217,11 @@ def konfirmasi_peminjaman_view(request):
             peminjaman_data = json.load(file)
         with open(BOOKS_FILE, 'r') as file:
             book = json.load(file)
+            
+        peminjaman_data = load_json_data(PEMINJAMAN_FILE)
+        today = datetime.now().date()
+
+        notifications = get_notifications(peminjaman_data, user["username"], today)
 
         peminjaman = next((req for req in peminjaman_data if req["id"] == int(peminjaman_id)), None)
         books = next((req for req in book if req["id"] == int(book_id)), None)
@@ -217,7 +236,7 @@ def konfirmasi_peminjaman_view(request):
             with open(BOOKS_FILE, 'w') as file:
                 json.dump(book, file, indent=4)
 
-            return redirect('/daftar-permintaan/')
+            return redirect('/daftar-permintaan/', {'notifications': notifications,})
     return JsonResponse({"error": "Invalid Request"}, status=400)
 
 @ensure_csrf_cookie
@@ -237,6 +256,11 @@ def peminjaman_buku_view(request):
     except (ValueError, TypeError):
         book_id = None
 
+    peminjaman_data = load_json_data(PEMINJAMAN_FILE)
+    today = datetime.now().date()
+
+    notifications = get_notifications(peminjaman_data, user["username"], today)
+    
     buku_ditemukan = None
     if book_id is not None:
         buku_ditemukan = next((buku for buku in data if buku['id'] == book_id), None)
@@ -269,6 +293,7 @@ def peminjaman_buku_view(request):
     context = {
         "user": user,
         "username": username,
+        'notifications': notifications,
         "judul_buku": buku_ditemukan['judul'] if buku_ditemukan else "Buku tidak ditemukan",
     }
     return render(request, 'peminjaman_buku.html', context)
