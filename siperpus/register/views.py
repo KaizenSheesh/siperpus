@@ -52,37 +52,6 @@ def logout_view(request):
     messages.info(request, 'Logout Berhasil!')
     return redirect('login')
 
-@ensure_csrf_cookie
-def home_view(request):
-    user = SessionAuth.get_current_user(request)
-    books = read_books()
-    
-    ta_count = len([book for book in books])
-    ta_2023_count = len([book for book in books if book['tahun_lulus'] == 2023])
-    ta_2024_count = len([book for book in books if book['tahun_lulus'] == 2024])
-
-    return render(request, 'home.html', {
-        'user': user,
-        'ta_count': ta_count,
-        'ta_2023_count': ta_2023_count,
-        'ta_2024_count': ta_2024_count
-        })
-
-@ensure_csrf_cookie
-def books_view(request):
-    user = SessionAuth.get_current_user(request)
-    return render(request, 'books.html', {'user': user})
-
-@ensure_csrf_cookie
-def peminjaman_view(request):
-    user = SessionAuth.get_current_user(request)
-    return render(request, 'peminjaman.html', {'user': user})
-
-@ensure_csrf_cookie
-def peminjaman_buku_view(request):
-    user = SessionAuth.get_current_user(request)
-    return render(request, 'peminjaman_buku.html', {'user': user})
-
 @api_view(['POST'])
 def add_staff(request):
     current_user = SessionAuth.get_current_user(request)

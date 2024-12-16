@@ -21,10 +21,14 @@ from django.urls import include, path
 
 urlpatterns = [
     path('admin/', admin.site.urls),
-    path('', views.homepage),
-    path('books/', views.books),
-    path('peminjaman/', views.peminjaman),
-    path('auth/', include('register.urls')),
     path('api/', include('books_api.urls')),
     path("__reload__/", include("django_browser_reload.urls")),
+    path('', views.home_view, name='home'),
+    path('books/', views.books_view, name='books'),
+    path('peminjaman/', views.peminjaman_view, name='peminjaman'),
+    path('', include('register.urls')),
+    path('peminjaman/buku/', views.peminjaman_buku_view, name='peminjaman_buku'),
+    path('daftar-permintaan/', views.daftar_permintaan, name='daftar_permintaan'),
+    path('konfirmasi-peminjaman/', views.konfirmasi_peminjaman_view, name='konfirmasi-peminjaman'),
+    path('pengembalian-buku/', views.pengembalian_buku, name='pengembalian-buku'),
 ]

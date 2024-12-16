@@ -1,632 +1,1472 @@
 [
-  {
-    "id": 1,
-    "nama_mhs": "SURMA ASBI",
-    "nim": 3202116016,
-    "judul": "RANCANG BANGUN APLIKASI PEMILIHAN MATA PELAJARAN PILIHAN BERDASARKAN MINAT DAN BAKAT SISWA DI SMA NEGERI 1 PONTIANAK DENGAN IMPLEMENTASI SISTEM PAKAR",
-    "dospem": "Safri Adam, S.Kom., M.Kom.",
-    "tahun_lulus": 2024,
-    "status": "Tersedia"
-  },
-  {
-    "id": 2,
-    "nama_mhs": "ADI SURYADI",
-    "nim": 3202116005,
-    "judul": "PERANCANGAN JARINGAN INTERNET SEKOLAH BERBASIS CLIENT-SERVER PADA SEKOLAH MENENGAH KEJURUAN NEGERI (SMKN) 1 BALAI KABUPATEN SANGGAU",
-    "dospem": "Yasir Arafat, S.S.T., M.T.",
-    "tahun_lulus": 2024,
-    "status": "Dipinjam"
-  },
-  {
-    "id": 3,
-    "nama_mhs": "RUDIYAT",
-    "nim": 3202116089,
-    "judul": "pembuatan sistem antrian dan integrasi pengenalan wajah pada buku digital di balai besar pom Pontianak",
-    "dospem": "Fitri Wibowo, S.S.T., M.T.",
-    "tahun_lulus": 2024,
-    "status": "Pending"
-  },
-  {
-    "id": 4,
-    "nama_mhs": "MUHAMMAD NOZALDI RADIKA ",
-    "nim": 3202116024,
-    "judul": "RANCANG BANGUN MEDIA PEMBELAJARAN ROTASI DAN REVOLUSI BUMI MENGGUNAKAN AUGMENTED REALITY",
-    "dospem": "Tommi Suryanto, S.Kom., M.Kom.",
-    "tahun_lulus": 2024,
-    "status": "Tersedia"
-  },
-  {
-    "id": 5,
-    "nama_mhs": "MUHAMMAD APRILLAHI FEDRIAN",
-    "nim": 3202116027,
-    "judul": "RANCANG BANGUN APLIKASI PEMBELAJARAN PERKEMBANGBIAKAN TUMBUHAN UNTUK SMPN 05 PONTIANAK BERBASIS AUGMENTED REALITY",
-    "dospem": "Tommi Suryanto, S.Kom., M.Kom.",
-    "tahun_lulus": 2024,
-    "status": "Tersedia"
-  },
-  {
-    "id": 6,
-    "nama_mhs": "VENDY PAULUS PRATAMA ",
-    "nim": 3202116101,
-    "judul": "RANCANG BANGUN APLIKASI CUTI KARYAWAN DI PT PERKEBUNAN NUSANTARA IV REGIONAL V",
-    "dospem": "Lindung Siswanto, S.Kom., M.Eng.",
-    "tahun_lulus": 2024,
-    "status": "Tersedia"
-  },
-  {
-    "id": 7,
-    "nama_mhs": "AKMAL MUHAMMAD RIDHO",
-    "nim": 3202116099,
-    "judul": "RANCANG BANGUN APLIKASI MATRIKS KOMPETENSI DOSEN DAN TENAGA KEPENDIDIKAN PADA PROGRAM STUDI TEKNIK INFORMATIKA POLITEKNIK NEGERI PONTIANAK",
-    "dospem": "Neny Firdyanti, S.T., M.",
-    "tahun_lulus": 2024,
-    "status": "Tersedia"
-  },
-  {
-    "id": 8,
-    "nama_mhs": "NABILA",
-    "nim": 3202116107,
-    "judul": "RANCANG BANGUN WEBSITE MONITORING DAN CONTROL SYSTEM BERBASIS IOT UNTUK SMART FISH FARMING (SHIFA) PADA BUDIDAYA IKAN ARWANA",
-    "dospem": "Fitri Wibowo, S.S.T., M.T.",
-    "tahun_lulus": 2024,
-    "status": "Tersedia"
-  },
-  {
-    "id": 9,
-    "nama_mhs": "AHMAD CHOIRUDIN",
-    "nim": 3202116083,
-    "judul": "RANCANG BANGUN PERANGKAT SISTEM MONITORING DAN CONTROL UNTUK SMART FISH FARMING (SHIFA) PADA BUDIDAYA IKAN ARWANA MENGGUNAKAN ESP32",
-    "dospem": "Fitri Wibowo, S.S.T, M.T.",
-    "tahun_lulus": 2024,
-    "status": "Tersedia"
-  },
-  {
-    "id": 10,
-    "nama_mhs": "MARIA UTRI",
-    "nim": 3202116104,
-    "judul": "PENERAPAN SEARCH ENGINE OPTIMIZATION DALAM RANCANG BANGUN WEBSITE COMPANY PROFILE PADA CV, BERKAH PINTU KREASI MENGGUNAKAN FRAMEWORK CODEIGNITER 4",
-    "dospem": "Suheri, S.T., M.Cs.",
-    "tahun_lulus": 2024,
-    "status": "Tersedia"
-  },
-  {
-    "id": 11,
-    "nama_mhs": "NOVIA SAFITRI ",
-    "nim": 3202116044,
-    "judul": "perancang bangun aplikasi berita acara pembayaran serah terima aset berbasis web di perumda air minum Tirta khatulistiwa kota Pontianak ",
-    "dospem": "Ferry Faisal, S.S.T., M.T.",
-    "tahun_lulus": 2024,
-    "status": "Tersedia"
-  },
-  {
-    "id": 12,
-    "nama_mhs": "AGUSTIA LITA",
-    "nim": 3202116085,
-    "judul": "RANCANG BANGUN APLIKASI E-MUTASI SISWA BERBASIS WEB DI DINAS PENDIDIKAN DAN KEBUDAYAAN KOTA PONTIANAK",
-    "dospem": "Fitri Wibowo, S.S.T., M.T.",
-    "tahun_lulus": 2024,
-    "status": "Tersedia"
-  },
-  {
-    "id": 13,
-    "nama_mhs": "WADIIAH NURFADHILAH",
-    "nim": 3202116001,
-    "judul": "PENGEMBANGAN SISTEM INFORMASI GEOGRAFIS BERBASIS WEB DALAM UPAYA KONSERVASI TERUMBU KARANG DI PESISIR KALIMANTAN BARAT",
-    "dospem": "Fitri Wibowo, S.S.T., M.T.",
-    "tahun_lulus": 2024,
-    "status": "Tersedia"
-  },
-  {
-    "id": 14,
-    "nama_mhs": "SYARIF MUHAMMAD IRFAN",
-    "nim": 3202116009,
-    "judul": "RANCANG BANGUN LOCAL AREA NETWORK (LAN) UNTUK AKSESIBILITAS INTERNET SEKOLAH BERBASIS CLIENT-SERVER PADA SEKOLAH MENENGAH ATAS NEGERI (SMAN) 4 PONTIANAK",
-    "dospem": "Yasir Arafat, S.S.T., M.T.",
-    "tahun_lulus": 2024,
-    "status": "Tersedia"
-  },
-  {
-    "id": 15,
-    "nama_mhs": "SABAKTI OKMALAPUTRA",
-    "nim": 3202116040,
-    "judul": "APLIKASI RANCANG BANGUN WEBSITE PROFIL TIM BOLA VOLI NOMEN NESCIO (NN)",
-    "dospem": "Mariana Syamsudin, S.T., M.T., PhD",
-    "tahun_lulus": 2024,
-    "status": "Tersedia"
-  },
-  {
-    "id": 16,
-    "nama_mhs": "AGUNG SUTIYO SUDRAJAD",
-    "nim": 3202116098,
-    "judul": "RANCANG BANGUN APLIKASI SISTEM REGISTRASI UJI KOMPETENSI FUNGSIONAL KESEHATAN KALIMANTAN BARAT (SERUNI SEHAT) PADA DINAS KESEHATAN PROVINSI KALIMANTAN BARAT",
-    "dospem": "Suharsono, S.Kom., M.Kom.",
-    "tahun_lulus": 2024,
-    "status": "Tersedia"
-  },
-  {
-    "id": 17,
-    "nama_mhs": "ZIDEAN SAFWAN ALFAROZI",
-    "nim": 3202116012,
-    "judul": "RANCANG BANGUN APLIKASI PEMESANAN AULA BERBASIS WEB PADA BADAN PENGEMBANGAN SUMBER DAYA MANUSIA PROVINSI KALIMANTAN BARAT",
-    "dospem": "Yasir Arafat, S.S.T., M.T.",
-    "tahun_lulus": 2024,
-    "status": "Tersedia"
-  },
-  {
-    "id": 18,
-    "nama_mhs": "NASRUL ADITIYA",
-    "nim": 3202116095,
-    "judul": "RANCANG BANGUN APLIKASI RENCANA ANGGARAN BIAYA PEKERJAAN KONSTRUKSI BERBASIS WEB DI PERUSAHAAN DAERAH AIR MINUM TIRTA KHATULISTIWA KOTA PONTIANAK",
-    "dospem": "Ferry Faisal, S.S.T., M.T.",
-    "tahun_lulus": 2024,
-    "status": "Tersedia"
-  },
-  {
-    "id": 19,
-    "nama_mhs": "NAURAH ADINDA APRILIA",
-    "nim": 3202116029,
-    "judul": "HEALER : E-HEALTH CARE CENTER MUHAMMADIYAH PONTIANAK BERBASIS PROGRESSIVE WEB APPLICATION (PWA)",
-    "dospem": "Fitri Wibowo, S.S.T., M.T.",
-    "tahun_lulus": 2024,
-    "status": "Tersedia"
-  },
-  {
-    "id": 20,
-    "nama_mhs": "RAISYA WANDHA SAPUTRI",
-    "nim": 3202116108,
-    "judul": "RANCANG BANGUN APLIKASI PENGELOLAAN KEUANGAN HIMPUNAN MAHASISWA JURUSAN TEKNIK ELEKTRO BERBASIS WEB MENGGUNAKAN METODE AGILE",
-    "dospem": "Safri Adam, S.Kom., M.Kom.",
-    "tahun_lulus": 2024,
-    "status": "Tersedia"
-  },
-  {
-    "id": 21,
-    "nama_mhs": "Haafizhar Al Fathan Syauqi ",
-    "nim": 3202116059,
-    "judul": "rancang bangun aplikasi manajemen inventaris berbasis web di PT Borneo inovasi gemilang",
-    "dospem": "Safri Adam, S.Kom., M.Kom",
-    "tahun_lulus": 2024,
-    "status": "Tersedia"
-  },
-  {
-    "id": 22,
-    "nama_mhs": "Rochmadi",
-    "nim": 3202116091,
-    "judul": "rancang bangun media pembelajaran interaktif mubadiul FIQHIYAH JUZ 1 MENGGUNAKAN ADOBE AnimATE CC",
-    "dospem": "Muhammad Diponegoro, S.Kom., M.Cs.",
-    "tahun_lulus": 2024,
-    "status": "Tersedia"
-  },
-  {
-    "id": 23,
-    "nama_mhs": "Naufal Nadhif",
-    "nim": 3202116079,
-    "judul": "RANCANG BANGUN APLIKASI PENJUALAN BAJU DAN JASA JAHIT BERBASIS WEB PADA USAHA JAHIT AMINAH",
-    "dospem": "Muhammad Hasbi, S.T., M.T.",
-    "tahun_lulus": 2024,
-    "status": "Tersedia"
-  },
-  {
-    "id": 24,
-    "nama_mhs": "Azzam Wildan Mascaty",
-    "nim": 3202116084,
-    "judul": "RANCANG BANGUN APLIKASI MEDIA PEMBELAJARAN INTERAKTIF KISAH KETELADANAN NABI DAN RASUL MENGGUNAKAN ADOBE AnimATE CC (STUDI KASUS : SDN 21 PONTIANAK TIMUR)",
-    "dospem": "Tommi Suryanto, S.Kom., M.Kom.",
-    "tahun_lulus": 2024,
-    "status": "Tersedia"
-  },
-  {
-    "id": 25,
-    "nama_mhs": "Azie Anggoro Subekti",
-    "nim": 3202116117,
-    "judul": "rancang bangun aplikasi sistem presensi siswa di sekolah menengah kejuruan 1 semparuk Sambas berbasis",
-    "dospem": "Tri Bowo Atmojo, S.T.,M.Cs.",
-    "tahun_lulus": 2024,
-    "status": "Tersedia"
-  },
-  {
-    "id": 26,
-    "nama_mhs": "Raihan Al Muntaz Prisyah",
-    "nim": 3202116120,
-    "judul": "RANCANG BANGUN WEBSITE NAISH PUDDING KOTA PONTIANAK ",
-    "dospem": "Muhammad Hasbi, S.T., M.T.",
-    "tahun_lulus": 2024,
-    "status": "Tersedia"
-  },
-  {
-    "id": 27,
-    "nama_mhs": "Muhammad Freza A Razak",
-    "nim": 3202116015,
-    "judul": "pembuatan game cerita rakyat di Pulau Kalimantan dengan genre role playing game menggunakan RPG maker MZ",
-    "dospem": "Muhammad Hasbi, S.T., M.T.",
-    "tahun_lulus": 2024,
-    "status": "Tersedia"
-  },
-  {
-    "id": 28,
-    "nama_mhs": "Falaah Bintang Armen Harahap",
-    "nim": 3202116036,
-    "judul": "PENERAPAN INITIATION DAN TESTING PADA METODE GAME DEVELOPMENT LIFE CYCLE DALAM PEMBUATAN GAME BOEDJANG COFFEE",
-    "dospem": "Budianingsih, S.T., M.T.",
-    "tahun_lulus": 2024,
-    "status": "Tersedia"
-  },
-  {
-    "id": 29,
-    "nama_mhs": "Gusnaufal Razan",
-    "nim": 3202116039,
-    "judul": "RANCANG BANGUN AUGMENTED REALITY (AR) UNTUK MEMPERKENALKAN ISI MONUMEN TUGU KHATULISTIWA ",
-    "dospem": "Tommi Suryanto, S.Kom., M.Kom.",
-    "tahun_lulus": 2024,
-    "status": "Tersedia"
-  },
-  {
-    "id": 30,
-    "nama_mhs": "Hafiz Putra Pratama ",
-    "nim": 3202116021,
-    "judul": "RANCANG BANGUN SISTEM INFORMASI MAGANG KURIKULUM MERDEKA BELAJAR KAMPUS MERDEKA (SIMBKM) BERBASIS WEB DI JURUSAN TEKNIK ELEKTRO POLITEKNIK NEGERI PONTIANAK",
-    "dospem": "Lindung Siswanto, S.Kom., M.Eng.",
-    "tahun_lulus": 2024,
-    "status": "Tersedia"
-  },
-  {
-    "id": 31,
-    "nama_mhs": "Refrisna Maulia Azwar",
-    "nim": 3202116069,
-    "judul": "RANCANG BANGUN SISTEM MONITORING GIZI ANAK BERDASARKAN PENGENALAN GAMBAR (SIMOGA) BERBASIS WEBSITE DI DINAS KESEHATAN PROVINSI KALIMANTAN BARAT",
-    "dospem": "Suheri, S.T., M.Cs.",
-    "tahun_lulus": 2024,
-    "status": "Tersedia"
-  },
-  {
-    "id": 32,
-    "nama_mhs": "Abdul Rohim",
-    "nim": 3202116041,
-    "judul": "PENGEMBANGAN APLIKASI REKAP PEMBERITAAN MENGGUNAKAN FRAMEWORK LARAVEL",
-    "dospem": "Ferry Faisal, S.S.T., MT.",
-    "tahun_lulus": 2024,
-    "status": "Tersedia"
-  },
-  {
-    "id": 33,
-    "nama_mhs": "Novan Febrian",
-    "nim": 3202116067,
-    "judul": "APLIKASI PEMESANAN JASA MAKE UP BERBASIS WEB PADA FEBIOLA NANDA MAKE UP ARTIST",
-    "dospem": "Muhammad Hasbi, S.T., M.T.",
-    "tahun_lulus": 2024,
-    "status": "Tersedia"
-  },
-  {
-    "id": 34,
-    "nama_mhs": "Muhammad Ricad Khaizuran",
-    "nim": 3202116119,
-    "judul": "RANCANG BANGUN MEDIA PEMBELAJARAN INTERAKTIF PENDIDIKAN AGAMA ISLAM MENGGUNAKAN ADOBE AnimATE CC (STUDI KASUS : SDN 03 KARIMUNTING)",
-    "dospem": "Sarah Bibi, S.S.T., M.Pd.",
-    "tahun_lulus": 2024,
-    "status": "Tersedia"
-  },
-  {
-    "id": 35,
-    "nama_mhs": "Okta Maulana",
-    "nim": 3202116074,
-    "judul": "RANCANG BANGUN APLIKASI MONITORING GIZI BALITA DAN REKOMENDASI MAKANAN BERBASIS ANDROID DENGAN PENGENALAN GAMBAR MENGGUNAKAN API TENSORFLOW",
-    "dospem": "Sarah Bibi, S.S.T., M.Pd.",
-    "tahun_lulus": 2024,
-    "status": "Tersedia"
-  },
-  {
-    "id": 36,
-    "nama_mhs": "Muhammad Abdu Waris",
-    "nim": 3202116110,
-    "judul": "RANCANG BANGUN SISTEM MANAJEMEN SURAT MASUK DAN SURAT KELUAR MENGGUNAKAN FRAMEWORK CODEIGNITER STUDI KASUS KPKNL SINGKAWANG",
-    "dospem": "Muhammad Diponegoro, S.Kom., M.Cs.",
-    "tahun_lulus": 2024,
-    "status": "Tersedia"
-  },
-  {
-    "id": 37,
-    "nama_mhs": "Septiadi Hendra Saputra ",
-    "nim": 3202116112,
-    "judul": "RANCANG BANGUN APLIKASI PENYEWAAN MOBIL DAN TRAVEL PADA MT RENTCAR BERBASIS WEB",
-    "dospem": "Wendhi Yuniarto, S.T., M.T.",
-    "tahun_lulus": 2024,
-    "status": "Tersedia"
-  },
-  {
-    "id": 38,
-    "nama_mhs": "Rida Ramdayani",
-    "nim": 3202116013,
-    "judul": "RANCANG BANGUN APLIKASI VISUALISASI DATA PERKEBUNAN RAKYAT PADA DINAS PERKEBUNAN DAN PETERNAKAN KABUPATEN KUBU RAYA BERBASIS WEB",
-    "dospem": "Neny Firdyanti, ST., MT.",
-    "tahun_lulus": 2024,
-    "status": "Tersedia"
-  },
-  {
-    "id": 39,
-    "nama_mhs": "Nada Nurramadhani Rosmita",
-    "nim": 3202116123,
-    "judul": "RANCANG BANGUN MEDIA PEMBELAJARAN EKONOMI DENGAN ADOBE AnimATE DAN AFTER EFFECT SISWA KELAS X SMA NEGERI 1 SUNGAI AMBAWANG",
-    "dospem": "Novi Aryani, S.T., S.T., M.Tr.Kom.",
-    "tahun_lulus": 2024,
-    "status": "Tersedia"
-  },
-  {
-    "id": 40,
-    "nama_mhs": "Fitri Ambarwati",
-    "nim": 3202116103,
-    "judul": "RANCANG BANGUN SISTEM INFORMASI BERBASIS WEB TAMAN PENDIDIKAN AL-QUR'AN (TPQ) BAITI JANNATI MENGGUNAKAN FRAMEWORK LARAVEL ",
-    "dospem": "Neny Firdyanti, ST., MT.",
-    "tahun_lulus": 2024,
-    "status": "Tersedia"
-  },
-  {
-    "id": 41,
-    "nama_mhs": "Dea Windiyati",
-    "nim": 3202116018,
-    "judul": "RANCANG BANGUN APLIKASI PEMESANAN JASA NAIL ART DAN LAST LIFT PADA ALPHA BEAUTY CENTER BERBASIS WEB",
-    "dospem": "Neny Firdyanti, S.T.,M.T.",
-    "tahun_lulus": 2024,
-    "status": "Tersedia"
-  },
-  {
-    "id": 42,
-    "nama_mhs": "Muhammad Ridho Madani",
-    "nim": 3202116063,
-    "judul": "RANCANG BANGUN APLIKASI MEDIA PEMBELAJARAN MENGGUNAKAN AUGMENTED REALITY ILMU PENGETAHUAN ALAM (IPA) MATERI SISTEM RANGKA MANUSIA BERBASIS ANDROID UNTUK GURU DAN SISWA TUNARUNGU SEKOLAH LUAR BIASA (SLB) B DHARMA ASIH PONTIANAK",
-    "dospem": "Nurul Fadhillah, S.Pd., M.Ed.TESOL",
-    "tahun_lulus": 2024,
-    "status": "Tersedia"
-  },
-  {
-    "id": 43,
-    "nama_mhs": "Raka Maulana Iqalvi",
-    "nim": 3202116064,
-    "judul": "PENGEMBANGAN FITUR  AUGMENTED REALITY  DALAM  APLIKASI MEDIA PEMBELAJARAN ILMU PENGETAHUAN ALAM (IPA) MATERI SISTEM RANGKA MANUSIA BERBASIS ANDROID UNTUK GURU DAN SISWA TUNARUNGU SEKOLAH LUAR BIASA (SLB) B DHARMA ASIH PONTIANAK",
-    "dospem": "Nurul Fadhillah, S.Pd., M.Ed.TESOL",
-    "tahun_lulus": 2024,
-    "status": "Tersedia"
-  },
-  {
-    "id": 44,
-    "nama_mhs": "M Dedi Robyyanto",
-    "nim": 3202116094,
-    "judul": "RANCANG BANGUN APLIKASI MONITORING PEKERJAAN(E-MONITORING)BERBASIS WE PADA BAGIAN PENECANAAN DAN PENGELOLAAN ASET DI PERUMDA TIRTA KHATULISTIWA KOTA PONTIANAK",
-    "dospem": "Suharsono,S.Kom,.M.Kom.",
-    "tahun_lulus": 2024,
-    "status": "Tersedia"
-  },
-  {
-    "id": 45,
-    "nama_mhs": "Brigitha Nitiari",
-    "nim": 3202116118,
-    "judul": "RANCANG BANGUN SISTEM LAYANAN KANTOR DESA PALOAN KABUPATEN LANDAK BERBASIS WEB ",
-    "dospem": "Yasir Arafat, S.ST., M.T.",
-    "tahun_lulus": 2024,
-    "status": "Tersedia"
-  },
-  {
-    "id": 46,
-    "nama_mhs": "Dhesty Aulia Pinanti",
-    "nim": 3202116068,
-    "judul": "AUGMENTED REALITY (AR) UNTUK PEMBELAJARAN STRUKTUR DAN FUNGSI TUMBUHAN BERBASIS ANDROID",
-    "dospem": "Yasir Arafat, S.ST., M.T.",
-    "tahun_lulus": 2024,
-    "status": "Tersedia"
-  },
-  {
-    "id": 47,
-    "nama_mhs": "Herdini Nabila Kanesya",
-    "nim": 3202116062,
-    "judul": "PEMBUATAN WEBSITE SEKOLAH SEBAGAI MEDIA INFORMASI, PROMOSI, DAN PENDAFTARAN DI TK AL MUKADDIMAH MENGGUNAKAN FRAMEWORK CODEIGNITER 4",
-    "dospem": "Suheri, S.T., M.Cs.",
-    "tahun_lulus": 2024,
-    "status": "Tersedia"
-  },
-  {
-    "id": 48,
-    "nama_mhs": "Herdini Nabila Kanesya",
-    "nim": 3202116062,
-    "judul": "PEMBUATAN WEBSITE SEKOLAH SEBAGAI MEDIA INFORMASI, PROMOSI, DAN PENDAFTARAN DI TK AL MUKADDIMAH MENGGUNAKAN FRAMEWORK CODEIGNITER 4",
-    "dospem": "Suheri, S.T., M.Cs.",
-    "tahun_lulus": 2024,
-    "status": "Tersedia"
-  },
-  {
-    "id": 49,
-    "nama_mhs": "Resky Syarif Maulana",
-    "nim": 3202116056,
-    "judul": "RANCANG BANGUN GAME PUZZLE ADVENTURE 2.5D \"ESCAPE FROM THE OFFICE\" MENGGUNAKAN UNITY ENGINE",
-    "dospem": "Muhammad Hasbi, S.T., M.T.",
-    "tahun_lulus": 2024,
-    "status": "Tersedia"
-  },
-  {
-    "id": 50,
-    "nama_mhs": "Azlina Asy Syifa",
-    "nim": 3202116019,
-    "judul": "RANCANG BANGUN APLIKASI LAUNDERCLEAN SEBAGAI PLATFORM PENYEDIA JASA LAUNDRY RUMAHAN DI KOTA PONTIANAK BERBASIS WEBSITE MENGGUNAKAN FRAMEWORK LARAVEL",
-    "dospem": "Safri Adam, S.Kom., M.Kom",
-    "tahun_lulus": 2024,
-    "status": "Tersedia"
-  },
-  {
-    "id": 51,
-    "nama_mhs": "Yachzee Aleandri Oktaura Tarigan",
-    "nim": 3202116008,
-    "judul": "PENERAPAN PRODUCTION PADA METODE GAME DEVELOPMENT LIFE CYCLE DAN PEMBUATAN GAME BOEJANG COFFEE",
-    "dospem": "Budianingsih, S.T., M.T.",
-    "tahun_lulus": 2024,
-    "status": "Tersedia"
-  },
-  {
-    "id": 52,
-    "nama_mhs": "Nuradinda El Taufiq",
-    "nim": 3202116028,
-    "judul": "PEMBUATAN APLIKASI MANAJEMEN INVENTARIS DI WORKSHOP PROGRAM STUDI D4 PENGOLAHAN DAN PENYIMPANAN HASIL PERIKANAN POLITEKNIK NEGERI PONTIANAK BERBASIS WEB MENGGUNAKAN FRAMEWORK CODEIGNITER 4",
-    "dospem": "Suheri, S.T., M.Cs.",
-    "tahun_lulus": 2024,
-    "status": "Tersedia"
-  },
-  {
-    "id": 53,
-    "nama_mhs": "Dayang Desti Damayanti",
-    "nim": 3202116058,
-    "judul": "RANCANG BANGUN WEBSITE PEMERINTAHAN KABUPATEN SINTANG DENGAN FITUR ANTI WEB DEFACEMENT MENGGUNAKAN FRAMEWORK CODEIGNITER 4",
-    "dospem": "Suheri, S.T., M.Cs.",
-    "tahun_lulus": 2024,
-    "status": "Tersedia"
-  },
-  {
-    "id": 54,
-    "nama_mhs": "Walillah",
-    "nim": 3202116032,
-    "judul": "RANCANG BANGUN SISTEM INFORMASI PEMBAYARAN BIAYA PENDIDIKAN PADA SD PLUS BINA 45 PONTIANAK",
-    "dospem": "Lindung Siswanto, S.Kom., M.Eng.",
-    "tahun_lulus": 2024,
-    "status": "Tersedia"
-  },
-  {
-    "id": 55,
-    "nama_mhs": "Firza Febrian",
-    "nim": 3202116055,
-    "judul": "RANCANG BANGUN SISTEM INFORMASI SEKOLAH SEPAK BOLA TUNAS BARU BERBASIS WEB",
-    "dospem": "Suharsono,S.Kom,.M.Kom.",
-    "tahun_lulus": 2024,
-    "status": "Tersedia"
-  },
-  {
-    "id": 56,
-    "nama_mhs": "Alda Rahmanita",
-    "nim": 3202116076,
-    "judul": "RANCANG BANGUN APLIKASI UNIT KEGIATAN MAHASISWA (UKM) BADMINTON POLITEKNIK NEGERI PONTIANAK BERBASIS WEB",
-    "dospem": "Neny Firdyanti, S.T.,M.T.",
-    "tahun_lulus": 2024,
-    "status": "Tersedia"
-  },
-  {
-    "id": 57,
-    "nama_mhs": "Syifa Firdassina",
-    "nim": 3202116049,
-    "judul": "PEMBUATAN WEBSITE PENJUALAN PADA TOKO RUMAHKU JINGGA MENGGUNAKAN FRAMEWORK CODEIGNITER 4",
-    "dospem": "Suheri, S.T., M.Cs.",
-    "tahun_lulus": 2024,
-    "status": "Tersedia"
-  },
-  {
-    "id": 58,
-    "nama_mhs": "SITI RAHMA AZMI",
-    "nim": 3202116057,
-    "judul": "RANCANG BANGUN APLIKASI PENCATATAN PENGELUARAN PENGAWAS PADA CV. ANUGERAH JAYA CEMERLANG BERBASIS WEB",
-    "dospem": "Fitri Wibowo, S.S.T., M.T.",
-    "tahun_lulus": 2024,
-    "status": "Tersedia"
-  },
-  {
-    "id": 59,
-    "nama_mhs": "ELFA CAHYA JAMIATI",
-    "nim": 3202116093,
-    "judul": "IMPLEMENTASI MEDIA PEMBELAJARAN INTERAKTIF BERBASIS AnimASI PADA MATERI FIQIH THAHARAH KELAS VII MENGGUNAKAN ACTION SCRIPT 3.0",
-    "dospem": "Suharsono, S.Kom., M.Kom.",
-    "tahun_lulus": 2024,
-    "status": "Tersedia"
-  },
-  {
-    "id": 60,
-    "nama_mhs": "NADIA SABRINA",
-    "nim": 3202116054,
-    "judul": "PEMANFAATAN TEKNOLOGI AUGMENTED REALITY SEBAGAI MEDIA BANTU PEMBELAJARAN HEWAN REPTIL PADA TK AISYIYAH BUSTANUL ATHFAL 1 PONTIANAK",
-    "dospem": "Novi Aryani, S.T., S.T., M.Tr.Kom.",
-    "tahun_lulus": 2024,
-    "status": "Tersedia"
-  },
-  {
-    "id": 61,
-    "nama_mhs": "BIMA ANDI PUTRA",
-    "nim": 3202116080,
-    "judul": "PERANCANGAN JARINGAN INTERNET PADA SEKOLAH MENENGAH PERTAMA NEGERI (SMPN) 1 SUNGAI RAYA KABUPATEN KUBU RAYA",
-    "dospem": "Muhammad Hasbi, S.T., M.T.",
-    "tahun_lulus": 2024,
-    "status": "Tersedia"
-  },
-  {
-    "id": 62,
-    "nama_mhs": "Rizky Alif Akbar",
-    "nim": 3202116115,
-    "judul": "PEMBUATAN AnimASI IKLAN APLIKASI BRIMO DI BANK RAKYAT INDONESIA CABANG SINTANG",
-    "dospem": "Novi Aryani, S.T., S.T., M.Tr.Kom.",
-    "tahun_lulus": 2024,
-    "status": "Tersedia"
-  },
-  {
-    "id": 63,
-    "nama_mhs": "Agistra Arifur Rahman",
-    "nim": 3202116023,
-    "judul": "RANCANG BANGUN APLIKASI BACKEND LAUNDERCLEAN BERBASIS RESTFUL API DENGAN FRAMEWORK LARAVEL DAN AUTENTIFIKASI JSON WEB TOKEN (JWT)",
-    "dospem": "Lindung Siswanto, S.Kom., M.Eng.",
-    "tahun_lulus": 2024,
-    "status": "Tersedia"
-  },
-  {
-    "id": 64,
-    "nama_mhs": "Putri Nadila Suryani",
-    "nim": 3202116060,
-    "judul": "RANCANG BANGUN APLIKASI FRONTEND LAUNDERCLEAN MENGGUNAKAN FRAMEWORK NEXT.JS DENGAN PENERAPAN SEARCH ENGINE OPTIMIZATION (SEO) DAN RESPONSIVE WEB DESIGN",
-    "dospem": "Safri Adam, S.Kom., M.Kom",
-    "tahun_lulus": 2024,
-    "status": "Tersedia"
-  },
-  {
-    "id": 65,
-    "nama_mhs": "Uchi Hardiana",
-    "nim": 3202116077,
-    "judul": "RANCANG BANGUN MEDIA PEMBELAJARAN KOSAKATA BAHASA ARAB MENGGUNAKAN ADOBE AnimATE DI MADRASAH IBTIDAIYAH SWASTA AL-AZHAR KABUPATEN SAMBAS BELUM",
-    "dospem": "Tommy Suryanto, S.Kom., M.Kom",
-    "tahun_lulus": 2024,
-    "status": "Tersedia"
-  },
-  {
-    "id": 66,
-    "nama_mhs": "Putri Yani",
-    "nim": 3202116125,
-    "judul": "RANCANG BANGUN APLIKASI PRESENSI DAN PENDAPATAN PADA MARLIN SWIMMING CLUB PONTIANAK BERBASIS WEB",
-    "dospem": "Sarah Bibi, S.S.T., M.Pd.",
-    "tahun_lulus": 2024,
-    "status": "Tersedia"
-  },
-  {
-    "id": 67,
-    "nama_mhs": "Jidan",
-    "nim": 3202116088,
-    "judul": "RANCANG BANGUN APLIKASI PENGELOLAAN ARSIP (E-ARSIP) PADA BAGIAN PERENCANAAN PENGELOLAAN ASET DI PERUMDA AIR MINUM TIRTA KHATULISTIWA KOTA PONTIANAK",
-    "dospem": "Ferry Faisal, S.S.T., MT.",
-    "tahun_lulus": 2024,
-    "status": "Tersedia"
-  },
-  {
-    "id": 68,
-    "nama_mhs": "Aryo Wibowo ",
-    "nim": 3202116031,
-    "judul": "PERANCANGAN DAN IMPLEMENTASI WEBSITE PROFILE PT BORNEO TECH SOLUTION",
-    "dospem": "Muhammad Hasbi, S.T., M.T.",
-    "tahun_lulus": 2024,
-    "status": "Tersedia"
-  },
-  {
-    "id": 69,
-    "nama_mhs": "Mustika",
-    "nim": 3202116017,
-    "judul": "RANCANG BANGUN MEDIA PEMBELAJARAN INTERAKTIF PENGENALAN HURUF HIJAIYAH DAN TAJWID MENGGUNAKAN ADOBE AnimATE PADA PAUD RAUDHATUL ATHFAL AS SYIFA",
-    "dospem": "Tommy Suryanto, S.Kom., M.Kom",
-    "tahun_lulus": 2024,
-    "status": "Tersedia"
-  },
-  {
-    "id": 70,
-    "nama_mhs": "Muhammad Vidi Rachman",
-    "nim": 3202116061,
-    "judul": "RANCANG BANGUN APLIKASI PEMESANAN MAKANAN BAKMIE HAJI AMAN BERBASIS ANDROID",
-    "dospem": "Sarah Bibi, S.S.T., M.Pd.",
-    "tahun_lulus": 2024,
-    "status": "Tersedia"
-  }
+    {
+        "id": 1,
+        "no_arsip": "1",
+        "nama_mhs": "Surma Asbi",
+        "nim": "3202116016",
+        "judul": "Rancang Bangun Aplikasi Pemilihan Mata Pelajaran Pilihan Berdasarkan Minat Dan Bakat Siswa Di SMA Negeri 1 Pontianak Dengan Implementasi Sistem Pakar",
+        "dospem": "Safri Adam, S.Kom., M.Kom.",
+        "tahun_lulus": 2024,
+        "status": "Tersedia"
+    },
+    {
+        "id": 2,
+        "no_arsip": 2,
+        "nama_mhs": "Adi Suryadi",
+        "nim": 3202116005,
+        "judul": "Perancangan Jaringan Internet Sekolah Berbasis Client-Server Pada Sekolah Menengah Kejuruan Negeri (SMKN) 1 Balai Kabupaten Sanggau",
+        "dospem": "Yasir Arafat, S.S.T., M.T.",
+        "tahun_lulus": 2024,
+        "status": "Pending"
+    },
+    {
+        "id": 3,
+        "no_arsip": 3,
+        "nama_mhs": "Rudiyat",
+        "nim": 3202116089,
+        "judul": "Pembuatan Sistem Antrian Dan Integrasi Pengenalan Wajah Pada Buku Digital Di Balai Besar POM Pontianak",
+        "dospem": "Fitri Wibowo, S.S.T., M.T.",
+        "tahun_lulus": 2024,
+        "status": "Pending"
+    },
+    {
+        "id": 4,
+        "no_arsip": 4,
+        "nama_mhs": "Muhammad Nozaldi Radika",
+        "nim": 3202116024,
+        "judul": "Rancang Bangun Media Pembelajaran Rotasi Dan Revolusi Bumi Menggunakan Augmented Reality",
+        "dospem": "Tommi Suryanto, S.Kom., M.Kom.",
+        "tahun_lulus": 2024,
+        "status": "Tersedia"
+    },
+    {
+        "id": 5,
+        "no_arsip": 5,
+        "nama_mhs": "Muhammad Aprillahi Fedrian",
+        "nim": 3202116027,
+        "judul": "Rancang Bangun Aplikasi Pembelajaran Perkembangbiakan Tumbuhan Untuk SMPN 05 Pontianak Berbasis Augmented Reality",
+        "dospem": "Tommi Suryanto, S.Kom., M.Kom.",
+        "tahun_lulus": 2024,
+        "status": "Tersedia"
+    },
+    {
+        "id": 6,
+        "no_arsip": 6,
+        "nama_mhs": "Vendy Paulus Pratama",
+        "nim": 3202116101,
+        "judul": "Rancang Bangun Aplikasi Cuti Karyawan Di PT Perkebunan Nusantara IV Regional V",
+        "dospem": "Lindung Siswanto, S.Kom., M.Eng.",
+        "tahun_lulus": 2024,
+        "status": "Tersedia"
+    },
+    {
+        "id": 7,
+        "no_arsip": 7,
+        "nama_mhs": "Akmal Muhammad Ridho",
+        "nim": 3202116099,
+        "judul": "Rancang Bangun Aplikasi Matriks Kompetensi Dosen Dan Tenaga Kependidikan Pada Program Studi Teknik Informatika Politeknik Negeri Pontianak",
+        "dospem": "Neny Firdyanti, S.T., M.",
+        "tahun_lulus": 2024,
+        "status": "Tersedia"
+    },
+    {
+        "id": 8,
+        "no_arsip": 8,
+        "nama_mhs": "Nabila",
+        "nim": 3202116107,
+        "judul": "Rancang Bangun Website Monitoring Dan Control System Berbasis Iot Untuk Smart Fish Farming (SHIFA) Pada Budidaya Ikan Arwana",
+        "dospem": "Fitri Wibowo, S.S.T., M.T.",
+        "tahun_lulus": 2024,
+        "status": "Tersedia"
+    },
+    {
+        "id": 9,
+        "no_arsip": 9,
+        "nama_mhs": "Ahmad Choirudin",
+        "nim": 3202116083,
+        "judul": "Rancang Bangun Perangkat Sistem Monitoring Dan Control Untuk Smart Fish Farming (SHIFA) Pada Budidaya Ikan Arwana Menggunakan Esp32",
+        "dospem": "Fitri Wibowo, S.S.T, M.T.",
+        "tahun_lulus": 2024,
+        "status": "Tersedia"
+    },
+    {
+        "id": 10,
+        "no_arsip": 10,
+        "nama_mhs": "Maria Utri",
+        "nim": 3202116104,
+        "judul": "Penerapan Search Engine Optimization Dalam Rancang Bangun Website Company Profile Pada CV. Berkah Pintu Kreasi Menggunakan Framework Codeigniter 4",
+        "dospem": "Suheri, S.T., M.Cs.",
+        "tahun_lulus": 2024,
+        "status": "Tersedia"
+    },
+    {
+        "id": 11,
+        "no_arsip": 11,
+        "nama_mhs": "Novia Safitri",
+        "nim": 3202116044,
+        "judul": "Perancang Bangun Aplikasi Berita Acara Pembayaran Serah Terima Aset Berbasis Web Di Perumda Air Minum Tirta Khatulistiwa Kota Pontianak ",
+        "dospem": "Ferry Faisal, S.S.T., M.T.",
+        "tahun_lulus": 2024,
+        "status": "Tersedia"
+    },
+    {
+        "id": 12,
+        "no_arsip": 12,
+        "nama_mhs": "Agustia Lita",
+        "nim": 3202116085,
+        "judul": "Rancang Bangun Aplikasi E-Mutasi Siswa Berbasis Web Di Dinas Pendidikan Dan Kebudayaan Kota Pontianak",
+        "dospem": "Fitri Wibowo, S.S.T., M.T.",
+        "tahun_lulus": 2024,
+        "status": "Tersedia"
+    },
+    {
+        "id": 13,
+        "no_arsip": 13,
+        "nama_mhs": "Wadiiah Nurfadhilah",
+        "nim": 3202116001,
+        "judul": "Pengembangan Sistem Informasi Geografis Berbasis Web Dalam Upaya Konservasi Terumbu Karang Di Pesisir Kalimantan Barat",
+        "dospem": "Fitri Wibowo, S.S.T., M.T.",
+        "tahun_lulus": 2024,
+        "status": "Tersedia"
+    },
+    {
+        "id": 14,
+        "no_arsip": 14,
+        "nama_mhs": "Syarif Muhammad Irfan",
+        "nim": 3202116009,
+        "judul": "Rancang Bangun Local Area Network (LAN) Untuk Aksesibilitas Internet Sekolah Berbasis Client-Server Pada Sekolah Menengah Atas Negeri (SMAN) 4 Pontianak",
+        "dospem": "Yasir Arafat, S.S.T., M.T.",
+        "tahun_lulus": 2024,
+        "status": "Tersedia"
+    },
+    {
+        "id": 15,
+        "no_arsip": 15,
+        "nama_mhs": "Sabakti Okmalaputra",
+        "nim": 3202116040,
+        "judul": "Aplikasi Rancang Bangun Website Profil Tim Bola Voli Nomen Nescio (NN)",
+        "dospem": "Mariana Syamsudin, S.T., M.T., PhD",
+        "tahun_lulus": 2024,
+        "status": "Tersedia"
+    },
+    {
+        "id": 16,
+        "no_arsip": 16,
+        "nama_mhs": "Agung Sutiyo Sudrajad",
+        "nim": 3202116098,
+        "judul": "Rancang Bangun Aplikasi Sistem Registrasi Uji Kompetensi Fungsional Kesehatan Kalimantan Barat (Seruni Sehat) Pada Dinas Kesehatan Provinsi Kalimantan Barat",
+        "dospem": "Suharsono, S.Kom., M.Kom.",
+        "tahun_lulus": 2024,
+        "status": "Tersedia"
+    },
+    {
+        "id": 17,
+        "no_arsip": 17,
+        "nama_mhs": "Zidean Safwan Alfarozi",
+        "nim": 3202116012,
+        "judul": "Rancang Bangun Aplikasi Pemesanan Aula Berbasis Web Pada Badan Pengembangan Sumber Daya Manusia Provinsi Kalimantan Barat",
+        "dospem": "Yasir Arafat, S.S.T., M.T.",
+        "tahun_lulus": 2024,
+        "status": "Tersedia"
+    },
+    {
+        "id": 18,
+        "no_arsip": 18,
+        "nama_mhs": "Nasrul Aditiya",
+        "nim": 3202116095,
+        "judul": "Rancang Bangun Aplikasi Rencana Anggaran Biaya Pekerjaan Konstruksi Berbasis Web Di Perusahaan Daerah Air Minum Tirta Khatulistiwa Kota Pontianak",
+        "dospem": "Ferry Faisal, S.S.T., M.T.",
+        "tahun_lulus": 2024,
+        "status": "Tersedia"
+    },
+    {
+        "id": 19,
+        "no_arsip": 19,
+        "nama_mhs": "Naurah Adinda Aprilia",
+        "nim": 3202116029,
+        "judul": "Healer : E-Health Care Center Muhammadiyah Pontianak Berbasis Progressive Web Application (PWA)",
+        "dospem": "Fitri Wibowo, S.S.T., M.T.",
+        "tahun_lulus": 2024,
+        "status": "Tersedia"
+    },
+    {
+        "id": 20,
+        "no_arsip": 20,
+        "nama_mhs": "Raisya Wandha Saputri",
+        "nim": 3202116108,
+        "judul": "Rancang Bangun Aplikasi Pengelolaan Keuangan Himpunan Mahasiswa Jurusan Teknik Elektro Berbasis Web Menggunakan Metode Agile",
+        "dospem": "Safri Adam, S.Kom., M.Kom.",
+        "tahun_lulus": 2024,
+        "status": "Tersedia"
+    },
+    {
+        "id": 21,
+        "no_arsip": 21,
+        "nama_mhs": "Haafizhar Al Fathan Syauqi",
+        "nim": 3202116059,
+        "judul": "Rancang Bangun Aplikasi Manajemen Inventaris Berbasis Web Di PT Borneo Inovasi Gemilang",
+        "dospem": "Safri Adam, S.Kom., M.Kom",
+        "tahun_lulus": 2024,
+        "status": "Tersedia"
+    },
+    {
+        "id": 22,
+        "no_arsip": 22,
+        "nama_mhs": "Rochmadi",
+        "nim": 3202116091,
+        "judul": "Rancang Bangun Media Pembelajaran Interaktif Mubadiul Fiqhiyah Juz 1 Menggunakan Adobe Animate CC",
+        "dospem": "Muhammad Diponegoro, S.Kom., M.Cs.",
+        "tahun_lulus": 2024,
+        "status": "Tersedia"
+    },
+    {
+        "id": 23,
+        "no_arsip": 23,
+        "nama_mhs": "Naufal Nadhif",
+        "nim": 3202116079,
+        "judul": "Rancang Bangun Aplikasi Penjualan Baju Dan Jasa Jahit Berbasis Web Pada Usaha Jahit Aminah",
+        "dospem": "Muhammad Hasbi, S.T., M.T.",
+        "tahun_lulus": 2024,
+        "status": "Tersedia"
+    },
+    {
+        "id": 24,
+        "no_arsip": 24,
+        "nama_mhs": "Azzam Wildan Mascaty",
+        "nim": 3202116084,
+        "judul": "Rancang Bangun Aplikasi Media Pembelajaran Interaktif Kisah Keteladanan Nabi Dan Rasul Menggunakan Adobe Animate CC (Studi Kasus : SDN 21 Pontianak Timur)",
+        "dospem": "Tommi Suryanto, S.Kom., M.Kom.",
+        "tahun_lulus": 2024,
+        "status": "Tersedia"
+    },
+    {
+        "id": 25,
+        "no_arsip": 25,
+        "nama_mhs": "Azie Anggoro Subekti",
+        "nim": 3202116117,
+        "judul": "Rancang Bangun Aplikasi Sistem Presensi Siswa Di Sekolah Menengah Kejuruan 1 Semparuk Sambas Berbasis",
+        "dospem": "Tri Bowo Atmojo, S.T.,M.Cs.",
+        "tahun_lulus": 2024,
+        "status": "Tersedia"
+    },
+    {
+        "id": 26,
+        "no_arsip": 26,
+        "nama_mhs": "Raihan Al Muntaz Prisyah",
+        "nim": 3202116120,
+        "judul": "Rancang Bangun Website Naish Pudding Kota Pontianak ",
+        "dospem": "Muhammad Hasbi, S.T., M.T.",
+        "tahun_lulus": 2024,
+        "status": "Tersedia"
+    },
+    {
+        "id": 27,
+        "no_arsip": 27,
+        "nama_mhs": "Muhammad Freza A Razak",
+        "nim": 3202116015,
+        "judul": "Pembuatan Game Cerita Rakyat Di Pulau Kalimantan Dengan Genre Role Playing Game Menggunakan RPG Maker MZ",
+        "dospem": "Muhammad Hasbi, S.T., M.T.",
+        "tahun_lulus": 2024,
+        "status": "Tersedia"
+    },
+    {
+        "id": 28,
+        "no_arsip": 28,
+        "nama_mhs": "Falaah Bintang Armen Harahap",
+        "nim": 3202116036,
+        "judul": "Penerapan Initiation Dan Testing Pada Metode Game Development Life Cycle Dalam Pembuatan Game Boedjang Coffee",
+        "dospem": "Budianingsih, S.T., M.T.",
+        "tahun_lulus": 2024,
+        "status": "Tersedia"
+    },
+    {
+        "id": 29,
+        "no_arsip": 29,
+        "nama_mhs": "Gusnaufal Razan",
+        "nim": 3202116039,
+        "judul": "Rancang Bangun Augmented Reality (AR) Untuk Memperkenalkan Isi Monumen Tugu Khatulistiwa ",
+        "dospem": "Tommi Suryanto, S.Kom., M.Kom.",
+        "tahun_lulus": 2024,
+        "status": "Tersedia"
+    },
+    {
+        "id": 30,
+        "no_arsip": 30,
+        "nama_mhs": "Hafiz Putra Pratama",
+        "nim": 3202116021,
+        "judul": "Rancang Bangun Sistem Informasi Magang Kurikulum Merdeka Belajar Kampus Merdeka (SIMBKM) Berbasis Web Di Jurusan Teknik Elektro Politeknik Negeri Pontianak",
+        "dospem": "Lindung Siswanto, S.Kom., M.Eng.",
+        "tahun_lulus": 2024,
+        "status": "Tersedia"
+    },
+    {
+        "id": 31,
+        "no_arsip": 31,
+        "nama_mhs": "Refrisna Maulia Azwar",
+        "nim": 3202116069,
+        "judul": "Rancang Bangun Sistem Monitoring Gizi Anak Berdasarkan Pengenalan Gambar (SIMOGA) Berbasis Website Di Dinas Kesehatan Provinsi Kalimantan Barat",
+        "dospem": "Suheri, S.T., M.Cs.",
+        "tahun_lulus": 2024,
+        "status": "Tersedia"
+    },
+    {
+        "id": 32,
+        "no_arsip": 32,
+        "nama_mhs": "Abdul Rohim",
+        "nim": 3202116041,
+        "judul": "Pengembangan Aplikasi Rekap Pemberitaan Menggunakan Framework Laravel",
+        "dospem": "Ferry Faisal, S.S.T., MT.",
+        "tahun_lulus": 2024,
+        "status": "Tersedia"
+    },
+    {
+        "id": 33,
+        "no_arsip": 33,
+        "nama_mhs": "Novan Febrian",
+        "nim": 3202116067,
+        "judul": "Aplikasi Pemesanan Jasa Make Up Berbasis Web Pada Febiola Nanda Make Up Artist",
+        "dospem": "Muhammad Hasbi, S.T., M.T.",
+        "tahun_lulus": 2024,
+        "status": "Tersedia"
+    },
+    {
+        "id": 34,
+        "no_arsip": 34,
+        "nama_mhs": "Muhammad Ricad Khaizuran",
+        "nim": 3202116119,
+        "judul": "Rancang Bangun Media Pembelajaran Interaktif Pendidikan Agama Islam Menggunakan Adobe Animate CC (Studi Kasus : SDN 03 Karimunting)",
+        "dospem": "Sarah Bibi, S.S.T., M.Pd.",
+        "tahun_lulus": 2024,
+        "status": "Tersedia"
+    },
+    {
+        "id": 35,
+        "no_arsip": 35,
+        "nama_mhs": "Okta Maulana",
+        "nim": 3202116074,
+        "judul": "Rancang Bangun Aplikasi Monitoring Gizi Balita Dan Rekomendasi Makanan Berbasis Android Dengan Pengenalan Gambar Menggunakan Api Tensorflow",
+        "dospem": "Sarah Bibi, S.S.T., M.Pd.",
+        "tahun_lulus": 2024,
+        "status": "Pending"
+    },
+    {
+        "id": 36,
+        "no_arsip": 36,
+        "nama_mhs": "Muhammad Abdu Waris",
+        "nim": 3202116110,
+        "judul": "Rancang Bangun Sistem Manajemen Surat Masuk Dan Surat Keluar Menggunakan Framework Codeigniter Studi Kasus KPKNL Singkawang",
+        "dospem": "Muhammad Diponegoro, S.Kom., M.Cs.",
+        "tahun_lulus": 2024,
+        "status": "Tersedia"
+    },
+    {
+        "id": 37,
+        "no_arsip": 37,
+        "nama_mhs": "Septiadi Hendra Saputra",
+        "nim": 3202116112,
+        "judul": "Rancang Bangun Aplikasi Penyewaan Mobil Dan Travel Pada MT Rentcar Berbasis Web",
+        "dospem": "Wendhi Yuniarto, S.T., M.T.",
+        "tahun_lulus": 2024,
+        "status": "Tersedia"
+    },
+    {
+        "id": 38,
+        "no_arsip": 38,
+        "nama_mhs": "Rida Ramdayani",
+        "nim": 3202116013,
+        "judul": "Rancang Bangun Aplikasi Visualisasi Data Perkebunan Rakyat Pada Dinas Perkebunan Dan Peternakan Kabupaten Kubu Raya Berbasis Web",
+        "dospem": "Neny Firdyanti, ST., MT.",
+        "tahun_lulus": 2024,
+        "status": "Tersedia"
+    },
+    {
+        "id": 39,
+        "no_arsip": 39,
+        "nama_mhs": "Nada Nurramadhani Rosmita",
+        "nim": 3202116123,
+        "judul": "Rancang Bangun Media Pembelajaran Ekonomi Dengan Adobe Animate Dan After Effect Siswa Kelas X SMA Negeri 1 Sungai Ambawang",
+        "dospem": "Novi Aryani, S.T., S.T., M.Tr.Kom.",
+        "tahun_lulus": 2024,
+        "status": "Tersedia"
+    },
+    {
+        "id": 40,
+        "no_arsip": 40,
+        "nama_mhs": "Fitri Ambarwati",
+        "nim": 3202116103,
+        "judul": "Rancang Bangun Sistem Informasi Berbasis Web Taman Pendidikan Al-Qur'an (TPQ) Baiti Jannati Menggunakan Framework Laravel ",
+        "dospem": "Neny Firdyanti, ST., MT.",
+        "tahun_lulus": 2024,
+        "status": "Tersedia"
+    },
+    {
+        "id": 41,
+        "no_arsip": 41,
+        "nama_mhs": "Dea Windiyati",
+        "nim": 3202116018,
+        "judul": "Rancang Bangun Aplikasi Pemesanan Jasa Nail Art Dan Last Lift Pada Alpha Beauty Center Berbasis Web",
+        "dospem": "Neny Firdyanti, S.T.,M.T.",
+        "tahun_lulus": 2024,
+        "status": "Tersedia"
+    },
+    {
+        "id": 42,
+        "no_arsip": 42,
+        "nama_mhs": "Muhammad Ridho Madani",
+        "nim": 3202116063,
+        "judul": "Rancang Bangun Aplikasi Media Pembelajaran Menggunakan Augmented Reality Ilmu Pengetahuan Alam (Ipa) Materi Sistem Rangka Manusia Berbasis Android Untuk Guru Dan Siswa Tunarungu Sekolah Luar Biasa (SLB) B Dharma Asih Pontianak",
+        "dospem": "Nurul Fadhillah, S.Pd., M.Ed.TESOL",
+        "tahun_lulus": 2024,
+        "status": "Tersedia"
+    },
+    {
+        "id": 43,
+        "no_arsip": 43,
+        "nama_mhs": "Raka Maulana Iqalvi",
+        "nim": 3202116064,
+        "judul": "Pengembangan Fitur  Augmented Reality  Dalam  Aplikasi Media Pembelajaran Ilmu Pengetahuan Alam (IPA) Materi Sistem Rangka Manusia Berbasis Android Untuk Guru Dan Siswa Tunarungu Sekolah Luar Biasa (SLB) B Dharma Asih Pontianak",
+        "dospem": "Nurul Fadhillah, S.Pd., M.Ed.TESOL",
+        "tahun_lulus": 2024,
+        "status": "Tersedia"
+    },
+    {
+        "id": 44,
+        "no_arsip": 44,
+        "nama_mhs": "M Dedi Robyyanto",
+        "nim": 3202116094,
+        "judul": "Rancang Bangun Aplikasi Monitoring Pekerjaan (E-MONITORING) Berbasis Web Pada Bagian Perencanaan Dan Pengelolaan Aset Di Perumda Tirta Khatulistiwa Kota Pontianak",
+        "dospem": "Suharsono,S.Kom,.M.Kom.",
+        "tahun_lulus": 2024,
+        "status": "Tersedia"
+    },
+    {
+        "id": 45,
+        "no_arsip": 45,
+        "nama_mhs": "Brigitha Nitiari",
+        "nim": 3202116118,
+        "judul": "Rancang Bangun Sistem Layanan Kantor Desa Paloan Kabupaten Landak Berbasis Web ",
+        "dospem": "Yasir Arafat, S.ST., M.T.",
+        "tahun_lulus": 2024,
+        "status": "Tersedia"
+    },
+    {
+        "id": 46,
+        "no_arsip": 46,
+        "nama_mhs": "Dhesty Aulia Pinanti",
+        "nim": 3202116068,
+        "judul": "Augmented Reality (AR) Untuk Pembelajaran Struktur Dan Fungsi Tumbuhan Berbasis Android",
+        "dospem": "Yasir Arafat, S.ST., M.T.",
+        "tahun_lulus": 2024,
+        "status": "Tersedia"
+    },
+    {
+        "id": 47,
+        "no_arsip": 47,
+        "nama_mhs": "Herdini Nabila Kanesya",
+        "nim": 3202116062,
+        "judul": "Pembuatan Website Sekolah Sebagai Media Informasi, Promosi, Dan Pendaftaran Di TK Al-Mukaddimah Menggunakan Framework Codeigniter 4",
+        "dospem": "Suheri, S.T., M.Cs.",
+        "tahun_lulus": 2024,
+        "status": "Tersedia"
+    },
+    {
+        "id": 48,
+        "no_arsip": 48,
+        "nama_mhs": "Natasha Melinda",
+        "nim": 3202116006,
+        "judul": "Rancang Bangun Sistem Monitoring Dan Kontrol Berbasis Internet Of Things Pada Aplikasi Web Untuk Pertumbuhan Tanaman Hidroponik Di Alwi Mini Farm",
+        "dospem": "Lindung Siswanto, S.Kom., M.Eng.",
+        "tahun_lulus": 2024,
+        "status": "Tersedia"
+    },
+    {
+        "id": 49,
+        "no_arsip": 49,
+        "nama_mhs": "Resky Syarif Maulana",
+        "nim": 3202116056,
+        "judul": "Rancang Bangun Game Puzzle Adventure 2.5d \"Escape From The Office\" Menggunakan Unity Engine",
+        "dospem": "Muhammad Hasbi, S.T., M.T.",
+        "tahun_lulus": 2024,
+        "status": "Tersedia"
+    },
+    {
+        "id": 50,
+        "no_arsip": 50,
+        "nama_mhs": "Azlina Asy Syifa",
+        "nim": 3202116019,
+        "judul": "Rancang Bangun Aplikasi Launderclean Sebagai Platform Penyedia Jasa Laundry Rumahan Di Kota Pontianak Berbasis Website Menggunakan Framework Laravel",
+        "dospem": "Safri Adam, S.Kom., M.Kom",
+        "tahun_lulus": 2024,
+        "status": "Tersedia"
+    },
+    {
+        "id": 51,
+        "no_arsip": 51,
+        "nama_mhs": "Yachzee Aleandri Oktaura Tarigan",
+        "nim": 3202116008,
+        "judul": "Penerapan Production Pada Metode Game Development Life Cycle Dan Pembuatan Game Boejang Coffee",
+        "dospem": "Budianingsih, S.T., M.T.",
+        "tahun_lulus": 2024,
+        "status": "Tersedia"
+    },
+    {
+        "id": 52,
+        "no_arsip": 52,
+        "nama_mhs": "Nuradinda El Taufiq",
+        "nim": 3202116028,
+        "judul": "Pembuatan Aplikasi Manajemen Inventaris Di Workshop Program Studi D4 Pengolahan Dan Penyimpanan Hasil Perikanan Politeknik Negeri Pontianak Berbasis Web Menggunakan Framework Codeigniter 4",
+        "dospem": "Suheri, S.T., M.Cs.",
+        "tahun_lulus": 2024,
+        "status": "Tersedia"
+    },
+    {
+        "id": 53,
+        "no_arsip": 53,
+        "nama_mhs": "Dayang Desti Damayanti",
+        "nim": 3202116058,
+        "judul": "Rancang Bangun Website Pemerintahan Kabupaten Sintang Dengan Fitur Anti Web Defacement Menggunakan Framework Codeigniter 4",
+        "dospem": "Suheri, S.T., M.Cs.",
+        "tahun_lulus": 2024,
+        "status": "Tersedia"
+    },
+    {
+        "id": 54,
+        "no_arsip": 54,
+        "nama_mhs": "Walillah",
+        "nim": 3202116032,
+        "judul": "Rancang Bangun Sistem Informasi Pembayaran Biaya Pendidikan Pada SD Plus Bina 45 Pontianak",
+        "dospem": "Lindung Siswanto, S.Kom., M.Eng.",
+        "tahun_lulus": 2024,
+        "status": "Tersedia"
+    },
+    {
+        "id": 55,
+        "no_arsip": 55,
+        "nama_mhs": "Firza Febrian",
+        "nim": 3202116055,
+        "judul": "Rancang Bangun Sistem Informasi Sekolah Sepak Bola Tunas Baru Berbasis Web",
+        "dospem": "Suharsono,S.Kom,.M.Kom.",
+        "tahun_lulus": 2024,
+        "status": "Tersedia"
+    },
+    {
+        "id": 56,
+        "no_arsip": 56,
+        "nama_mhs": "Alda Rahmanita",
+        "nim": 3202116076,
+        "judul": "Rancang Bangun Aplikasi Unit Kegiatan Mahasiswa (UKM) Badminton Politeknik Negeri Pontianak Berbasis Web",
+        "dospem": "Neny Firdyanti, S.T.,M.T.",
+        "tahun_lulus": 2024,
+        "status": "Tersedia"
+    },
+    {
+        "id": 57,
+        "no_arsip": 57,
+        "nama_mhs": "Syifa Firdassina",
+        "nim": 3202116049,
+        "judul": "Pembuatan Website Penjualan Pada Toko Rumahku Jingga Menggunakan Framework Codeigniter 4",
+        "dospem": "Suheri, S.T., M.Cs.",
+        "tahun_lulus": 2024,
+        "status": "Tersedia"
+    },
+    {
+        "id": 58,
+        "no_arsip": 58,
+        "nama_mhs": "Siti Rahma Azmi",
+        "nim": 3202116057,
+        "judul": "Rancang Bangun Aplikasi Pencatatan Pengeluaran Pengawas Pada CV. Anugerah Jaya Cemerlang Berbasis Web",
+        "dospem": "Fitri Wibowo, S.S.T., M.T.",
+        "tahun_lulus": 2024,
+        "status": "Tersedia"
+    },
+    {
+        "id": 59,
+        "no_arsip": 59,
+        "nama_mhs": "Elfa Cahya Jamiati",
+        "nim": 3202116093,
+        "judul": "Implementasi Media Pembelajaran Interaktif Berbasis Animasi Pada Materi Fiqih Thaharah Kelas VII Menggunakan Action Script 3.0",
+        "dospem": "Suharsono, S.Kom., M.Kom.",
+        "tahun_lulus": 2024,
+        "status": "Tersedia"
+    },
+    {
+        "id": 60,
+        "no_arsip": 60,
+        "nama_mhs": "Nadia Sabrina",
+        "nim": 3202116054,
+        "judul": "Pemanfaatan Teknologi Augmented Reality Sebagai Media Bantu Pembelajaran Hewan Reptil Pada Tk Aisyiyah Bustanul Athfal 1 Pontianak",
+        "dospem": "Novi Aryani, S.T., S.T., M.Tr.Kom.",
+        "tahun_lulus": 2024,
+        "status": "Tersedia"
+    },
+    {
+        "id": 61,
+        "no_arsip": 61,
+        "nama_mhs": "Bima Andi Putra",
+        "nim": 3202116080,
+        "judul": "Perancangan Jaringan Internet Pada Sekolah Menengah Pertama Negeri (SMPN) 1 Sungai Raya Kabupaten Kubu Raya",
+        "dospem": "Muhammad Hasbi, S.T., M.T.",
+        "tahun_lulus": 2024,
+        "status": "Tersedia"
+    },
+    {
+        "id": 62,
+        "no_arsip": 62,
+        "nama_mhs": "Rizky Alif Akbar",
+        "nim": 3202116115,
+        "judul": "Pembuatan Animasi Iklan Aplikasi Brimo Di Bank Rakyat Indonesia Cabang Sintang",
+        "dospem": "Novi Aryani, S.T., S.T., M.Tr.Kom.",
+        "tahun_lulus": 2024,
+        "status": "Tersedia"
+    },
+    {
+        "id": 63,
+        "no_arsip": 63,
+        "nama_mhs": "Agistra Arifur Rahman",
+        "nim": 3202116023,
+        "judul": "Rancang Bangun Aplikasi Backend Launderclean Berbasis Restful Api Dengan Framework Laravel Dan Autentifikasi Json Web Token (JWT)",
+        "dospem": "Lindung Siswanto, S.Kom., M.Eng.",
+        "tahun_lulus": 2024,
+        "status": "Tersedia"
+    },
+    {
+        "id": 64,
+        "no_arsip": 64,
+        "nama_mhs": "Putri Nadila Suryani",
+        "nim": 3202116060,
+        "judul": "Rancang Bangun Aplikasi Frontend Launderclean Menggunakan Framework Next.Js Dengan Penerapan Search Engine Optimization (SEO) Dan Responsive Web Design",
+        "dospem": "Safri Adam, S.Kom., M.Kom",
+        "tahun_lulus": 2024,
+        "status": "Tersedia"
+    },
+    {
+        "id": 65,
+        "no_arsip": 65,
+        "nama_mhs": "Uchi Hardiana",
+        "nim": 3202116077,
+        "judul": "Rancang Bangun Media Pembelajaran Kosakata Bahasa Arab Menggunakan Adobe Animate Di Madrasah Ibtidaiyah Swasta Al-Azhar Kabupaten Sambas Belum",
+        "dospem": "Tommy Suryanto, S.Kom., M.Kom",
+        "tahun_lulus": 2024,
+        "status": "Tersedia"
+    },
+    {
+        "id": 66,
+        "no_arsip": 66,
+        "nama_mhs": "Putri Yani",
+        "nim": 3202116125,
+        "judul": "Rancang Bangun Aplikasi Presensi Dan Pendapatan Pada Marlin Swimming Club Pontianak Berbasis Web",
+        "dospem": "Sarah Bibi, S.S.T., M.Pd.",
+        "tahun_lulus": 2024,
+        "status": "Tersedia"
+    },
+    {
+        "id": 67,
+        "no_arsip": 67,
+        "nama_mhs": "Jidan",
+        "nim": 3202116088,
+        "judul": "Rancang Bangun Aplikasi Pengelolaan Arsip (E-ARSIP) Pada Bagian Perencanaan Pengelolaan Aset Di Perumda Air Minum Tirta Khatulistiwa Kota Pontianak",
+        "dospem": "Ferry Faisal, S.S.T., MT.",
+        "tahun_lulus": 2024,
+        "status": "Tersedia"
+    },
+    {
+        "id": 68,
+        "no_arsip": 68,
+        "nama_mhs": "Aryo Wibowo",
+        "nim": 3202116031,
+        "judul": "Perancangan Dan Implementasi Website Profile PT Borneo Tech Solution",
+        "dospem": "Muhammad Hasbi, S.T., M.T.",
+        "tahun_lulus": 2024,
+        "status": "Tersedia"
+    },
+    {
+        "id": 69,
+        "no_arsip": 69,
+        "nama_mhs": "Mustika",
+        "nim": 3202116017,
+        "judul": "Rancang Bangun Media Pembelajaran Interaktif Pengenalan Huruf Hijaiyah Dan Tajwid Menggunakan Adobe Animate Pada Paud Raudhatul Athfal As-Syifa",
+        "dospem": "Tommy Suryanto, S.Kom., M.Kom",
+        "tahun_lulus": 2024,
+        "status": "Tersedia"
+    },
+    {
+        "id": 70,
+        "no_arsip": 70,
+        "nama_mhs": "Muhammad Vidi Rachman",
+        "nim": 3202116061,
+        "judul": "Rancang Bangun Aplikasi Pemesanan Makanan Bakmie Haji Aman Berbasis Android",
+        "dospem": "Sarah Bibi, S.S.T., M.Pd.",
+        "tahun_lulus": 2024,
+        "status": "Tersedia"
+    },
+    {
+        "id": 71,
+        "no_arsip": 1,
+        "nama_mhs": "Nela Sry Devi Sitompul ",
+        "nim": 3202016082,
+        "judul": "Media Pembelajaran Interaktif Tabel Periodik Unsur Kimia Di SMAN 1 Sei Bamban Menggunakan Adobe Animate CC 2019",
+        "dospem": "Pausta Yugianus, S.Kom., M.T.",
+        "tahun_lulus": 2023,
+        "status": "Tersedia"
+    },
+    {
+        "id": 72,
+        "no_arsip": 2,
+        "nama_mhs": "Andra Zalianty",
+        "nim": 3202016081,
+        "judul": "Rancang Bangun Aplikasi Pembelajaran Indera Pendengaran Menggunakan Augmented Reality Di SLB Dharma Asih Pontianak",
+        "dospem": "Nurul Fadillah, S.Pd., M.Ed., TESOL.",
+        "tahun_lulus": 2023,
+        "status": "Tersedia"
+    },
+    {
+        "id": 73,
+        "no_arsip": 3,
+        "nama_mhs": "Muhammad Wildan Adham",
+        "nim": 3202016003,
+        "judul": "Rancang Bangun Aplikasi Pendaftaran Berbasis Website Pada SMP Muhammadiyah Sintang",
+        "dospem": "Muhammad Diponegoro, S.Kom., M.Cs.",
+        "tahun_lulus": 2023,
+        "status": "Tersedia"
+    },
+    {
+        "id": 74,
+        "no_arsip": 4,
+        "nama_mhs": "Cherly Evanjeli",
+        "nim": 3202016104,
+        "judul": "Implementasi Augmented Reality Sebagai Media Pembelajaran Interaktif Organ Pernapasan Manusia",
+        "dospem": "Novi Aryani Fitri, S.T., M.Tr.Kom.",
+        "tahun_lulus": 2023,
+        "status": "Tersedia"
+    },
+    {
+        "id": 75,
+        "no_arsip": 5,
+        "nama_mhs": "Putri Sari",
+        "nim": 3202016009,
+        "judul": "Rancang Bangun Official Web SMP NEGERI 3 Sungai Kakap Kabupaten Kubu Raya",
+        "dospem": "Ferry Faisal, S.S.T., M.T.",
+        "tahun_lulus": 2023,
+        "status": "Tersedia"
+    },
+    {
+        "id": 76,
+        "no_arsip": 6,
+        "nama_mhs": "Muhammad Robby Alfian ",
+        "nim": 3202016029,
+        "judul": "Rancang Bangun Sistem Informasi Badan Eksekutif Mahasiswa Di Politeknik Negeri Pontianak Berbasis Web",
+        "dospem": "Fitri Wibowo, S.S.T., M.T.",
+        "tahun_lulus": 2023,
+        "status": "Tersedia"
+    },
+    {
+        "id": 77,
+        "no_arsip": 7,
+        "nama_mhs": "Ahmad Lazuardi",
+        "nim": 3202016083,
+        "judul": "Rancang Bangun Website Sekolah Pada SMKN 1 Dedai Kabupaten Sintang",
+        "dospem": "Pausta Yugianus, S.Kom., M.T.",
+        "tahun_lulus": 2023,
+        "status": "Tersedia"
+    },
+    {
+        "id": 78,
+        "no_arsip": 8,
+        "nama_mhs": "Susan",
+        "nim": 3202016075,
+        "judul": "Media Pembelajaran Tata Surya Menggunakan Teknologi Augmented Reality ",
+        "dospem": "Novi Aryani Fitri, S.T., M.Tr.Kom.",
+        "tahun_lulus": 2023,
+        "status": "Tersedia"
+    },
+    {
+        "id": 79,
+        "no_arsip": 9,
+        "nama_mhs": "Raihan Ridho",
+        "nim": 3202016049,
+        "judul": "Rancang Bangun Sistem Informasi Inventaris Barang Berbasis Website Pada PT Borneo Inovasi Gemilang",
+        "dospem": "Yasir Arafat, S.S.T., MT.",
+        "tahun_lulus": 2023,
+        "status": "Tersedia"
+    },
+    {
+        "id": 80,
+        "no_arsip": 10,
+        "nama_mhs": "-",
+        "nim": "-",
+        "judul": "-",
+        "dospem": "-",
+        "tahun_lulus": 2023,
+        "status": "Tersedia"
+    },
+    {
+        "id": 81,
+        "no_arsip": 11,
+        "nama_mhs": "Ricky Inzagi Baryono",
+        "nim": 3202016063,
+        "judul": "Rancang Bangun Aplikasi Pemesanan Jasa Service Dan Pencucian AC Berbasis Web Di CV Permata Cahaya Tanisga",
+        "dospem": "Fitri Wibowo, S.S.T., M.T.",
+        "tahun_lulus": 2023,
+        "status": "Tersedia"
+    },
+    {
+        "id": 82,
+        "no_arsip": 12,
+        "nama_mhs": "Lintang Karenina Aprillianti",
+        "nim": 3202016058,
+        "judul": "Rancang Bangun Aplikasi Penyewaan Mobil Berbasis Web Progresif Pada MT Rentcar Pontianak",
+        "dospem": "Ferry Faisal, S.S.T., M.T.",
+        "tahun_lulus": 2023,
+        "status": "Tersedia"
+    },
+    {
+        "id": 83,
+        "no_arsip": 13,
+        "nama_mhs": "Anggi Syahrul Kurniawan ",
+        "nim": 3202016023,
+        "judul": "Rancang Bangun Sistem Pendeteksi Kebakaran Pada Laboratorium Teknik Informatika Polnep Melalui Kamera CCTV Menggunakan Library Opencv",
+        "dospem": "Safri Adam, S.Kom., M.Kom.",
+        "tahun_lulus": 2023,
+        "status": "Tersedia"
+    },
+    {
+        "id": 84,
+        "no_arsip": 14,
+        "nama_mhs": "Tari",
+        "nim": 3202016076,
+        "judul": "Rancang Bangun Aplikasi Berbasis Website Penyedia Jasa Wedding Decoration Pada Divya Dekorasi",
+        "dospem": "Neny Firdyanti, S.T., M.T.",
+        "tahun_lulus": 2023,
+        "status": "Tersedia"
+    },
+    {
+        "id": 85,
+        "no_arsip": 15,
+        "nama_mhs": "-",
+        "nim": "-",
+        "judul": "-",
+        "dospem": "-",
+        "tahun_lulus": 2023,
+        "status": "Tersedia"
+    },
+    {
+        "id": 86,
+        "no_arsip": 16,
+        "nama_mhs": "Fandy Haryadi",
+        "nim": 3202016110,
+        "judul": "Rancang Bangun Media Pembelajaran Lapisan Bumi Kelas VII Madrasah Tsanawiyah 2 Pontianak Menggunakan Adobe Animate",
+        "dospem": "Mariana Syamsudin, S.T., M.T.,PhD",
+        "tahun_lulus": 2023,
+        "status": "Tersedia"
+    },
+    {
+        "id": 87,
+        "no_arsip": 17,
+        "nama_mhs": "Dewi Ramadhanti",
+        "nim": 3202016025,
+        "judul": "Rancang Bangun Media Pembelajaran Pengenalan Rumah Adat Kalimantan Barat Menggunakan Augmented Reality (Studi Kasus : SDN 24 Pontianak Kota)",
+        "dospem": "Tommi Suryanto, S.Kom., M.Kom",
+        "tahun_lulus": 2023,
+        "status": "Tersedia"
+    },
+    {
+        "id": 88,
+        "no_arsip": 18,
+        "nama_mhs": "Elsadai Romyanna Br Ginting",
+        "nim": 3202016080,
+        "judul": "Rancang Bangun Media Pembelajaran Karakter Tokoh Pada Alkitab Untuk Anak Sekolah Minggu Menggunakan Adobe Animate CC 2023",
+        "dospem": "Yasir Arafat, S.S.T., MT.",
+        "tahun_lulus": 2023,
+        "status": "Tersedia"
+    },
+    {
+        "id": 89,
+        "no_arsip": 19,
+        "nama_mhs": "Rizky Arlino Murtadho",
+        "nim": 3202016062,
+        "judul": "Rancang Bangun Game Tebak Pahlawan Sebagai Media Pengenalan Pahlawan Indonesia",
+        "dospem": "Suharsono, S.Kom., M.Kom.",
+        "tahun_lulus": 2023,
+        "status": "Tersedia"
+    },
+    {
+        "id": 90,
+        "no_arsip": 20,
+        "nama_mhs": "Bento Bongkar Nasution ",
+        "nim": 3202016034,
+        "judul": "Rancang Bangun Aplikasi Perpustakaan Berbasis Web Di SMK Negeri 1 Ketapang",
+        "dospem": "Muhammad Hasbi, S.T.,M.T.",
+        "tahun_lulus": 2023,
+        "status": "Tersedia"
+    },
+    {
+        "id": 91,
+        "no_arsip": 21,
+        "nama_mhs": "-",
+        "nim": "-",
+        "judul": "-",
+        "dospem": "-",
+        "tahun_lulus": 2023,
+        "status": "Tersedia"
+    },
+    {
+        "id": 92,
+        "no_arsip": 22,
+        "nama_mhs": "Fuad Riyadhi",
+        "nim": 3202016057,
+        "judul": "Chatbot Pelayanan Informasi Calon Santri Baru Pada Pondok Pesantren Al-Jihad Menggunakan Metode Cosine Similarty",
+        "dospem": "Safri Adam, S.Kom., M.Kom.",
+        "tahun_lulus": 2023,
+        "status": "Tersedia"
+    },
+    {
+        "id": 93,
+        "no_arsip": 23,
+        "nama_mhs": "Tri Laksono Wijoyo ",
+        "nim": 3202016026,
+        "judul": "Pembuatan Chatbot Sebagai Media Informasi Pendaftaran Lomba Menggunakan Metode TIF-IDF Pada UKM Iptek Polnep",
+        "dospem": "Safri Adam, S.Kom., M.Kom.",
+        "tahun_lulus": 2023,
+        "status": "Tersedia"
+    },
+    {
+        "id": 94,
+        "no_arsip": 24,
+        "nama_mhs": "M. David Firmansyah ",
+        "nim": 3202016122,
+        "judul": "Rancang Bangun Sistem Informasi Sekolah Menengah Atas (SMA) Negeri 1 Suhaid Berbasis Web",
+        "dospem": "Suharsono, S.Kom., M.Kom.",
+        "tahun_lulus": 2023,
+        "status": "Tersedia"
+    },
+    {
+        "id": 95,
+        "no_arsip": 25,
+        "nama_mhs": "Mellanie Prasticia Yositaputri",
+        "nim": 3202016054,
+        "judul": "Rancang Bangun Media Pembelajaran Bahasa Isyarat Sibi Untuk Anak Tunarungu Di TK SLB-B Dharma Asih",
+        "dospem": "Tommi Suryanto, S.Kom., M.Kom",
+        "tahun_lulus": 2023,
+        "status": "Tersedia"
+    },
+    {
+        "id": 96,
+        "no_arsip": 26,
+        "nama_mhs": "Vebri Sulitian",
+        "nim": 3202016033,
+        "judul": "Rancang Bangun Website Gereja Kalimantan Evangelis (GKE) Betlehem Pontianak ",
+        "dospem": "Sarah Bibi,S.S.T., M.Pd.",
+        "tahun_lulus": 2023,
+        "status": "Tersedia"
+    },
+    {
+        "id": 97,
+        "no_arsip": 27,
+        "nama_mhs": "Muklis Faridho Novianto",
+        "nim": 3202016114,
+        "judul": "Rancang Bangun Aplikasi Media Pembelajaran Interaktif Kitab Khulasoh Yaqin Menggunakan Adobe Animate Cc",
+        "dospem": "Mariana Syamsudin, S.T., M.T., Ph.D.",
+        "tahun_lulus": 2023,
+        "status": "Tersedia"
+    },
+    {
+        "id": 98,
+        "no_arsip": 28,
+        "nama_mhs": "Muhammad Noufail Baihaqy Ravaie",
+        "nim": 3202016123,
+        "judul": "Rancang Bangun Sistem Informasi Jasa Pada Laundry Arbi Berbasis Web",
+        "dospem": "Wendhi Yuniarto, S.T., M.T.",
+        "tahun_lulus": 2023,
+        "status": "Tersedia"
+    },
+    {
+        "id": 99,
+        "no_arsip": 29,
+        "nama_mhs": "Angelina Vivi Widyanti",
+        "nim": 3202016022,
+        "judul": "Rancang Bangun Aplikasi Pengarsipan Dokumen Paspor Di Kantor Imigrasi Kelas 1 Tempat Pemeriksaan Imigrasi Pontianak Berbasis Web",
+        "dospem": "Lindung Siswanto, S.kom., M.Eng.",
+        "tahun_lulus": 2023,
+        "status": "Tersedia"
+    },
+    {
+        "id": 100,
+        "no_arsip": 30,
+        "nama_mhs": "Utin Rafiqiyah Azizah",
+        "nim": 3202016007,
+        "judul": "Rancang Bangun Website Sekolah SMPN 1 Suhaid Di Kabupaten Kapuas Hulu",
+        "dospem": "Tri Bowo Atmojo, S.T., M.Cs.",
+        "tahun_lulus": 2023,
+        "status": "Tersedia"
+    },
+    {
+        "id": 101,
+        "no_arsip": 31,
+        "nama_mhs": "Citra Aulia Putri",
+        "nim": 3202016096,
+        "judul": "Rancang Bangun Media Pembelajaran Interaktif Dasar Bahasa Inggris Menggunakan Adobe Animate CC (Studi Kasus: TK Raudhatul Athfal Mas'udi) ",
+        "dospem": "Tommi Suryanto, S.Kom., M.Kom",
+        "tahun_lulus": 2023,
+        "status": "Tersedia"
+    },
+    {
+        "id": 102,
+        "no_arsip": 32,
+        "nama_mhs": "Tania Surihatanti Br. Sinurat",
+        "nim": 3202016021,
+        "judul": "Rancang Bangun Media Pembelajaran Interaktif Ilmu Pengetahuan Alam Tentang Organ Gerak Hewan Dan Manusia Tingkat Sekolah Dasar Menggunakan Adobe Animate",
+        "dospem": "Pausta Yugianus ,S.Kom.,M.T",
+        "tahun_lulus": 2023,
+        "status": "Tersedia"
+    },
+    {
+        "id": 103,
+        "no_arsip": 33,
+        "nama_mhs": "Putra Satria Mujahid",
+        "nim": 3202016108,
+        "judul": "Rancang Bangun Media Pembelajaran Animasi Pada Anak Di TK B Primanda Untan",
+        "dospem": "Muhammad Diponegoro, S.Kom.,M.Cs.",
+        "tahun_lulus": 2023,
+        "status": "Tersedia"
+    },
+    {
+        "id": 104,
+        "no_arsip": 34,
+        "nama_mhs": "Irfanda Anugerah",
+        "nim": 3202016068,
+        "judul": "Rancang Bangun Aplikasi Pembelajaran Mu Geografi Berbasis Android Menggunakan Adobe Animate CC (Studi Kasus: SMAN 05 Pontianak)",
+        "dospem": "Budianingsih,S.T.,M.T",
+        "tahun_lulus": 2023,
+        "status": "Tersedia"
+    },
+    {
+        "id": 105,
+        "no_arsip": 35,
+        "nama_mhs": "Muhammad Rizky Ikhsan Pratam",
+        "nim": 3202016043,
+        "judul": "Rancang Bangun Sistem Informasi Pemasaran Dan Penjualan Produk Umkm Selera Indonesia Berbasis Web",
+        "dospem": "Fitri Wibowo, S.S.T.,M.T",
+        "tahun_lulus": 2023,
+        "status": "Tersedia"
+    },
+    {
+        "id": 106,
+        "no_arsip": 36,
+        "nama_mhs": "Dinda Putri Dapridhitha",
+        "nim": 3202016001,
+        "judul": "Rancang Bangun Aplikasi Sistem Presensi Dan Nilai Siswa Berbasis Web Pada SMPN 1 Entikong",
+        "dospem": "Fitri Wibowo, S.S.T.,M.T",
+        "tahun_lulus": 2023,
+        "status": "Tersedia"
+    },
+    {
+        "id": 107,
+        "no_arsip": 37,
+        "nama_mhs": "Yoga Restu Dwi Prasetyo",
+        "nim": 3202016011,
+        "judul": "Rancang Bangun Website Sekolah Mi Darul Ilmi Kabupaten Sintang",
+        "dospem": "Sarah Bibi,S.S.T.,M.Pd",
+        "tahun_lulus": 2023,
+        "status": "Tersedia"
+    },
+    {
+        "id": 108,
+        "no_arsip": 38,
+        "nama_mhs": "Utin Dyah Ayu Febrianti Ningrum",
+        "nim": 3202016008,
+        "judul": "Rancang Bangun Media Pembelajaran Interaktif Mata Pelajaran Jaringan Komputer Dasar Kelas X Pada Jurusan Teknik Komputer Dan Jaringan Smk Muhammadiyah Sintang Menggunakan Adobe Animate",
+        "dospem": "Pausta Yugianus ,S.Kom.,M.T",
+        "tahun_lulus": 2023,
+        "status": "Tersedia"
+    },
+    {
+        "id": 109,
+        "no_arsip": 39,
+        "nama_mhs": "Jurina ",
+        "nim": 3202016045,
+        "judul": "Rancang Bangun Aplikasi Media Pembelajaran Mata Pelajaran Ilmu Pengetahuan Alam Tentang Zat Tunggal Dan Zat Campuran Untuk Siswa Kelas V SD Negeri 36 Pontianak Menggunakan Adobe Animate CC",
+        "dospem": "Yasir Arafat,S.S.T.,M.T",
+        "tahun_lulus": 2023,
+        "status": "Tersedia"
+    },
+    {
+        "id": 110,
+        "no_arsip": 40,
+        "nama_mhs": "Muhammad Wada Asy Sya'rani",
+        "nim": 3202016052,
+        "judul": "Rancang Bangun Sistem Informasi Pendaftaran Berbasis Web Di Sekolah Dasar Negeri 21 Ambawang",
+        "dospem": "Lindung Siswanto,S.Kom.,M.Eng",
+        "tahun_lulus": 2023,
+        "status": "Tersedia"
+    },
+    {
+        "id": 111,
+        "no_arsip": 41,
+        "nama_mhs": "Melda Syafitri",
+        "nim": 3202016093,
+        "judul": "Rancang Bangun Aplikasi Manajemen Aset Information Technology Pada PT. Anzon Autoplaza Pontianak Berbasis Web",
+        "dospem": "Ferry Faisal, S.S.T., M.T.",
+        "tahun_lulus": 2023,
+        "status": "Tersedia"
+    },
+    {
+        "id": 112,
+        "no_arsip": 42,
+        "nama_mhs": "Ridho Al Fikhri",
+        "nim": 3202016067,
+        "judul": "Rancang Bangun Aplikasi Pencatatan Transaksi Penjualan Dan Pencatatan Proses Pengolahan Lahan Berbasis Website Pada CV.Yasmin",
+        "dospem": "Muhammad Hasbi,S.T.,M.T",
+        "tahun_lulus": 2023,
+        "status": "Tersedia"
+    },
+    {
+        "id": 113,
+        "no_arsip": 43,
+        "nama_mhs": "Diah Ayu Puspita Wardani",
+        "nim": 3202016024,
+        "judul": "Rancang Bangun Aplikasi Perpustakaan SMK Al Madani Pontianak Berbasis Web",
+        "dospem": "Budianingsih,S.T.,M.T",
+        "tahun_lulus": 2023,
+        "status": "Tersedia"
+    },
+    {
+        "id": 114,
+        "no_arsip": 44,
+        "nama_mhs": "Dani Faturrahman ",
+        "nim": 3202016069,
+        "judul": "Rancang Bangun Aplikasi Pemesanan Katering Online Berbasis Web Pada Usaha Wargo Katering ",
+        "dospem": "Fitri Wibowo, S.S.T., M.T.",
+        "tahun_lulus": 2023,
+        "status": "Tersedia"
+    },
+    {
+        "id": 115,
+        "no_arsip": 45,
+        "nama_mhs": "Jawanda Renny",
+        "nim": 3202016018,
+        "judul": "Rancang Bangun Media Informasi Dan Pendaftaran Pada SDN No 10 SP 3 SKPD Pandan Berbasis Website ",
+        "dospem": "Muhammad Diponegoro, S.Kom., M.Cs.",
+        "tahun_lulus": 2023,
+        "status": "Tersedia"
+    },
+    {
+        "id": 116,
+        "no_arsip": 46,
+        "nama_mhs": "Renaldi",
+        "nim": 3202016097,
+        "judul": "Rancang Bangun Aplikasi Pemesanan Jadwal Penggunaan Lapangan Di Puncak Futsal Berbasis Website",
+        "dospem": "Muhammad Hasbi, S.T., M.T.",
+        "tahun_lulus": 2023,
+        "status": "Tersedia"
+    },
+    {
+        "id": 117,
+        "no_arsip": 47,
+        "nama_mhs": "Dwi Febrianto Halim",
+        "nim": 3202016090,
+        "judul": "Rancang Bangun Aplikasi Point Of Sales (Pos) Pada Toko Haji Ali Berbasis Website ",
+        "dospem": "Fitri Wibowo, S.S.T,. M.T.",
+        "tahun_lulus": 2023,
+        "status": "Tersedia"
+    },
+    {
+        "id": 118,
+        "no_arsip": 48,
+        "nama_mhs": "Zidta Fardianti",
+        "nim": 3202016002,
+        "judul": "Rancang Bangun Aplikasi Persediaan Barang Berbasis Web Progresif Untuk Agen Snack Dan Kue Kering Berkah Jaya",
+        "dospem": "Ferry Faisal, S.S.T., M.T.",
+        "tahun_lulus": 2023,
+        "status": "Tersedia"
+    },
+    {
+        "id": 119,
+        "no_arsip": 49,
+        "nama_mhs": "Desti Muthiah ",
+        "nim": 3202016128,
+        "judul": "Rancang Bangun Aplikasi Layanan Kesehatan Untuk Bidan Praktik Mandiri Sri Usisa Mempawah Berbasis Website Progressive ",
+        "dospem": "Ferry Faisal, S.S.T., M.T.",
+        "tahun_lulus": 2023,
+        "status": "Tersedia"
+    },
+    {
+        "id": 120,
+        "no_arsip": 50,
+        "nama_mhs": "Rahmat Raihan Baihaqi",
+        "nim": 3202016038,
+        "judul": "Rancang Bangun Aplikasi Berbasis Website Pada Makna Wedding Organizer ",
+        "dospem": "Tri Bowo Atmojo, S.T., M.Cs.",
+        "tahun_lulus": 2023,
+        "status": "Tersedia"
+    },
+    {
+        "id": 121,
+        "no_arsip": 51,
+        "nama_mhs": "Jaka Adi Baskara ",
+        "nim": 3202016077,
+        "judul": "Rancang Bangun Website Sistem Informasi Panen Di PT Perkebunan Nusantara XIII",
+        "dospem": "Muhammad Diponegoro, S.Kom., M.Cs.",
+        "tahun_lulus": 2023,
+        "status": "Tersedia"
+    },
+    {
+        "id": 122,
+        "no_arsip": 52,
+        "nama_mhs": "Restu Anugerah ",
+        "nim": 3202016014,
+        "judul": "Rancang Bangun Aplikasi Tes TOEFL Berbasis Desktop Untuk Mahasiswa Program Studi Pendidikan Bahasa Inggris Di IKIP PGRI Pontianak",
+        "dospem": "Sarah Bibi,S.S.T., M.Pd.",
+        "tahun_lulus": 2023,
+        "status": "Tersedia"
+    },
+    {
+        "id": 123,
+        "no_arsip": 53,
+        "nama_mhs": "-",
+        "nim": "-",
+        "judul": "-",
+        "dospem": "-",
+        "tahun_lulus": 2023,
+        "status": "Tersedia"
+    },
+    {
+        "id": 124,
+        "no_arsip": 54,
+        "nama_mhs": "Dela Pebriyani",
+        "nim": 3202016071,
+        "judul": "Rancang Bangun Aplikasi Media Pembelajaran Interaktif Materi Sandi Pramuka Menggunakan Adobe Animate",
+        "dospem": "Neny Firdyanti, S.T., M.T.",
+        "tahun_lulus": 2023,
+        "status": "Tersedia"
+    },
+    {
+        "id": 125,
+        "no_arsip": 55,
+        "nama_mhs": "Muhammad Fazri",
+        "nim": 3202016048,
+        "judul": "Rancang Bangun Aplikasi Media Pembelajaran Salat Jenazah Berbasis Augmented Reality Program Studi Teknik Informatika Politeknik Negeri Pontianak",
+        "dospem": "Suheri, S.T., M.Cs.",
+        "tahun_lulus": 2023,
+        "status": "Tersedia"
+    },
+    {
+        "id": 126,
+        "no_arsip": 56,
+        "nama_mhs": "Rizky Saputra",
+        "nim": 3202016827,
+        "judul": "Rancang Bangun Sistem Informasi Presensi Berbasis Web Di PT Sabang Digital Indonesia Menggunakan Framework Laravel 8",
+        "dospem": "Suheri, S.T., M.Cs.",
+        "tahun_lulus": 2023,
+        "status": "Tersedia"
+    },
+    {
+        "id": 127,
+        "no_arsip": 57,
+        "nama_mhs": "Adhietya Irwanda",
+        "nim": 3202016044,
+        "judul": "Rancang Bangun Aplikasi Kasir Pada Tokoh Zahra Cake & Bread Di Pontianak",
+        "dospem": "Yasir Arafat,S.S.T.,M.T",
+        "tahun_lulus": 2023,
+        "status": "Tersedia"
+    },
+    {
+        "id": 128,
+        "no_arsip": 58,
+        "nama_mhs": "Dewi Alauwiyah",
+        "nim": 3202016084,
+        "judul": "Rancang Bangun Aplikasi Media Belajar Membaca Menggunakan Adobe Animate Pada Paud Nurul Jannah",
+        "dospem": "Neny Firdyanti, S.T., M.T.",
+        "tahun_lulus": 2023,
+        "status": "Tersedia"
+    },
+    {
+        "id": 129,
+        "no_arsip": 59,
+        "nama_mhs": "Fikri Faizul Azka ",
+        "nim": 3202016115,
+        "judul": "Rancang Bangun Rancang Bangun Aplikasi Pendaftaran Peserta Didik Baru Madrasah Tsanawiyah Negeri (MTSN) 1 Mempawah Berbasis Website",
+        "dospem": "Mariana Syamsudin, S.T., M.T., Ph.D.",
+        "tahun_lulus": 2023,
+        "status": "Tersedia"
+    },
+    {
+        "id": 130,
+        "no_arsip": 60,
+        "nama_mhs": "Yopi Sulistyo ",
+        "nim": 3202016050,
+        "judul": "Rancang Bangun Aplikasi Pemesanan Makanan Pada Warung Makan Bude Berbasis Website ",
+        "dospem": "Muhammad Hasbi, S.T., M.T.",
+        "tahun_lulus": 2023,
+        "status": "Tersedia"
+    },
+    {
+        "id": 131,
+        "no_arsip": 61,
+        "nama_mhs": "Alya Nabilah Dwianda ",
+        "nim": 3202016113,
+        "judul": "Rancang Bangun Aplikasi Reservasi CO-Working Space Dinas Komunikasi Dan Informatika Kota Pontianak Berbasis Mobile",
+        "dospem": "-",
+        "tahun_lulus": 2023,
+        "status": "Tersedia"
+    },
+    {
+        "id": 132,
+        "no_arsip": 62,
+        "nama_mhs": "Sahanan",
+        "nim": 3202016073,
+        "judul": "Rancang Bangun Media Pembelajaran Interaktif Untuk Materi Bangun Datar Dan Ruang Pada Mata Pelajaran Matematika Kelas I Sekolah Dasar Negeri 15 Parit Bintang",
+        "dospem": "Sarah Bibi,S.S.T., M.Pd.",
+        "tahun_lulus": 2023,
+        "status": "Tersedia"
+    },
+    {
+        "id": 133,
+        "no_arsip": 63,
+        "nama_mhs": "Rangga Dwi Pangestu",
+        "nim": 3202016035,
+        "judul": "Pengembangan Aplikasi Cuti Pegawai Negeri Sipil Dinas Komunikasi Dan Informatika Kota Pontianak Berbasis Web",
+        "dospem": "Mariana Syamsudin, S.T., M.T.,PhD",
+        "tahun_lulus": 2023,
+        "status": "Tersedia"
+    },
+    {
+        "id": 134,
+        "no_arsip": 64,
+        "nama_mhs": "Siti Auliyah",
+        "nim": 3202016117,
+        "judul": "Rancang Bangun Media Pembelajaran Komputer Dan Jaringan Dasar Kelas X Sekolah Menengah Kejuruan Al Falah",
+        "dospem": "Tommi Suryanto, S.Kom., M.Kom",
+        "tahun_lulus": 2023,
+        "status": "Tersedia"
+    },
+    {
+        "id": 135,
+        "no_arsip": 65,
+        "nama_mhs": "Mihandha Gustiani",
+        "nim": 3202016039,
+        "judul": "Pembuatan Video Animasi Sebagai Media Pemasaran Pada Aplikasi E-Kasir",
+        "dospem": "Tommi Suryanto, S.Kom., M.Kom",
+        "tahun_lulus": 2023,
+        "status": "Tersedia"
+    },
+    {
+        "id": 136,
+        "no_arsip": 66,
+        "nama_mhs": "Fika Astuti Sari",
+        "nim": 3202016103,
+        "judul": "Rancang Bangun Aplikasi Media Pembelajaran Ilmu Pengetahuan Sosial Tentang Keberagaman Budaya Di Indonesia Untuk Sd Mujahidin Pontianak Kelas IV Menggunakan Adobe Animate CC",
+        "dospem": "Sarah Bibi,S.S.T., M.Pd.",
+        "tahun_lulus": 2023,
+        "status": "Tersedia"
+    },
+    {
+        "id": 137,
+        "no_arsip": 67,
+        "nama_mhs": "Meisi Arselia",
+        "nim": 3202016015,
+        "judul": "Rancang Banguh Website Puskesmas Desa Sekura Kabupaten Sambas Menggunakan Framework Laravel 8",
+        "dospem": "Lindung Siswanto, S.Kom., M.Eng",
+        "tahun_lulus": 2023,
+        "status": "Tersedia"
+    },
+    {
+        "id": 138,
+        "no_arsip": 68,
+        "nama_mhs": "Qaysa Aththayalisy",
+        "nim": 3202016006,
+        "judul": "Rancang Bangun Aplikasi Pemesanan Layanan Wisata Pada Kampung Wisata Caping Berbasis Web",
+        "dospem": "Lindung Siswanto, S.Kom., M.Eng",
+        "tahun_lulus": 2023,
+        "status": "Tersedia"
+    },
+    {
+        "id": 139,
+        "no_arsip": 69,
+        "nama_mhs": "Dimitri Kaila Aprilia",
+        "nim": 3202016016,
+        "judul": "Rancang Bangun Animasi 3D Penyusunan Jaringan LAN Menggunakan Kabel UTP 5 Dengan Teknologi Augmented Reality Di Program Studi Teknik Informatika Politeknik Negeri Pontianak",
+        "dospem": "Sarah Bibi,S.S.T., M.Pd.",
+        "tahun_lulus": 2023,
+        "status": "Tersedia"
+    },
+    {
+        "id": 140,
+        "no_arsip": 70,
+        "nama_mhs": "Rafif Nabil",
+        "nim": 3202016127,
+        "judul": "Rancang Bangun Sistem Aplikasi Data Masuk Produk Online Berbasis Web",
+        "dospem": "Satriyo, S.T., M.Kom.",
+        "tahun_lulus": 2023,
+        "status": "Tersedia"
+    },
+    {
+        "id": 141,
+        "no_arsip": 71,
+        "nama_mhs": "Rabuansah",
+        "nim": 3202016040,
+        "judul": "Rancang Bangun Sistem Informasi Penyewaan Lapangan Bola Voli Berbasis Web Di Gor Chandra Alkadrie Kubu Raya",
+        "dospem": "Tri Bowo Atmojo, S.T., M.Cs.",
+        "tahun_lulus": 2023,
+        "status": "Tersedia"
+    },
+    {
+        "id": 142,
+        "no_arsip": 72,
+        "nama_mhs": "Chrystoper Brayen Krisna",
+        "nim": 3202016106,
+        "judul": "Rancang Bangun Website Desa Benua Baru Kabupaten Sintang",
+        "dospem": "Pausta Yugianus ,S.Kom.,M.T",
+        "tahun_lulus": 2023,
+        "status": "Tersedia"
+    },
+    {
+        "id": 143,
+        "no_arsip": 73,
+        "nama_mhs": "Abbas Satria Anargya",
+        "nim": 3202016118,
+        "judul": "Rancang Bangun Aplikasi Presensi Untuk Kegiatan Sosial Sunday Di Kampoeng English Poernama Berbasis Progressive Web Apps",
+        "dospem": "Suheri, S.T., M.Cs.",
+        "tahun_lulus": 2023,
+        "status": "Tersedia"
+    },
+    {
+        "id": 144,
+        "no_arsip": 74,
+        "nama_mhs": "Dina Berliana Br Sitohang",
+        "nim": 3202016032,
+        "judul": "Rancang Bangun Website Gereja Pentakosta Indonesia (GPI) Kotabaru Pontianak Kalimantan Barat",
+        "dospem": "Neny Firdyanti, S.T., M.T.",
+        "tahun_lulus": 2023,
+        "status": "Tersedia"
+    },
+    {
+        "id": 145,
+        "no_arsip": 75,
+        "nama_mhs": "Feby Paramudia",
+        "nim": 3202016074,
+        "judul": "Rancang Bangun Aplikasi Rekapitulasi Penjualan Dan Pemesanan Berbasis Web Pada UKM Tenun Songket Sambas Sahidah",
+        "dospem": "Budianingsih,S.T.,M.T",
+        "tahun_lulus": 2023,
+        "status": "Tersedia"
+    },
+    {
+        "id": 146,
+        "no_arsip": 76,
+        "nama_mhs": "Berliana Putri Ceasadela",
+        "nim": 3202016037,
+        "judul": "Perancangan Media Pembelajaran Menggunakan Augmented Reality Pada Mata Pelajaran TIK (Studi Kasus: MTSN Putussibau) ",
+        "dospem": "Neny Firdyanti, S.T., M.T.",
+        "tahun_lulus": 2023,
+        "status": "Tersedia"
+    },
+    {
+        "id": 147,
+        "no_arsip": 77,
+        "nama_mhs": "Melati",
+        "nim": 3202016092,
+        "judul": "Rancang Bangun Sistem Informasi Presensi Mahasiswa Program Studi D3 Teknik Informatika Politeknik Negeri Pontianak Berbasis Web",
+        "dospem": "Suheri, S.T., M.Cs.",
+        "tahun_lulus": 2023,
+        "status": "Tersedia"
+    }
 ]

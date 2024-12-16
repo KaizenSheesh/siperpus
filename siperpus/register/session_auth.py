@@ -9,13 +9,18 @@ class SessionAuth:
         if JSON_FILE_PATH.exists():
             with open(JSON_FILE_PATH, "r") as file:
                 data = json.load(file)
+                # Jika data adalah list, langsung return data
+                if isinstance(data, list):
+                    return data
+                # Jika data adalah dictionary, kembalikan users
                 return data.get("users", [])
         return []
 
     @staticmethod
     def save_users(users):
+        # Langsung simpan sebagai list, tanpa membungkus dalam dictionary
         with open(JSON_FILE_PATH, "w") as file:
-            json.dump({"users": users}, file)
+            json.dump(users, file, indent=4)  # indent=4 untuk format JSON yang lebih terbaca
 
     @staticmethod
     def register_user(username, password, role="user"):
@@ -36,12 +41,8 @@ class SessionAuth:
     @staticmethod
     def authenticate(username, password):
         users = SessionAuth.load_users()
-        
         user = next((user for user in users if user['username'] == username and user['password'] == password), None)
-        
-        if user:
-            return user
-        return None
+        return user
 
     @staticmethod
     def get_current_user(request):

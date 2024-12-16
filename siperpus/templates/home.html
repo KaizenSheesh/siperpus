@@ -43,25 +43,35 @@
         <ul class="mt-5 space-y-2">
           <li>
             <a href="{% url 'home' %}" class="block hover:bg-gray-200 hover:text-black font-medium rounded-xl py-3 px-5 
-               {% if request.path == '/auth/' %}bg-black text-white{% else %}text-gray-600{% endif %}">
+               {% if request.path == '/' %}bg-black text-white{% else %}text-gray-600{% endif %}">
               Dashboard
             </a>
           </li>
           <li>
             <a href="{% url 'books' %}" class="block hover:bg-gray-200 hover:text-black font-medium rounded-xl py-3 px-5 
-               {% if request.path == '/auth/books/' %}bg-black text-white{% else %}text-gray-600{% endif %}">
+               {% if request.path == '/books/' %}bg-black text-white{% else %}text-gray-600{% endif %}">
               Daftar Buku
             </a>
           </li>
           <li>
             <a href="{% url 'peminjaman' %}" class="block hover:bg-gray-200 hover:text-black font-medium rounded-xl py-3 px-5 
-               {% if request.path == '/auth/peminjaman/' %}bg-black text-white{% else %}text-gray-600{% endif %}">
+               {% if request.path == '/peminjaman/' %}bg-black text-white{% else %}text-gray-600{% endif %}">
               Peminjaman Buku
             </a>
           </li>
+          {% if user.role == 'staff' %}
+          <li>
+            <a
+              href="{% url 'daftar_permintaan' %}"
+              class="block hover:bg-white hover:text-black font-medium rounded-xl py-3 px-5 {% if request.path == '/daftar-permintaan/' %}bg-black text-white{% else %}text-gray-600{% endif %}"
+            >
+              Daftar permintaan
+            </a>
+          </li>
+          {% endif %}
           <li>
             <a href="{% url 'logout' %}" class="block hover:bg-gray-200 hover:text-black font-medium rounded-xl py-3 px-5 
-               {% if request.path == 'auth/logout/' %}bg-black text-white{% else %}text-gray-600{% endif %}">
+               {% if request.path == '/auth/logout/' %}bg-black text-white{% else %}text-gray-600{% endif %}">
               Logout
             </a>
           </li>
@@ -107,6 +117,44 @@
         </div>
       </nav>
       <div class="p-5 min-h-screen">
+        <div id="notifications-container" class="flex flex-col gap-3 sm:w-72 mb-5" style="width: 100%">
+          {% for notification in notifications %}
+            <div
+              class="alert flex items-center justify-between w-full h-auto md:h-16 rounded-lg px-4 shadow-lg border border-yellow-600 bg-transparent"
+              data-type="{{ notification.type }}">
+              <div class="flex items-center gap-3">
+                <div class="icon p-2 rounded-lg bg-white/20">
+                  <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-bell-ring"><path d="M10.268 21a2 2 0 0 0 3.464 0"/><path d="M22 8c0-2.3-.8-4.3-2-6"/><path d="M3.262 15.326A1 1 0 0 0 4 17h16a1 1 0 0 0 .74-1.673C19.41 13.956 18 12.499 18 8A6 6 0 0 0 6 8c0 4.499-1.411 5.956-2.738 7.326"/><path d="M4 2C2.8 3.7 2 5.7 2 8"/></svg>
+                </div>
+                <div>
+                  <p class="text-black font-medium text-xs md:text-lg">{{ notification.message }}</p>
+                  {% if notification.description %}
+                    <p class="text-gray-600 text-xs">{{ notification.description }}</p>
+                  {% endif %}
+                </div>
+              </div>
+              <button
+                class="close-btn text-gray-400 hover:text-white transition ease-in-out"
+                onclick="this.parentElement.remove()"
+              >
+                <svg
+                  xmlns="http://www.w3.org/2000/svg"
+                  fill="none"
+                  viewBox="0 0 24 24"
+                  stroke-width="1.5"
+                  stroke="currentColor"
+                  class="w-6 h-6"
+                >
+                  <path
+                    stroke-linecap="round"
+                    stroke-linejoin="round"
+                    d="M6 18L18 6M6 6l12 12"
+                  ></path>
+                </svg>
+              </button>
+            </div>
+          {% endfor %}
+        </div>
         <h1 class="text-3xl font-bold mb-4">Selamat datang di SIPTA 👋</h1>
         <p class="font-medium mb-8">Sistem Informasi Perpustakaan Tugas Akhir Jurusan Elektro</p>
 

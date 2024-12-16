@@ -1,7 +1,51 @@
 [
     {
+        "id": 1,
+        "username": "a",
         "book_id": 1,
-        "user_id": 5,
-        "status": false
+        "tgl_peminjaman": "2024-12-16",
+        "tgl_pengembalian": "2024-12-17",
+        "status": "Sudah Dikembalikan",
+        "tanggal_pengembalian": "2024-12-16"
+    },
+    {
+        "id": 2,
+        "username": "a",
+        "book_id": 2,
+        "tgl_peminjaman": "2024-12-16",
+        "tgl_pengembalian": "2024-12-20",
+        "status": "pending"
+    },
+    {
+        "id": 3,
+        "username": "a",
+        "book_id": 3,
+        "tgl_peminjaman": "2024-12-16",
+        "tgl_pengembalian": "2024-12-01",
+        "status": "pending"
+    },
+    {
+        "id": 4,
+        "username": "a",
+        "book_id": 3,
+        "tgl_peminjaman": "2024-12-16",
+        "tgl_pengembalian": "2024-12-01",
+        "status": "pending"
+    },
+    {
+        "id": 5,
+        "username": "a",
+        "book_id": 3,
+        "tgl_peminjaman": "2024-12-16",
+        "tgl_pengembalian": "2024-12-01",
+        "status": "pending"
+    },
+    {
+        "id": 6,
+        "username": "a",
+        "book_id": 3,
+        "tgl_peminjaman": "2024-12-16",
+        "tgl_pengembalian": "2024-12-01",
+        "status": "pending"
     }
 ]

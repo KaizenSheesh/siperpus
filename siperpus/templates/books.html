@@ -54,7 +54,7 @@
             <li>
               <a
                 href="{% url 'home' %}"
-                class="block hover:bg-gray-200 hover:text-black font-medium rounded-xl py-3 px-5 {% if request.path == '/auth/' %}bg-black text-white{% else %}text-gray-600{% endif %}"
+                class="block hover:bg-white hover:text-black font-medium rounded-xl py-3 px-5 {% if request.path == '/' %}bg-black text-white{% else %}text-gray-600{% endif %}"
               >
                 Dashboard
               </a>
@@ -62,7 +62,7 @@
             <li>
               <a
                 href="{% url 'books' %}"
-                class="block hover:bg-gray-200 hover:text-black font-medium rounded-xl py-3 px-5 {% if request.path == '/auth/books/' %}bg-black text-white{% else %}text-gray-600{% endif %}"
+                class="block hover:bg-white hover:text-black font-medium rounded-xl py-3 px-5 {% if request.path == '/books/' %}bg-black text-white{% else %}text-gray-600{% endif %}"
               >
                 Daftar Buku
               </a>
@@ -70,15 +70,25 @@
             <li>
               <a
                 href="{% url 'peminjaman' %}"
-                class="block hover:bg-gray-200 hover:text-black font-medium rounded-xl py-3 px-5 {% if request.path == '/auth/peminjaman/' %}bg-black text-white{% else %}text-gray-600{% endif %}"
+                class="block hover:bg-white hover:text-black font-medium rounded-xl py-3 px-5 {% if request.path == '/peminjaman/' %}bg-black text-white{% else %}text-gray-600{% endif %}"
               >
                 Peminjaman Buku
               </a>
             </li>
+            {% if user.role == 'staff' %}
+            <li>
+              <a
+                href="{% url 'daftar_permintaan' %}"
+                class="block hover:bg-white hover:text-black font-medium rounded-xl py-3 px-5 {% if request.path == '/daftar-permintaan/' %}bg-black text-white{% else %}text-gray-600{% endif %}"
+              >
+                Daftar permintaan
+              </a>
+            </li>
+            {% endif %}
             <li>
               <a
                 href="{% url 'logout' %}"
-                class="block hover:bg-gray-200 font-medium rounded-xl py-3 px-5 {% if request.path == '/auth/logout/' %}bg-black text-white{% else %}text-gray-600{% endif %}"
+                class="block hover:bg-white font-medium rounded-xl py-3 px-5 {% if request.path == '/auth/logout/' %}bg-black text-white{% else %}text-gray-600{% endif %}"
               >
                 Logout
               </a>
@@ -161,51 +171,78 @@
                 {% csrf_token %}
                 <div class="form-control">
                   <label class="label">
-                    <span class="label-text text-black">Title</span>
+                    <span class="label-text text-black">Nomor Urut Arsip</span>
                   </label>
                   <input
-                    type="text"
-                    name="title"
-                    id="bookTitleAdd"
-                    class="input input-bordered bg-gray-200 border border-black"
+                    type="number"
+                    name="no_arsip"
+                    placeholder="Nomor Urut Arsip"
+                    id="noArsipAdd"
+                    class="input input-bordered bg-white border border-black"
                     required
                   />
                 </div>
                 <div class="form-control">
                   <label class="label">
-                    <span class="label-text text-black">Author</span>
+                    <span class="label-text text-black">Nama Mahasiswa</span>
                   </label>
                   <input
                     type="text"
-                    name="author"
-                    id="bookAuthorAdd"
-                    class="input input-bordered bg-gray-200 border border-black"
+                    name="nama_mhs"
+                    placeholder="Nama Mahasiswa"
+                    id="namaMhsAdd"
+                    class="input input-bordered bg-white border border-black"
                     required
                   />
                 </div>
                 <div class="form-control">
                   <label class="label">
-                    <span class="label-text text-black">Category</span>
+                    <span class="label-text text-black">NIM</span>
                   </label>
                   <input
-                    type="text"
-                    name="category"
-                    id="bookCategoryAdd"
-                    class="input input-bordered bg-gray-200 border border-black"
+                    type="number"
+                    name="nim"
+                    placeholder="NIM Mahasiswa"
+                    id="nimAdd"
+                    class="input input-bordered bg-white border border-black"
                     required
                   />
                 </div>
                 <div class="form-control">
                   <label class="label">
-                    <span class="label-text text-black">Lokasi Rak</span>
+                    <span class="label-text text-black">Judul Tugas Akhir</span>
                   </label>
                   <input
                     type="text"
-                    name="lok_rak"
-                    id="bookLokRakAdd"
-                    class="input input-bordered bg-gray-200 border border-black"
+                    name="judul"
+                    placeholder="Judul Tugas Akhir"
+                    id="judulAdd"
+                    class="input input-bordered bg-white border border-black"
                     required
                   />
+                </div>
+                <div class="form-control">
+                  <label class="label">
+                    <span class="label-text text-black">Dosen Pembimbing</span>
+                  </label>
+                  <input
+                    type="text"
+                    name="dospem"
+                    placeholder="Dosen Pembimbing"
+                    id="dospemAdd"
+                    class="input input-bordered bg-white border border-black"
+                    required
+                  />
+                </div>
+                <div class="form-control">
+                  <label class="label">
+                    <span class="label-text text-black">Tahun Lulus</span>
+                  </label>
+                  <select name="tahun_lulus" class="select select-bordered w-full bg-white border border-black">
+                    <option disabled selected>Pilih Tahun Lulus</option>
+                    <option value="2024">2024</option>
+                    <option value="2023">2023</option>
+                  </select>
                 </div>
                 <div class="modal-action">
                   <button
@@ -244,7 +281,7 @@
                   <input
                     type="text"
                     name="username"
-                    class="input input-bordered bg-gray-200 border border-black"
+                    class="input input-bordered bg-white border border-black"
                     required
                   />
                 </div>
@@ -255,7 +292,7 @@
                   <input
                     type="password"
                     name="password"
-                    class="input input-bordered bg-gray-200 border border-black"
+                    class="input input-bordered bg-white border border-black"
                     required
                   />
                 </div>
@@ -282,55 +319,78 @@
               <form id="editBookForm">
                 <div class="form-control">
                   <label class="label">
-                    <span class="label-text text-black">Title</span>
+                    <span class="label-text text-black">Nomor Urut Arsip</span>
                   </label>
                   <input
-                    type="text"
-                    name="title"
-                    id="bookTitle"
-                    placeholder="Title"
-                    class="input input-bordered bg-gray-200 border border-black"
+                    type="number"
+                    name="no_arsip"
+                    id="noArsipEdit"
+                    placeholder="Nomor Urut Arsip"
+                    class="input input-bordered bg-white border border-black"
                     required
                   />
                 </div>
                 <div class="form-control">
                   <label class="label">
-                    <span class="label-text text-black">Author</span>
+                    <span class="label-text text-black">Nama Mahasiswa</span>
                   </label>
                   <input
                     type="text"
                     name="author"
-                    id="bookAuthor"
-                    placeholder="Author"
-                    class="input input-bordered bg-gray-200 border border-black"
+                    id="namaMhsEdit"
+                    placeholder="Nama Mahasiswa"
+                    class="input input-bordered bg-white border border-black"
                     required
                   />
                 </div>
                 <div class="form-control">
                   <label class="label">
-                    <span class="label-text text-black">Category</span>
+                    <span class="label-text text-black">NIM</span>
                   </label>
                   <input
-                    type="text"
-                    name="category"
-                    id="bookCategory"
-                    placeholder="Category"
-                    class="input input-bordered bg-gray-200 border border-black"
+                    type="number"
+                    name="nim"
+                    id="nimEdit"
+                    placeholder="NIM Mahasiswa"
+                    class="input input-bordered bg-white border border-black"
                     required
                   />
                 </div>
                 <div class="form-control">
                   <label class="label">
-                    <span class="label-text text-black">Lokasi Rak</span>
+                    <span class="label-text text-black">Judul Tugas Akhir</span>
                   </label>
                   <input
                     type="text"
-                    name="lok_rak"
-                    id="bookLokRak"
-                    placeholder="Location"
-                    class="input input-bordered bg-gray-200 border border-black"
+                    name="judul"
+                    id="judulEdit"
+                    placeholder="Judul Tugas Akhir"
+                    class="input input-bordered bg-white border border-black"
                     required
                   />
+                </div>
+                <div class="form-control">
+                  <label class="label">
+                    <span class="label-text text-black">Dosen Pembimbing</span>
+                  </label>
+                  <input
+                    type="text"
+                    name="dosepm"
+                    id="dospemEdit"
+                    placeholder="Dosen Pembimbing"
+                    class="input input-bordered bg-white border border-black"
+                    required
+                  />
+                </div>
+                <div class="form-control">
+                  <label class="label">
+                    <span class="label-text text-black">Dosen Pembimbing</span>
+                  </label>
+                  <select name="tahun_lulus" id="tahunLulusEdit" class="select select-bordered w-full bg-white border border-black">
+                    <option disabled selected>Pilih Tahun Lulus</option>
+                    <option value="2024">2024</option>
+                    <option value="2023">2023</option>
+                  </select>
                 </div>
                 <input type="hidden" id="bookId" />
 
@@ -379,25 +439,22 @@
               Nomor Urut Arsip, Nama Mahasiswa, NIM, Judul Tugas Akhir, Dosen
               Pembimbing, dan Tahun Lulus
             </p>
-            <div class="overflow-x-auto lg:overflow-x-visible">
-              <table id="example" class="display w-full">
-                <thead>
-                  <tr>
-                    <th>Nomor Urut Arsip</th>
-                    <th>Nama Mahasiswa</th>
-                    <th>NIM</th>
-                    <th>Judul</th>
-                    <th>Dosen Pembimbing</th>
-                    <th>Tahun Lulus</th>
-                    <th>Status</th>
-                    {% if user.role == 'staff' or user.role == 'admin' %}
-                    <th>Aksi</th>
-                    {% endif %}
-                  </tr>
-                </thead>
-                <tbody></tbody>
-              </table>
-            </div>
+            <table id="table_ta" class="display w-full">
+              <thead>
+                <tr>
+                  <th>ID</th>
+                  <th>Nomor Urut Arsip</th>
+                  <th>Nama Mahasiswa</th>
+                  <th>NIM</th>
+                  <th>Judul</th>
+                  <th>Dosen Pembimbing</th>
+                  <th>Tahun Lulus</th>
+                  <th>Status</th>
+                  <th>Aksi</th>
+                </tr>
+              </thead>
+              <tbody></tbody>
+            </table>
           </section>
         </div>
       </main>
@@ -444,7 +501,7 @@
             'input[name="password"]'
           ).value;
 
-          fetch("/auth/admin/add_staff/", {
+          fetch("/add_staff/", {
             method: "POST",
             headers: {
               "Content-Type": "application/json",
@@ -485,17 +542,23 @@
         addBookForm.addEventListener("submit", function (event) {
           event.preventDefault();
 
-          const bookTitle = addBookForm.querySelector(
-            'input[name="title"]'
+          const noArsip = addBookForm.querySelector(
+            'input[name="no_arsip"]'
           ).value;
-          const bookAuthor = addBookForm.querySelector(
-            'input[name="author"]'
+          const namaMhs = addBookForm.querySelector(
+            'input[name="nama_mhs"]'
           ).value;
-          const bookCategory = addBookForm.querySelector(
-            'input[name="category"]'
+          const nim = addBookForm.querySelector(
+            'input[name="nim"]'
           ).value;
-          const bookLokRak = addBookForm.querySelector(
-            'input[name="lok_rak"]'
+          const judulTA = addBookForm.querySelector(
+            'input[name="judul"]'
+          ).value;
+          const dospemAdd = addBookForm.querySelector(
+            'input[name="dospem"]'
+          ).value;
+          const tahunLulus = addBookForm.querySelector(
+            'select[name="tahun_lulus"]'
           ).value;
 
           fetch('{% url "add_book" %}', {
@@ -505,10 +568,12 @@
               "X-CSRFToken": getCookie("csrftoken"),
             },
             body: JSON.stringify({
-              title: bookTitle,
-              author: bookAuthor,
-              category: bookCategory,
-              lok_rak: bookLokRak,
+              no_arsip: noArsip,
+              nama_mhs: namaMhs,
+              nim: nim,
+              judul: judulTA,
+              dospem: dospemAdd,
+              tahun_lulus: tahunLulus,
             }),
           })
             .then((response) => response.json())
@@ -542,10 +607,12 @@
           type: "GET",
           success: function (data) {
             $("#bookId").val(data.id);
-            $("#bookTitle").val(data.title);
-            $("#bookAuthor").val(data.author);
-            $("#bookCategory").val(data.category);
-            $("#bookLokRak").val(data.lok_rak);
+            $("#noArsipEdit").val(data.no_arsip);
+            $("#namaMhsEdit").val(data.nama_mhs);
+            $("#nimEdit").val(data.nim);
+            $("#judulEdit").val(data.judul);
+            $("#dospemEdit").val(data.dospem);
+            $("#tahunLulusEdit").val(data.tahun_lulus);
 
             document.getElementById("my_modal_edit").showModal();
           },
@@ -557,10 +624,12 @@
 
       function submitEdit() {
         const bookId = document.getElementById("bookId").value;
-        const bookTitle = document.getElementById("bookTitle").value;
-        const bookAuthor = document.getElementById("bookAuthor").value;
-        const bookCategory = document.getElementById("bookCategory").value;
-        const bookLokRak = document.getElementById("bookLokRak").value;
+        const noArsipEdit = document.getElementById("noArsipEdit").value;
+        const namaMhsEdit = document.getElementById("namaMhsEdit").value;
+        const nimEdit = document.getElementById("nimEdit").value;
+        const judulEdit = document.getElementById("judulEdit").value;
+        const dospemEdit = document.getElementById("dospemEdit").value;
+        const tahunLulusEdit = document.getElementById("tahunLulusEdit").value;
 
         fetch(`/api/books/edit/${bookId}/`, {
           method: "POST",
@@ -569,10 +638,13 @@
             "X-CSRFToken": getCookie("csrftoken"),
           },
           body: JSON.stringify({
-            title: bookTitle,
-            author: bookAuthor,
-            category: bookCategory,
-            lok_rak: bookLokRak,
+            no_arsip: noArsipEdit,
+            nama_mhs: namaMhsEdit,
+            nim: nimEdit,
+            judul: judulEdit,
+            dospem: dospemEdit,
+            tahun_lulus: tahunLulusEdit,
+            status: "Tersedia",
           }),
         })
           .then((response) => response.json())
@@ -657,6 +729,7 @@
 
         const columns = [
           { data: "id" },
+          { data: "no_arsip" },
           { data: "nama_mhs" },
           { data: "nim" },
           { data: "judul" },
@@ -678,60 +751,53 @@
           },
         ];
 
-        if (userRole === "admin" || userRole === "staff") {
-          columns.push({
-            data: null,
-            render: function (data, type, row) {
-              return `
-                <div class="flex gap-3">
-                    <div class="tooltip" data-tip="${
-                      row.status !== "Tersedia"
-                        ? row.status === "Dipinjam"
-                          ? "Sedang Dipinjam"
-                          : "Dalam Persetujuan"
-                        : "Pinjam Buku"
-                    }">
-                      <button 
-                          onclick="redirectToPeminjaman(${row.id})"  
-                          ${row.status !== "Tersedia" ? "disabled" : ""}>
-                          ${
-                            row.status === "Tersedia"
-                              ? '<svg xmlns="http://www.w3.org/2000/svg" width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-book-marked"><path d="M10 2v8l3-3 3 3V2"/><path d="M4 19.5v-15A2.5 2.5 0 0 1 6.5 2H19a1 1 0 0 1 1 1v18a1 1 0 0 1-1 1H6.5a1 1 0 0 1 0-5H20"/></svg>'
-                              : ""
-                          }
-                            ${
-                              row.status === "Dipinjam"
-                                ? '<svg xmlns="http://www.w3.org/2000/svg" width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-book-marked"><path d="M10 2v8l3-3 3 3V2"/><path d="M4 19.5v-15A2.5 2.5 0 0 1 6.5 2H19a1 1 0 0 1 1 1v18a1 1 0 0 1-1 1H6.5a1 1 0 0 1 0-5H20"/></svg>'
-                                : ""
-                            }
-                            ${
-                              row.status === "Pending"
-                                ? '<svg xmlns="http://www.w3.org/2000/svg" width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-book-marked"><path d="M10 2v8l3-3 3 3V2"/><path d="M4 19.5v-15A2.5 2.5 0 0 1 6.5 2H19a1 1 0 0 1 1 1v18a1 1 0 0 1-1 1H6.5a1 1 0 0 1 0-5H20"/></svg>'
-                                : ""
-                            }
-                      </button>
-                    </div>
-                    <div class="tooltip" data-tip="Edit Buku">
-                      <button data-id="${row.id}" onclick="openEditModal(${
-                row.id
-              })">
-                        <svg xmlns="http://www.w3.org/2000/svg" width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-pencil"><path d="M21.174 6.812a1 1 0 0 0-3.986-3.987L3.842 16.174a2 2 0 0 0-.5.83l-1.321 4.352a.5.5 0 0 0 .623.622l4.353-1.32a2 2 0 0 0 .83-.497z"/><path d="m15 5 4 4"/></svg>
-                      </button>
-                    </div>
-                    
-                    <a href="#" class="delete-btn" data-id="${row.id}">
-                      <svg xmlns="http://www.w3.org/2000/svg" width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-trash">
-                        <path d="M3 6h18"/>
-                        <path d="M19 6l-1.3 14.5a2 2 0 0 1-2 1.5H8.3a2 2 0 0 1-2-1.5L5 6m5 0V4a2 2 0 1 1 4 0v2"/>
-                      </svg>
-                    </a>
-                </div>
-              `;
-            },
-          });
-        }
+        columns.push({
+          data: null,
+          render: function (data, type, row) {
+            let actions = `<div class="flex gap-3">`;
+            actions += `
+      <div class="tooltip tooltip-left" data-tip="${
+        row.status !== "Tersedia"
+          ? row.status === "Dipinjam"
+            ? "Sedang Dipinjam"
+            : "Dalam Persetujuan"
+          : "Pinjam Buku"
+      }">
+        <button 
+            onclick="redirectToPeminjaman(${row.id})"  
+            class="${row.status !== "Tersedia" ? "cursor-not-allowed" : ""}" 
+            ${row.status !== "Tersedia" ? "disabled" : ""}>
+                <svg xmlns="http://www.w3.org/2000/svg" width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-book-marked"><path d="M10 2v8l3-3 3 3V2"/><path d="M4 19.5v-15A2.5 2.5 0 0 1 6.5 2H19a1 1 0 0 1 1 1v18a1 1 0 0 1-1 1H6.5a1 1 0 0 1 0-5H20"/></svg>
+        </button>
+      </div>`;
 
-        const table = $("#example").DataTable({
+            if (userRole === "admin" || userRole === "staff") {
+              actions += `
+        <div class="tooltip tooltip-left" data-tip="Edit Buku">
+          <button data-id="${row.id}" onclick="openEditModal(${row.id})">
+            <svg xmlns="http://www.w3.org/2000/svg" width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-pencil"><path d="M21.174 6.812a1 1 0 0 0-3.986-3.987L3.842 16.174a2 2 0 0 0-.5.83l-1.321 4.352a.5.5 0 0 0 .623.622l4.353-1.32a2 2 0 0 0 .83-.497z"/><path d="m15 5 4 4"/></svg>
+          </button>
+        </div>
+      `;
+            }
+
+            if (userRole === "admin" || userRole === "staff") {
+              actions += `
+        <a href="#" class="delete-btn" data-id="${row.id}">
+          <svg xmlns="http://www.w3.org/2000/svg" width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-trash">
+            <path d="M3 6h18"/>
+            <path d="M19 6l-1.3 14.5a2 2 0 0 1-2 1.5H8.3a2 2 0 0 1-2-1.5L5 6m5 0V4a2 2 0 1 1 4 0v2"/>
+          </svg>
+        </a>
+      `;
+            }
+
+            actions += `</div>`;
+            return actions;
+          },
+        });
+
+        const table_ta = $("#table_ta").DataTable({
           ajax: {
             url: "/api/books/",
             dataSrc: "",
@@ -760,8 +826,8 @@
       });
 
       function redirectToPeminjaman(bookId) {
-        const userId = "{{ user.id }}";
-        window.location.href = `/peminjaman/buku?bookId=${bookId}&userId=${userId}`;
+        const username = "{{ user.username }}";
+        window.location.href = `/peminjaman/buku?bookId=${bookId}&username=${username}`;
       }
     </script>
   </body>
