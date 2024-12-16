@@ -82,6 +82,7 @@ def home_view(request):
     today = datetime.now().date()
 
     notifications = get_notifications(peminjaman_data, user["username"], today)
+    notification_count = len(notifications)
 
     return render(request, 'home.html', {
         'user': user,
@@ -89,6 +90,7 @@ def home_view(request):
         'ta_2023_count': ta_2023_count,
         'ta_2024_count': ta_2024_count,
         'notifications': notifications,
+        'notification_count': notification_count,
     })
 
 @ensure_csrf_cookie
@@ -98,9 +100,11 @@ def books_view(request):
     today = datetime.now().date()
 
     notifications = get_notifications(peminjaman_data, user["username"], today)
+    notification_count = len(notifications)
     return render(request, 'books.html', {
         'user': user,
         'notifications': notifications,
+        'notification_count': notification_count,
         })
 
 def load_json_data(file_path):
@@ -162,12 +166,14 @@ def peminjaman_view(request):
     riwayat = [item for item in peminjaman_data if item.get("username") == username]
 
     notifications = get_notifications(peminjaman_data, username, today)
+    notification_count = len(notifications)
 
     return render(request, 'peminjaman.html', {
         'user': user,
         'riwayat': riwayat,
         'books_dipinjam': books_dipinjam,
         'notifications': notifications,
+        'notification_count': notification_count,
         'user_account': user_account,
     })
 
@@ -185,6 +191,7 @@ def daftar_permintaan(request):
     today = datetime.now().date()
 
     notifications = get_notifications(peminjaman_data, user["username"], today)
+    notification_count = len(notifications)
     
     pending_requests = []
     for req in peminjaman_data:
@@ -206,6 +213,7 @@ def daftar_permintaan(request):
         'user': user,
         'pending_requests': pending_requests,
         'notifications': notifications,
+        'notification_count': notification_count,
     })
 
 def konfirmasi_peminjaman_view(request):
@@ -222,7 +230,8 @@ def konfirmasi_peminjaman_view(request):
         today = datetime.now().date()
 
         notifications = get_notifications(peminjaman_data, user["username"], today)
-
+        notification_count = len(notifications)
+        
         peminjaman = next((req for req in peminjaman_data if req["id"] == int(peminjaman_id)), None)
         books = next((req for req in book if req["id"] == int(book_id)), None)
 
@@ -236,7 +245,10 @@ def konfirmasi_peminjaman_view(request):
             with open(BOOKS_FILE, 'w') as file:
                 json.dump(book, file, indent=4)
 
-            return redirect('/daftar-permintaan/', {'notifications': notifications,})
+            return redirect('/daftar-permintaan/', {
+                'notifications': notifications, 
+                'notification_count': notification_count,
+                })
     return JsonResponse({"error": "Invalid Request"}, status=400)
 
 @ensure_csrf_cookie

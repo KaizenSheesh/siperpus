@@ -6,5 +6,13 @@
         "tgl_peminjaman": "2024-12-16",
         "tgl_pengembalian": "2024-12-17",
         "status": "Diterima"
+    },
+    {
+        "id": 2,
+        "username": "a",
+        "book_id": 2,
+        "tgl_peminjaman": "2024-12-16",
+        "tgl_pengembalian": "2024-12-16",
+        "status": "Diterima"
     }
 ]
