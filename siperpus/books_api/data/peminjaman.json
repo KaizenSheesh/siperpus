@@ -5,12 +5,22 @@
         "book_id": 1,
         "tgl_peminjaman": "2024-12-16",
         "tgl_pengembalian": "2024-12-17",
-        "status": "Diterima"
+        "status": "Sudah Dikembalikan",
+        "tanggal_pengembalian": "2024-12-16"
     },
     {
         "id": 2,
         "username": "a",
         "book_id": 2,
+        "tgl_peminjaman": "2024-12-16",
+        "tgl_pengembalian": "2024-12-16",
+        "status": "Sudah Dikembalikan",
+        "tanggal_pengembalian": "2024-12-16"
+    },
+    {
+        "id": 3,
+        "username": "Dimas Miftahul Arifin",
+        "book_id": 1,
         "tgl_peminjaman": "2024-12-16",
         "tgl_pengembalian": "2024-12-16",
         "status": "Diterima"

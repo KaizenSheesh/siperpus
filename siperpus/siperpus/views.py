@@ -1,5 +1,6 @@
 import json
 import os
+import pandas as pd
 from django.shortcuts import render, redirect
 from datetime import datetime, timedelta
 from django.http import JsonResponse
@@ -9,6 +10,7 @@ from django.contrib import messages
 from rest_framework.decorators import api_view
 from rest_framework.response import Response
 from rest_framework import status
+from django.http import HttpResponse
 
 BOOKS_FILE = os.path.join(os.path.dirname(__file__), "../books_api/data/books.json")
 PEMINJAMAN_FILE = os.path.join(os.path.dirname(__file__), "../books_api/data/peminjaman.json")
@@ -52,6 +54,39 @@ def update_book_status(book_id, new_status):
     with open(BOOKS_FILE, 'w') as file:
         json.dump(books_data, file, indent=4)
         
+def export_books_and_peminjaman_to_xlsx(request):
+    books_data = load_json_data(BOOKS_FILE)
+    peminjaman_data = load_json_data(PEMINJAMAN_FILE)
+
+    books_df = pd.DataFrame(books_data)
+    peminjaman_df = pd.DataFrame(peminjaman_data)
+
+    excel_file_path = os.path.join(os.path.dirname(__file__), "../books_api/data/daftar_buku.xlsx")
+    with pd.ExcelWriter(excel_file_path, engine="xlsxwriter") as writer:
+        books_df.to_excel(writer, sheet_name="Books", index=False)
+        peminjaman_df.to_excel(writer, sheet_name="Peminjaman", index=False)
+
+    with open(excel_file_path, 'rb') as excel_file:
+        response = HttpResponse(excel_file.read(), content_type='application/vnd.openxmlformats-officedocument.spreadsheetml.sheet')
+        response['Content-Disposition'] = 'attachment; filename="daftar_buku.xlsx"'
+        return response
+        
+def export_peminjaman_to_xlsx(request):
+    peminjaman_data = load_json_data(PEMINJAMAN_FILE)
+    peminjaman_df = pd.DataFrame(peminjaman_data)
+
+    excel_file_path = os.path.join(os.path.dirname(__file__), "../books_api/data/peminjaman_data.xlsx")
+    with pd.ExcelWriter(excel_file_path, engine="xlsxwriter") as writer:
+        peminjaman_df.to_excel(writer, sheet_name="Peminjaman", index=False)
+
+    with open(excel_file_path, 'rb') as excel_file:
+        response = HttpResponse(
+            excel_file.read(),
+            content_type='application/vnd.openxmlformats-officedocument.spreadsheetml.sheet'
+        )
+        response['Content-Disposition'] = 'attachment; filename="peminjaman_data.xlsx"'
+        return response
+
 @api_view(['GET'])
 def get_books_peminjaman(request):
     books = read_books()

@@ -31,4 +31,6 @@ urlpatterns = [
     path('daftar-permintaan/', views.daftar_permintaan, name='daftar_permintaan'),
     path('konfirmasi-peminjaman/', views.konfirmasi_peminjaman_view, name='konfirmasi-peminjaman'),
     path('pengembalian-buku/', views.pengembalian_buku, name='pengembalian-buku'),
+    path('export-xlsx/', views.export_books_and_peminjaman_to_xlsx, name='export_xlsx'),
+    path('export-peminjaman-xlsx/', views.export_peminjaman_to_xlsx, name='export_peminjaman'),
 ]

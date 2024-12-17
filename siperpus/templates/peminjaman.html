@@ -174,7 +174,9 @@
               </nav>
             <div class="p-5 min-h-screen">
                 <h1 class="text-3xl font-bold mb-4">Daftar Peminjaman Buku Tugas Akhir</h1>
-
+                <a href="{% url 'export_peminjaman' %}" class="btn btn-primary mb-5" target="_blank">
+                    Export Data Peminjaman ke Excel
+                </a>
                 <div class="tabs mb-5">
                     <button class="tab tab-bordered tab-active text-blue-600 border-b-4 border-b-blue-600" id="tab-semua-peminjaman">Semua Peminjaman</button>
                     <button class="tab tab-bordered" id="tab-sedang-dipinjam">Sedang Dipinjam</button>

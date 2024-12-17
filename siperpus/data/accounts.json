@@ -113,5 +113,10 @@
         "username": "awikoakwa",
         "password": "awoko",
         "role": "staff"
+    },
+    {
+        "username": "Dimas Miftahul Arifin",
+        "password": "dimas",
+        "role": "user"
     }
 ]
