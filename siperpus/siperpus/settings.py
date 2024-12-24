@@ -89,7 +89,7 @@ SECURE_PROXY_SSL_HEADER = ('HTTP_X_FORWARDED_PROTO', 'https')
 # Tambahkan konfigurasi CORS jika diperlukan
 CORS_ALLOWED_ORIGINS = [
     'https://8000-idx-siperpus-1730949380502.cluster-mwrgkbggpvbq6tvtviraw2knqg.cloudworkstations.dev',
-    'https://sipta.codeelder.my.id/'
+    # 'https://sipta.codeelder.my.id/'
 ]
 CORS_ALLOW_CREDENTIALS = True
 
