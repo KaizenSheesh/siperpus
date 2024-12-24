@@ -30,7 +30,9 @@ WORKDIR /app/siperpus
 RUN npm install
 RUN npm i -D daisyui@latest
 RUN python manage.py tailwind install
-RUN python manage.py collectstatic --noinput
+# RUN python manage.py collectstatic --noinput
+RUN python manage.py tailwind build
+
 
 # Expose port
 EXPOSE 8000
