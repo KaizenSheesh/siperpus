@@ -17,9 +17,10 @@ COPY . /app/
 RUN pip install --upgrade pip
 RUN pip freeze > requirements.txt
 
+WORKDIR /app/siperpus
+
 RUN npm install
 RUN npm i -D daisyui@latest
-RUN cd siperpus
 RUN python manage.py tailwind install
 
 EXPOSE 8000
