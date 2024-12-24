@@ -54,7 +54,7 @@ SESSION_COOKIE_SECURE = True
 CORS_ALLOWED_ORIGINS = [
     "http://localhost:3000",
     "http://localhost:8000", 
-    "https://sipta.codeelder.my.id/"
+    # "https://sipta.codeelder.my.id/"
 ]
 
 CORS_ALLOW_METHODS = [
