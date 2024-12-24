@@ -27,12 +27,11 @@ pip install djangorestframework
 
 ```
 
-Setelah itu arahkan / masuk ke dalam folder cd siperpus
-
 Jalankan perintah berikut untuk menginstall Django-Tailwind
 
 ```bash
 
+cd siperpus
 python -m pip install 'django-tailwind[reload]'
 python manage.py tailwind init
 python manage.py tailwind install
