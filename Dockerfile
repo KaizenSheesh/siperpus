@@ -22,7 +22,6 @@ COPY . /app/
 RUN pip install --upgrade pip
 RUN pip install -r requirements.txt
 
-RUN python manage.py collectstatic --noinput
 # Set NPM_BIN_PATH explicitly in Django settings
 ENV NPM_BIN_PATH=/usr/bin/npm
 
@@ -31,6 +30,7 @@ WORKDIR /app/siperpus
 RUN npm install
 RUN npm i -D daisyui@latest
 RUN python manage.py tailwind install
+RUN python manage.py collectstatic --noinput
 
 # Expose port
 EXPOSE 8000
