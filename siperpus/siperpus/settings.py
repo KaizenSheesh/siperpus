@@ -36,13 +36,15 @@ SESSION_COOKIE_SECURE = True  # Jika menggunakan HTTPS
 ALLOWED_HOSTS = [
     '8000-idx-siperpus-1730949380502.cluster-mwrgkbggpvbq6tvtviraw2knqg.cloudworkstations.dev',
     'localhost',
-    '127.0.0.1'
+    '127.0.0.1',
+    'https://sipta.codeelder.my.id/'
 ]
 
 CSRF_TRUSTED_ORIGINS = [
     'https://8000-idx-siperpus-1730949380502.cluster-mwrgkbggpvbq6tvtviraw2knqg.cloudworkstations.dev',
     'https://40grpvxr-8000.asse.devtunnels.ms/',
-    'http://localhost:8000'
+    'http://localhost:8000',
+    'https://sipta.codeelder.my.id/'
 ]
 
 
@@ -52,6 +54,7 @@ SESSION_COOKIE_SECURE = True
 CORS_ALLOWED_ORIGINS = [
     "http://localhost:3000",
     "http://localhost:8000", 
+    "https://sipta.codeelder.my.id/"
 ]
 
 CORS_ALLOW_METHODS = [
@@ -85,7 +88,8 @@ SECURE_PROXY_SSL_HEADER = ('HTTP_X_FORWARDED_PROTO', 'https')
 
 # Tambahkan konfigurasi CORS jika diperlukan
 CORS_ALLOWED_ORIGINS = [
-    'https://8000-idx-siperpus-1730949380502.cluster-mwrgkbggpvbq6tvtviraw2knqg.cloudworkstations.dev'
+    'https://8000-idx-siperpus-1730949380502.cluster-mwrgkbggpvbq6tvtviraw2knqg.cloudworkstations.dev',
+    'https://sipta.codeelder.my.id/'
 ]
 CORS_ALLOW_CREDENTIALS = True
 
