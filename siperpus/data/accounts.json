@@ -118,5 +118,30 @@
         "username": "Dimas Miftahul Arifin",
         "password": "dimas",
         "role": "user"
+    },
+    {
+        "username": "ikanaja",
+        "password": "ikanaja",
+        "role": "user"
+    },
+    {
+        "username": "sina",
+        "password": "sina12",
+        "role": "user"
+    },
+    {
+        "username": "abisigma",
+        "password": "gyatt69",
+        "role": "user"
+    },
+    {
+        "username": "skibidi",
+        "password": "skibidi",
+        "role": "user"
+    },
+    {
+        "username": "bang_al",
+        "password": "bangal123",
+        "role": "user"
     }
 ]

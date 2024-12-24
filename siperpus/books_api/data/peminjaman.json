@@ -24,5 +24,21 @@
         "tgl_peminjaman": "2024-12-16",
         "tgl_pengembalian": "2024-12-16",
         "status": "Diterima"
+    },
+    {
+        "id": 4,
+        "username": "a",
+        "book_id": 2,
+        "tgl_peminjaman": "2024-12-23",
+        "tgl_pengembalian": "2024-12-23",
+        "status": "Diterima"
+    },
+    {
+        "id": 5,
+        "username": "a",
+        "book_id": 2,
+        "tgl_peminjaman": "2024-12-23",
+        "tgl_pengembalian": "2024-12-23",
+        "status": "pending"
     }
 ]
