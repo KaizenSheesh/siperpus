@@ -38,4 +38,4 @@ RUN python manage.py tailwind build
 EXPOSE 8082
 
 # Start the Django server
-CMD ["python", "manage.py", "runserver"]
+CMD ["python", "manage.py", "runserver", "0.0.0.0:8082"]
