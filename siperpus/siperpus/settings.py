@@ -38,7 +38,7 @@ ALLOWED_HOSTS = [
     '8000-idx-siperpus-1730949380502.cluster-mwrgkbggpvbq6tvtviraw2knqg.cloudworkstations.dev',
     'localhost',
     '127.0.0.1',
-    'sipta.codeelder.my.id/'
+    '193.168.195.84'
 ]
 
 CSRF_TRUSTED_ORIGINS = [
@@ -107,7 +107,7 @@ INSTALLED_APPS = [
     'django.contrib.contenttypes',
     'django.contrib.sessions',
     'django.contrib.messages',
-    'django.contrib.staticfiles',
+    # 'django.contrib.staticfiles',
     'tailwind',
     'django_browser_reload',
     'theme',
