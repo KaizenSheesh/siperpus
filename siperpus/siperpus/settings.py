@@ -96,8 +96,8 @@ CORS_ALLOW_CREDENTIALS = True
 
 TAILWIND_APP_NAME = 'theme'
 
-# NPM_BIN_PATH = "C:/Program Files/nodejs/npm.cmd"
-NPM_BIN_PATH = "/usr/bin/npm"
+NPM_BIN_PATH = "C:/Program Files/nodejs/npm.cmd"
+# NPM_BIN_PATH = "/usr/bin/npm"
 
 # Application definition
 
@@ -117,7 +117,7 @@ INSTALLED_APPS = [
     'corsheaders',
 ]
 
-STATIC_ROOT = BASE_DIR / 'staticfiles'
+# STATIC_ROOT = BASE_DIR / 'staticfiles'
 
 MIDDLEWARE = [
     'django.middleware.security.SecurityMiddleware',
@@ -199,6 +199,7 @@ USE_TZ = True
 # https://docs.djangoproject.com/en/5.1/howto/static-files/
 
 STATIC_URL = 'static/'
+STATIC_ROOT = 'theme/'
 
 # Default primary key field type
 # https://docs.djangoproject.com/en/5.1/ref/settings/#default-auto-field
