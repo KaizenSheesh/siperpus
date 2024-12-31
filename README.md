@@ -1,4 +1,4 @@
-# Welcome to SIPERPUS 👋
+# Welcome to sipTA 👋
 
 <p>SIPERPUS Merupakan aplikasi Sistem Informasi Perpustakaan Pusat (Polnep) yang berguuna untuk mengelola data buku TUGAS AKHIR yang ada diperpustakaan</p>
 
